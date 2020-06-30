@@ -3,15 +3,12 @@ $bootstrap-sass-asset-helper: false !default;
 // Variables
 // --------------------------------------------------
 
-@import url(https://fonts.googleapis.com/css?family=Alice);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:300);
-
 
 //== Colors
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-base:              #253133 !default;
+$gray-base:              #1c1d1e !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
@@ -21,11 +18,11 @@ $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 $light-base: #d3dbde;
 $light-lighter: lighten($light-base, 11%);
 
-$brand-primary:         #0f2f87 !default; //dark blue
-$brand-success:         #3c9d64 !default; //green old #5A9D76
-$brand-info:            #447984 !default; //blue
-$brand-warning:         #FAE579 !default; //yellow
-$brand-danger:          #D3D7D8 !default; //gray
+$brand-primary:         #c8963e !default; //gold
+$brand-success:         #e3c567 !default; //light gold
+$brand-info:            #4E5656 !default; //earl gray
+$brand-warning:         red !default; //yellow
+$brand-danger:          #6B7676 !default; //nickel
 
 $nav-accent:            #f8f8f8 !default;
 
@@ -51,7 +48,7 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  "Josefin Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-sans-serif:  Helvetica, Arial, sans-serif !default;
 $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;

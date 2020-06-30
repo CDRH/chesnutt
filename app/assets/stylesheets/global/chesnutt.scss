@@ -1,0 +1,241 @@
+@import "../bootstrap-variables.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
+
+//@import url('https://fonts.googleapis.com/css2?family=Literata:ital@0;1&display=swap');
+
+//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@531&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,562;1,562&display=swap');
+
+// colors
+$light-gold: #e3c567;
+$gold: #c8963e;
+$white: #fff;
+$light-silver: #f4f5f5;
+$platinum: #dFe2e2;
+$dark: #1c1d1e;
+
+
+
+@supports (font-variation-settings: normal) {
+  h1, h2, h3, h3, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+   font-family: 'EB Garamond', serif;
+   font-weight: 400;
+  }
+  body {
+    // font-family: 'Inter', sans-serif;
+
+    // font-family: 'Literata', serif;
+
+    font-family: 'Lora', serif;
+    
+  }
+}
+
+body {
+  font-weight: 400;
+  font-variation-settings: 'wght' 400;
+  //font-style: italic;
+}
+
+
+
+body {
+  background-color: $light-silver;
+  //background-color: #fff;
+}
+
+
+#header, #footer {
+  background-color: $dark;
+  color: $white;
+  text-align: center;
+  .h1 {
+    font-weight: 300;
+    font-variation-settings: 'wght' 300;
+    margin-top: .1em;
+  }
+  a {
+    color: $white;
+  }
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  font-family: 'EB Garamond', serif;
+  font-size: 1.3em;
+  
+  a {
+    color: $dark;
+  }
+}
+
+.navbar-default {
+  background-color: $white;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+}
+
+#footer {
+  margin-bottom: 0;
+  padding-bottom: 8em;
+}
+
+// Stick footer to bottom
+
+#body-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+#content-wrapper {
+  flex-grow: 1;
+}
+
+#header {
+  height: auto;
+}
+ 
+.main_content {
+  //background-color: #F5F5F5;
+  background-color: $white;
+  padding: .5em;
+}
+
+
+
+// Poems
+
+div.poem {}
+
+.tei_lg_type_stanza {}
+
+.tei_lg {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.tei_l {
+  display: block;
+}
+
+// Texts
+
+.tei_byline,
+.tei_ab {
+  display: block;
+}
+
+.tei_ab {
+  margin: 0 0 .69em;
+}
+
+.tei_byline {
+  margin-bottom: .5em;
+}
+
+.tei_ab_type_title {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.tei_note {
+  background-color: $platinum;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.tei_name {
+  font-style: italic;
+}
+
+.tei_fw, .tei_titlePage {
+  display: block;
+  text-align: center;
+  background-color: $light-silver;
+  margin-bottom: .5em;
+}
+
+.tei_titlePage {
+  
+  padding: .5em;
+  margin: .5em 0;
+  border: solid 1px $light-silver;
+
+}
+
+.SmallCaps {
+  text-transform: uppercase;
+}
+
+.tei_sic {
+  background-color: $platinum;
+}
+
+.tei_sic:after {
+  content: " [sic]";
+}
+
+.milestone {
+  border-top: solid 2px $platinum;
+  display: block;
+}
+
+
+
+
+// figures
+
+.inline_figure {
+  border: solid 2px $platinum;
+  text-align: center;
+  margin: 1em 3em;
+}
+
+.tei_caption {}
+
+
+
+
+
+
+// Page images
+
+span.pageimage {
+  border-bottom: 2px solid $platinum;
+  border-left: 2px solid $platinum;
+  border-right: 2px solid $platinum;
+  clear: both;
+  float: right;
+  margin: 0 0 1em .5em;
+  padding: 0;
+}
+
+.hr {
+  border-top: 2px solid $platinum; 
+  clear: right;
+  display: block;
+  height: 0;
+  margin: 10px 0 0 0;
+  padding: 0px 0 0 0;
+  width: 100%;
+}
+
+.pageimage img {
+  min-height: 80px;
+  min-width: 80px;
+  background-color: $platinum;
+}
+
+
+
+
+
