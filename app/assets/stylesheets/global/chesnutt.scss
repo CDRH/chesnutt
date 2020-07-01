@@ -35,7 +35,9 @@ body {
 
 .main_content {
   background-color: $white;
-  padding: .5em;
+  border-radius: 5px;
+  border: solid 1px $platinum;
+  padding: 20px;
 }
 
 // Adding underlines back on links with some exceptions
