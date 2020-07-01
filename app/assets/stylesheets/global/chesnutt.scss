@@ -1,89 +1,103 @@
 @import "../bootstrap-variables.scss";
 
+// Google Fonts
+// Garamond for headers, Lora for body text
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
-
-//@import url('https://fonts.googleapis.com/css2?family=Literata:ital@0;1&display=swap');
-
-//@import url('https://fonts.googleapis.com/css2?family=Inter:wght@531&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,562;1,562&display=swap');
 
-// colors
-$light-gold: #e3c567;
-$gold: #c8963e;
-$white: #fff;
-$light-silver: #f4f5f5;
-$platinum: #dFe2e2;
-$dark: #1c1d1e;
+$font-headers: 'EB Garamond', serif;
+$font-body: 'Lora', serif;
 
-
-
+// Calling variable font if browser supports it
+// will probabyl change this out for static fonts in final version
 @supports (font-variation-settings: normal) {
   h1, h2, h3, h3, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-   font-family: 'EB Garamond', serif;
+   font-family: $font-headers;
    font-weight: 400;
   }
   body {
-    // font-family: 'Inter', sans-serif;
-
-    // font-family: 'Literata', serif;
-
-    font-family: 'Lora', serif;
-    
+    font-family: $font-body;
   }
 }
 
 body {
-  font-weight: 400;
   font-variation-settings: 'wght' 400;
-  //font-style: italic;
+  font-weight: 400;
 }
 
-
+// ================
+// General settings
+// ================
 
 body {
   background-color: $light-silver;
-  //background-color: #fff;
 }
 
+.main_content {
+  background-color: $white;
+  padding: .5em;
+}
+
+// Adding underlines back on links with some exceptions
+
+a {
+  text-decoration: underline;
+  &:hover {
+    text-decoration-color: $brand-success;
+    text-decoration-thickness: 3px;
+  }
+}
+
+#header a, #footer a, a.btn {
+  text-decoration: none;
+}
+
+// Header and Footer 
 
 #header, #footer {
   background-color: $dark;
   color: $white;
   text-align: center;
+
   .h1 {
+    font-variation-settings: 'wght' 300; //todo chane if we remove variable fonts
     font-weight: 300;
-    font-variation-settings: 'wght' 300;
     margin-top: .1em;
   }
+
   a {
     color: $white;
   }
-.navbar-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-  font-family: 'EB Garamond', serif;
-  font-size: 1.3em;
-  
-  a {
-    color: $dark;
+
+  .navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: $font-headers;
+    font-size: 1.3em;
+    justify-content: center;
+    width: 100%;
+    
+    a {
+      color: $dark;
+    }
   }
-}
 
-.navbar-default {
-  background-color: $white;
-}
+  .navbar-default {
+    background-color: $white;
+  }
 
-.navbar {
-  margin-bottom: 0;
-}
+  .navbar {
+    margin-bottom: 0;
+  }
 }
 
 #footer {
   margin-bottom: 0;
   padding-bottom: 8em;
+}
+
+#header {
+  height: auto;
 }
 
 // Stick footer to bottom
@@ -98,17 +112,12 @@ body {
   flex-grow: 1;
 }
 
-#header {
-  height: auto;
-}
- 
-.main_content {
-  //background-color: #F5F5F5;
-  background-color: $white;
-  padding: .5em;
-}
+// ================
+// TEI
+// ================
 
-
+// Note there will be empty select rules until 
+// I figure out if I need to style them
 
 // Poems
 
@@ -158,18 +167,16 @@ div.poem {}
 }
 
 .tei_fw, .tei_titlePage {
-  display: block;
-  text-align: center;
   background-color: $light-silver;
+  display: block;
   margin-bottom: .5em;
+  text-align: center;
 }
 
 .tei_titlePage {
-  
-  padding: .5em;
-  margin: .5em 0;
   border: solid 1px $light-silver;
-
+  margin: .5em 0;
+  padding: .5em;
 }
 
 .SmallCaps {
@@ -189,22 +196,15 @@ div.poem {}
   display: block;
 }
 
-
-
-
 // figures
 
 .inline_figure {
   border: solid 2px $platinum;
-  text-align: center;
   margin: 1em 3em;
+  text-align: center;
 }
 
 .tei_caption {}
-
-
-
-
 
 
 // Page images
@@ -230,12 +230,52 @@ span.pageimage {
 }
 
 .pageimage img {
+  background-color: $platinum;
   min-height: 80px;
   min-width: 80px;
-  background-color: $platinum;
 }
 
 
+// ================
+// Home
+// ================
 
+.controller_general.action_index .lead {
+  margin-top: 1em;
+}
 
+.home-hero {
+  background-image: image-url("home/chesnutt_home_banner.jpg");
+  background-position: top center;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 1em;
+  width: 100%;
+  p {
+    color: #fff;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.6em;
+    margin-top: 1em;
+    max-width: 400px;
+  }
+}
 
+@media (min-width: 1200px) {
+  .home-hero {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .home-hero {
+    height: 500px;
+  }
+}
+
+.controller_general.action_index #content-wrapper {
+  margin-bottom: 0;
+}
+
+.home-content-wrapper {
+  margin-bottom: 3em;
+}

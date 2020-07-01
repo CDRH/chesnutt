@@ -5,26 +5,39 @@ $bootstrap-sass-asset-helper: false !default;
 
 
 //== Colors
-//
-//## Gray and brand colors for use across Bootstrap.
+
+//Chesnutt Colors
+// https://coolors.co/853d00-c8963e-e3c567-ffffff-f4f5f5-dfe2e2-2b5554-1c1d1e
+// todo clean up
+
+$saddle-brown: #853D00;
+$gold: #c8963e;
+$light-gold: #e3c567;
+$white: #fff;
+$light-silver: #f4f5f5;
+$platinum: #dFe2e2;
+$dark-teal: #2B5554;
+$dark: #1c1d1e;
+
+// Bootstrap colors
 
 $gray-base:              #1c1d1e !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+$gray-light:             $platinum !default; // #777
+$gray-lighter:           $light-silver !default; // #eee
 
-$light-base: #d3dbde;
-$light-lighter: lighten($light-base, 11%);
+$light-base: $platinum;
+$light-lighter: $light-silver;
 
-$brand-primary:         #c8963e !default; //gold
-$brand-success:         #e3c567 !default; //light gold
-$brand-info:            #4E5656 !default; //earl gray
-$brand-warning:         red !default; //yellow
-$brand-danger:          #6B7676 !default; //nickel
+$brand-primary:         $saddle-brown !default;
+$brand-success:         $gold !default; //gold
+$brand-info:            $dark-teal !default; //earl gray
+$brand-warning:         $light-gold !default; //yellow
+$brand-danger:          $dark-teal !default; //nickel
 
-$nav-accent:            #f8f8f8 !default;
+$nav-accent:            $platinum !default;
 
 
 //== Scaffolding
