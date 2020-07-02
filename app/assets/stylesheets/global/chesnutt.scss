@@ -119,6 +119,10 @@ a {
 // TEI
 // ================
 
+// Proofs
+
+
+
 .tei_hi_rend_underline {
   text-decoration: underline;
 }
@@ -127,20 +131,66 @@ a {
   background-color: yellow;
 }
 
-// Metamark 
+// Metamark / adds
 
-.tei_add_place_margin-left {
+.tei_add_place_inline, 
+.tei_add_place_margin-bottom,
+.tei_add_place_margin-left, 
+.tei_add_place_margin-right,
+.tei_add_place_margin-top, 
+.tei_add_rend_circle {
   border: solid #aaa 1px;
   display: inline;
   background-color: beige;
   padding: 1px 3px 0px 3px;
-  // width: 100px;
-  // margin-left: -120px;
-  // position: absolute;
+}
+
+.tei_add_place_inline {
+  &:before {
+    content: "[inline]  ";
+  }
+}
+
+.tei_add_place_margin-left {
   &:before {
     content: "[margin left]  ";
-    //float: left;
   }
+}
+
+.tei_add_place_margin-bottom {
+  &:before {
+    content: "[margin bottom]  ";
+  }
+}
+
+.tei_add_place_margin-right {
+  &:before {
+    content: "[margin right]  ";
+  }
+}
+
+.tei_add_place_margin-top {
+  &:before {
+    content: "[margin top]  ";
+  }
+}
+
+.tei_add_rend_circle {
+  border-radius: 7px;
+}
+
+.tei_seg {
+  background-color: $platinum;
+  border-bottom: dashed black 1px;
+}
+
+.tei_metamark_rend_lasso {
+  min-width: 1em;
+  min-height: 1em;
+  display: inline-block;
+  border: dashed 1px black;
+  background-color: platinum;
+  border-radius: 7px;
 }
 
 // Note there will be empty select rules until 
@@ -268,13 +318,7 @@ span.pageimage {
   display: block;
 }
 
-// Proofs
 
-.tei_add_rend_circle {
-  border-radius: 10px;
-  border: solid #aaa 1px;
-  display: inline-block;
-}
 
 
 // From Whitman
@@ -339,7 +383,7 @@ display: block;
 }
 
 .tei_add_place_inline {
-  color:magenta;
+  //color:magenta;
 }
 
 .unclear,
