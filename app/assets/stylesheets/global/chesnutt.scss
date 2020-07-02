@@ -38,6 +38,7 @@ body {
   border-radius: 5px;
   border: solid 1px $platinum;
   padding: 20px;
+  line-height: 1.8em;
 }
 
 // Adding underlines back on links with some exceptions
@@ -117,6 +118,30 @@ a {
 // ================
 // TEI
 // ================
+
+.tei_hi_rend_underline {
+  text-decoration: underline;
+}
+
+.tei_supplied {
+  background-color: yellow;
+}
+
+// Metamark 
+
+.tei_add_place_margin-left {
+  border: solid #aaa 1px;
+  display: inline;
+  background-color: beige;
+  padding: 1px 3px 0px 3px;
+  // width: 100px;
+  // margin-left: -120px;
+  // position: absolute;
+  &:before {
+    content: "[margin left]  ";
+    //float: left;
+  }
+}
 
 // Note there will be empty select rules until 
 // I figure out if I need to style them
@@ -236,6 +261,174 @@ span.pageimage {
   min-height: 80px;
   min-width: 80px;
 }
+
+// letters
+
+.tei_dateline {
+  display: block;
+}
+
+// Proofs
+
+.tei_add_rend_circle {
+  border-radius: 10px;
+  border: solid #aaa 1px;
+  display: inline-block;
+}
+
+
+// From Whitman
+// =====
+
+// Editorial Marks
+
+.tei_ref_target, .internal_link.tei_ptr {
+  vertical-align: super;
+  font-size: 1em;
+}
+
+.editorial_note {
+  display: block;
+}
+
+// Quotes
+
+/*  q in TEI */
+.tei_q {
+  display: block;
+  margin: .5em 0;
+  padding: .5em 4em .5em 4em;
+}
+
+// Poems
+
+.inline_quote
+.tei_q,
+.tei_floatingText,
+.tei_lg_type_poem,
+.tei_lg,
+.tei_lg_type_linegroup,
+.tei_l {
+  display: block;
+}
+
+/* correspondence */
+
+.tei_salute {
+  display: block;
+  margin: .5em 0;
+}
+
+.tei_name_type_place {
+display: block;
+}
+
+.tei_address {
+  margin-top: 1.5em;
+  display: block;
+}
+
+.tei_addrline {
+  display: block;
+}
+
+/* Manuscripts */
+
+.tei_del_rend_overwrite {
+  color:orange;
+}
+
+.tei_add_place_inline {
+  color:magenta;
+}
+
+.unclear,
+.tei_gap_reason_illegible {
+  color: #aaa;
+}
+
+/* Will need to discuss if we wantto keep this, 
+it is not supported in all browsers 
+see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
+.tei_del_rend_overstrike sup {
+  display:inline-block;
+  text-decoration-skip-ink: none; 
+  text-decoration-skip: none;
+  text-decoration: underline;
+  text-underline-offset: -.3em;
+  padding-left: 0em;
+  text-indent: 0em;
+  font-size: 1em;
+}
+
+.tei_milestone_unit_glued {
+  margin: .5em;
+  text-align: center;
+  color: #939393;
+}
+
+.inline_tei_rend_insertion {
+  vertical-align: sub; /* prevents triangle formation */
+}
+
+.tei_add_place_infralinear {
+  vertical-align: sub;
+}
+
+.tei_hashmark_title {
+text-align: center;
+margin: .5em 0;
+}
+
+.tei_delSpan_rend_hashmark {
+  background-color: #CCCCCC;
+  padding: .5em;
+}
+
+/* not sure if these stylings are manuscript specific */
+.tei_list_type_simple {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+
+/* marginalia */
+
+.tei_titlePage {
+  margin: 1em 0;
+  display:block;
+}
+
+.tei_note_type_authorial span {
+  border: double 3px blue;
+  border-right: none;
+  border-left: none;
+  display: inline;
+  background-color: yellow;
+  
+}
+
+.tei_note_type_authorial {
+  margin: .5em 0 1em 0;
+}
+
+.tei_titlePart_type_main {
+  font-weight: 800;
+  display: block;
+  margin: .5em 0 1em 0;
+}
+
+.tei_milestone_rend_horbar-short-center {
+  width: 6em;
+  margin: 1em auto;
+}
+
+.tei_pubPlace {
+  display: block;
+}
+
+
+
 
 // Hand CSS
 // DRAFT
