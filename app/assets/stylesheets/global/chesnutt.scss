@@ -529,3 +529,31 @@ margin: .5em 0;
 .home-content-wrapper {
   margin-bottom: 3em;
 }
+
+// interface changes
+.metadata ul {
+  columns: 2;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.metadata {
+  border: 1px solid silver;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+
+#footer {
+  padding-top: 1.5em;
+}
+
+.footer_logo {
+  margin-top: 1.5em;
+}
+
+.tei_note_type_authorial {}
+.tei_note_place_margin-bottom {}
+
+
