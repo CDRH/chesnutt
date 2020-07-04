@@ -577,3 +577,17 @@ background-color: #000;}
 ::selection {
   background-color: rgb(229, 207, 169);
 }
+
+.home-hero p {
+  background-color: rgba(0,0,0,.5);
+  padding: .5em .5em 1em .5em;
+  line-height: 1.2em;
+  text-align: left;
+  margin: 0;
+  height: 100%;
+
+}
+.home-hero p em {
+  display: block;
+  text-align:right;
+}
