@@ -533,6 +533,10 @@ margin: .5em 0;
 // interface changes
 .metadata ul {
   columns: 2;
+}
+
+.metadata ul {
+  columns: 2;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -556,4 +560,20 @@ margin: .5em 0;
 .tei_note_type_authorial {}
 .tei_note_place_margin-bottom {}
 
+#header  {
+  border-bottom: double 3px #C8963E;
+  background-color: transparent;
+}
 
+.site-title-container {
+  width: 100%;
+background-color: #000;}
+
+#header .navbar-default {
+  border-bottom: 0;
+  
+}
+
+::selection {
+  background-color: rgb(229, 207, 169);
+}
