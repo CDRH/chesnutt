@@ -133,46 +133,68 @@ a {
 
 // Metamark / adds
 
-.tei_add_place_inline, 
-.tei_add_place_margin-bottom,
-.tei_add_place_margin-left, 
-.tei_add_place_margin-right,
-.tei_add_place_margin-top, 
-.tei_add_rend_circle {
-  border: solid #aaa 1px;
-  display: inline;
-  background-color: beige;
-  padding: 1px 3px 0px 3px;
-}
+// .tei_add_place_inline, 
+// .tei_add_place_margin-bottom,
+// .tei_add_place_margin-left, 
+// .tei_add_place_margin-right,
+// .tei_add_place_margin-top, 
+// .tei_add_rend_circle {
+//   border: solid #aaa 1px;
+//   display: inline;
+//   background-color: beige;
+//   padding: 1px 3px 0px 3px;
+// }
 
-.tei_add_place_inline {
-  &:before {
-    content: "[inline]  ";
-  }
-}
+// .tei_add_place_inline {
+//   &:before {
+//     content: "[TESTING]  ";
+//   }
+// }
 
 .tei_add_place_margin-left {
   &:before {
-    content: "[margin left]  ";
+    content: "[left margin] ";
   }
 }
 
 .tei_add_place_margin-bottom {
   &:before {
-    content: "[margin bottom]  ";
+    content: "[bottom margin] ";
   }
 }
 
 .tei_add_place_margin-right {
   &:before {
-    content: "[margin right]  ";
+    content: "[right margin] ";
   }
 }
 
 .tei_add_place_margin-top {
   &:before {
-    content: "[margin top]  ";
+    content: "[top margin] ";
   }
+}
+
+.tei_add_place_left {
+  &:before {
+    content: "[left margin] ";
+  }
+}
+
+.tei_add_place_right {
+  &:before {
+    content: "[right margin] ";
+  }
+}
+
+.tei_add_place_top {
+  &:before {
+    content: "[top margin] ";
+  }
+}
+
+.tei_add {
+  font-style: normal;
 }
 
 .tei_add_rend_circle {
@@ -184,13 +206,15 @@ a {
   border-bottom: dashed black 1px;
 }
 
-.tei_metamark_rend_lasso {
-  min-width: 1em;
-  min-height: 1em;
-  display: inline-block;
-  border: dashed 1px black;
-  background-color: platinum;
-  border-radius: 7px;
+
+.tei_metamark.tei_metamark_rend_lasso {  // .tei_metamark added for specificity
+  // min-width: 1em;
+  // min-height: 1em;
+  // display: inline-block;
+  // border: dashed 1px black;
+  // background-color: platinum;
+  // border-radius: 7px;
+  display: none;
 }
 
 // Note there will be empty select rules until 
@@ -232,7 +256,9 @@ div.poem {}
 }
 
 .tei_note {
-  background-color: $platinum;
+  border: solid #aaa 1px;
+  display: inline;
+  background-color: rgba(194,218,217,1);
 }
 
 .bold {
@@ -449,7 +475,6 @@ margin: .5em 0;
   border-left: none;
   display: inline;
   background-color: yellow;
-  
 }
 
 .tei_note_type_authorial {
@@ -610,6 +635,27 @@ background-color: #000;}
   box-shadow: 4px 0 10px -4px rgba(0,0,0,.07),
     -4px 0 10px -4px rgba(0,0,0,.07);
   
+}
+
+//Kevin's additions start here
+
+.tei_metamark {
+  border: solid #aaa 1px;
+  display: inline;
+  background-color: rgba(194,218,217,1);
+  padding: 1px 3px 0px 3px;
+}
+
+// .tei_hi_rend_bold {
+// 	font-weight: 600;
+// }
+
+// .tei_fw_rend_bold {
+// 	font-weight: 600;
+// }
+
+.rend_bold {
+	font-weight: 600;
 }
 
 
