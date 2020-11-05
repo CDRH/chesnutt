@@ -153,43 +153,43 @@ a {
 
 .tei_add_place_margin-left {
   &:before {
-    content: "[left margin] ";
+    content: " [left margin] ";
   }
 }
 
 .tei_add_place_margin-bottom {
   &:before {
-    content: "[bottom margin] ";
+    content: " [bottom margin] ";
   }
 }
 
 .tei_add_place_margin-right {
   &:before {
-    content: "[right margin] ";
+    content: " [right margin] ";
   }
 }
 
 .tei_add_place_margin-top {
   &:before {
-    content: "[top margin] ";
+    content: " [top margin] ";
   }
 }
 
 .tei_add_place_left {
   &:before {
-    content: "[left margin] ";
+    content: " [left margin] ";
   }
 }
 
 .tei_add_place_right {
   &:before {
-    content: "[right margin] ";
+    content: " [right margin] ";
   }
 }
 
 .tei_add_place_top {
   &:before {
-    content: "[top margin] ";
+    content: " [top margin] ";
   }
 }
 
