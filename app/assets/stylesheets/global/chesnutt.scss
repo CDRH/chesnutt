@@ -121,8 +121,6 @@ a {
 
 // Proofs
 
-
-
 .tei_hi_rend_underline {
   text-decoration: underline;
 }
@@ -132,24 +130,6 @@ a {
 }
 
 // Metamark / adds
-
-// .tei_add_place_inline, 
-// .tei_add_place_margin-bottom,
-// .tei_add_place_margin-left, 
-// .tei_add_place_margin-right,
-// .tei_add_place_margin-top, 
-// .tei_add_rend_circle {
-//   border: solid #aaa 1px;
-//   display: inline;
-//   background-color: beige;
-//   padding: 1px 3px 0px 3px;
-// }
-
-// .tei_add_place_inline {
-//   &:before {
-//     content: "[TESTING]  ";
-//   }
-// }
 
 .tei_add_place_margin-left {
   &:before {
@@ -207,13 +187,7 @@ a {
 }
 
 
-.tei_metamark.tei_metamark_rend_lasso {  // .tei_metamark added for specificity
-  // min-width: 1em;
-  // min-height: 1em;
-  // display: inline-block;
-  // border: dashed 1px black;
-  // background-color: platinum;
-  // border-radius: 7px;
+.tei_metamark.tei_metamark_rend_lasso {
   display: none;
 }
 
@@ -256,9 +230,9 @@ div.poem {}
 }
 
 .tei_note {
+  background-color: rgba(194,218,217,1);
   border: solid #aaa 1px;
   display: inline;
-  background-color: rgba(194,218,217,1);
 }
 
 .bold {
@@ -390,12 +364,12 @@ span.pageimage {
 }
 
 .tei_name_type_place {
-display: block;
+  display: block;
 }
 
 .tei_address {
-  margin-top: 1.5em;
   display: block;
+  margin-top: 1.5em;
 }
 
 .tei_addrline {
@@ -409,7 +383,6 @@ display: block;
 }
 
 .tei_add_place_inline {
-  //color:magenta;
 }
 
 .unclear,
@@ -417,24 +390,24 @@ display: block;
   color: #aaa;
 }
 
-/* Will need to discuss if we wantto keep this, 
+/* Will need to discuss if we want to keep this, 
 it is not supported in all browsers 
 see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 .tei_del_rend_overstrike sup {
   display:inline-block;
+  font-size: 1em;
+  padding-left: 0em;
   text-decoration-skip-ink: none; 
   text-decoration-skip: none;
   text-decoration: underline;
-  text-underline-offset: -.3em;
-  padding-left: 0em;
   text-indent: 0em;
-  font-size: 1em;
+  text-underline-offset: -.3em;
 }
 
 .tei_milestone_unit_glued {
+  color: #939393;
   margin: .5em;
   text-align: center;
-  color: #939393;
 }
 
 .inline_tei_rend_insertion {
@@ -446,8 +419,8 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 }
 
 .tei_hashmark_title {
-text-align: center;
-margin: .5em 0;
+  text-align: center;
+  margin: .5em 0;
 }
 
 .tei_delSpan_rend_hashmark {
@@ -458,23 +431,23 @@ margin: .5em 0;
 /* not sure if these stylings are manuscript specific */
 .tei_list_type_simple {
   list-style: none;
-  padding: 0;
   margin: 0 0 1em 0;
+  padding: 0;
 }
 
 /* marginalia */
 
 .tei_titlePage {
-  margin: 1em 0;
   display:block;
+  margin: 1em 0;
 }
 
 .tei_note_type_authorial span {
+  background-color: yellow;
   border: double 3px blue;
   border-right: none;
   border-left: none;
   display: inline;
-  background-color: yellow;
 }
 
 .tei_note_type_authorial {
@@ -482,8 +455,8 @@ margin: .5em 0;
 }
 
 .tei_titlePart_type_main {
-  font-weight: 800;
   display: block;
+  font-weight: 800;
   margin: .5em 0 1em 0;
 }
 
@@ -495,8 +468,6 @@ margin: .5em 0;
 .tei_pubPlace {
   display: block;
 }
-
-
 
 
 // Hand CSS
@@ -592,11 +563,11 @@ margin: .5em 0;
 
 .site-title-container {
   width: 100%;
-background-color: #000;}
+  background-color: #000;
+}
 
 #header .navbar-default {
   border: 0;
-  
 }
 
 ::selection {
@@ -605,44 +576,39 @@ background-color: #000;}
 
 .home-hero p {
   background-color: rgba(0,0,0,.5);
-  padding: .5em .5em 1em .5em;
-  line-height: 1.2em;
-  text-align: left;
-  margin: 0;
   height: 100%;
-
+  line-height: 1.2em;
+  margin: 0;
+  padding: .5em .5em 1em .5em;
+  text-align: left;
 }
+
 .home-hero p em {
   display: block;
   text-align:right;
 }
 
 .controller_general.action_index #header .h1 {
-  
   font-size: 5em;
   max-width: 10em;
   margin: auto;
   text-align: center;
   padding-bottom: .3em;
   line-height: .95em;
-  
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active {
-
   background-color: transparent;
-  
   box-shadow: 4px 0 10px -4px rgba(0,0,0,.07),
     -4px 0 10px -4px rgba(0,0,0,.07);
-  
 }
 
-//Kevin's additions start here
+// Kevin's additions start here
 
 .tei_metamark {
+  background-color: rgba(194,218,217,1);
   border: solid #aaa 1px;
   display: inline;
-  background-color: rgba(194,218,217,1);
   padding: 1px 3px 0px 3px;
 }
 
@@ -655,5 +621,5 @@ background-color: #000;}
 // }
 
 .rend_bold {
-	font-weight: 600;
+  font-weight: 600;
 }
