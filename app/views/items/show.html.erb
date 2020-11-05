@@ -1,0 +1,8 @@
+<%# overridden from orchid to add assets, no other changes %>
+
+<% @ext_css = [ "fancybox.min" ] %>
+<% @ext_js = [ "fancybox.min", "item_gallery_lightbox" ] %>
+
+<h1><%= @res["title"] %></h1>
+<%= render_overridable("show_metadata") %>
+<%= render_overridable("show_content") %>
