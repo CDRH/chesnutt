@@ -2,8 +2,37 @@
 
 // Google Fonts
 // Garamond for headers, Lora for body text
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,562;1,562&display=swap');
+
+//page head font choices
+//@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+// font-family: 'Tangerine', cursive;
+//@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+// font-family: 'Allura', cursive;
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+// font-family: 'Mrs Saint Delafield', cursive;
+
+// heading font choices
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+// font-family: 'Montserrat', sans-serif;
+//@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+// font-family: 'Nunito', sans-serif;
+
+
+
+
+.site-title {
+  font-family: 'Mrs Saint Delafield', cursive;
+  padding-top: .4em;
+  display: block;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+
 
 $font-headers: 'EB Garamond', serif;
 $font-body: 'Lora', serif;
@@ -565,6 +594,8 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
   width: 100%;
   background-color: $brand-info;
 }
+
+
 
 #header .navbar-default {
   border: 0;
