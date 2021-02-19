@@ -30,7 +30,7 @@ body {
 // ================
 
 body {
-  background-color: $light-silver;
+  background-color: $white;
 }
 
 .main_content {
@@ -58,7 +58,7 @@ a {
 // Header and Footer 
 
 #header, #footer {
-  background-color: $dark;
+  background-color: $brand-info;
   color: $white;
   text-align: center;
 
@@ -86,7 +86,7 @@ a {
   }
 
   .navbar-default {
-    background-color: $white;
+    background-color: $gray-lighter;
   }
 
   .navbar {
@@ -126,7 +126,7 @@ a {
 }
 
 .tei_supplied {
-  background-color: yellow;
+  background-color: $banana-mania;
 }
 
 // Metamark / adds
@@ -244,14 +244,14 @@ div.poem {}
 }
 
 .tei_fw, .tei_titlePage {
-  background-color: $light-silver;
+  background-color: $gray-lighter;
   display: block;
   margin-bottom: .5em;
   text-align: center;
 }
 
 .tei_titlePage {
-  border: solid 1px $light-silver;
+  border: solid 1px $gray-lighter;
   margin: .5em 0;
   padding: .5em;
 }
@@ -443,7 +443,7 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 }
 
 .tei_note_type_authorial span {
-  background-color: yellow;
+  background-color: $gold-metallic;
   border: double 3px blue;
   border-right: none;
   border-left: none;
@@ -474,7 +474,7 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 // DRAFT
 
 .tei_hand_resp_cwc {
-  border-bottom: double 3px $gold;
+  border-bottom: double 3px $brand-success;
 }
 
 // .tei_hand_medium_black_pen {
@@ -563,7 +563,7 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 
 .site-title-container {
   width: 100%;
-  background-color: #000;
+  background-color: $brand-info;
 }
 
 #header .navbar-default {
@@ -623,3 +623,84 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 .rend_bold {
   font-weight: 600;
 }
+
+
+
+// Changes to work in
+
+.metadata h2 {
+  margin: 0 0 .5em 0;
+  padding: 0;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+
+// interface changes
+.metadata ul {
+  columns: 1;
+
+}
+
+.metadata ul {
+  columns: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: .5em ;
+}
+
+
+.metadata {
+  border: 1px solid silver;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+
+.test_home_banner_outer {
+  background-image: image-url("watercolorbg.jpg");
+  height: 400px;
+  background-size: cover;
+  .test_home_banner_inner,
+  .test_home_banner_inner2 {
+    background-image: image-url("chesnutt_sm.png");
+    height: 400px;
+    width: 300px;
+    background-repeat: no-repeat;
+    float: right;
+  }
+}
+
+.test_home_banner_outer {
+
+  .test_home_banner_inner2 {
+    background-image: image-url("blend_mode.png");
+
+    float: left;
+  }
+}
+
+.test_home_banner_outer1 {
+
+  .test_home_banner_inner {
+    // mix-blend-mode: screen;
+  }
+}
+
+.test_home_banner_outer2 {
+
+  .test_home_banner_inner {
+
+  }
+}
+
+.test_home_banner_outer3 {
+
+  .test_home_banner_inner {
+
+  }
+}
+
+
+
+
+

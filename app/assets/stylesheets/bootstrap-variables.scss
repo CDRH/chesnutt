@@ -7,35 +7,41 @@ $bootstrap-sass-asset-helper: false !default;
 //== Colors
 
 //Chesnutt Colors
-// https://coolors.co/853d00-c8963e-e3c567-ffffff-f4f5f5-dfe2e2-2b5554-1c1d1e
-// todo clean up
+// https://coolors.co/324257-545b5e-7f7382-342740-cfd9e6-f4f5f5-dfe2e2-ffedc2-e3bb45-873636
 
-$saddle-brown: #853D00;
-$gold: #c8963e;
-$light-gold: #e3c567;
-$white: #fff;
-$light-silver: #f4f5f5;
+/* SCSS HEX */
+$charcoal: #324257;
+$davys-grey: #545b5e;
+$old-lavender: #7f7382;
+$dark-purple: #342740;
+$beau-blue: #cfd9e6;
+$cultured: #f4f5f5;
+$eggshell: #faf1dc;
+$banana-mania: #ffedc2;
+$gold-metallic: #e3bb45;
+$brandy: #873636;
 $platinum: #dFe2e2;
-$dark-teal: #2B5554;
-$dark: #1c1d1e;
+
+$white: #fff;
+$dark: #000;
 
 // Bootstrap colors
 
-$gray-base:              #1c1d1e !default;
+$gray-base:              $dark !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             $platinum !default; // #777
-$gray-lighter:           $light-silver !default; // #eee
+$gray-lighter:           $cultured !default; // #eee
 
 $light-base: $platinum;
-$light-lighter: $light-silver;
+$light-lighter: $beau-blue;
 
-$brand-primary:         $saddle-brown !default;
-$brand-success:         $gold !default; //gold
-$brand-info:            $dark-teal !default; //earl gray
-$brand-warning:         $light-gold !default; //yellow
-$brand-danger:          $dark-teal !default; //nickel
+$brand-primary:         $brandy !default;
+$brand-success:         $gold-metallic !default;
+$brand-info:            $dark-purple !default; //earl gray
+$brand-warning:         $banana-mania !default; //yellow
+$brand-danger:          $charcoal !default; //nickel
 
 $nav-accent:            $platinum !default;
 
