@@ -26,9 +26,11 @@
   font-family: 'Mrs Saint Delafield', cursive;
   padding-top: .4em;
   display: block;
+  word-spacing: .8rem;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, 
+.navbar-nav {
   font-family: 'Montserrat', sans-serif !important;
 }
 
@@ -105,7 +107,7 @@ a {
     display: flex;
     flex-wrap: wrap;
     font-family: $font-headers;
-    font-size: 1.3em;
+    font-size: 1.1em;
     justify-content: center;
     width: 100%;
     
@@ -710,28 +712,16 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
   }
 }
 
-.test_home_banner_outer1 {
+ul.searchlinks {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  list-style-type: none;
+  margin-top: 10px;
 
-  .test_home_banner_inner {
-    // mix-blend-mode: screen;
+  li {
+    display: inline;
+    margin-right: 20px;
   }
 }
-
-.test_home_banner_outer2 {
-
-  .test_home_banner_inner {
-
-  }
-}
-
-.test_home_banner_outer3 {
-
-  .test_home_banner_inner {
-
-  }
-}
-
-
-
-
-

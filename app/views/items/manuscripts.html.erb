@@ -1,0 +1,31 @@
+<%# for instructions about how to use the search preset feature, please refer
+to docs/search_preset.md %>
+
+<%# provide the following:
+  - @res : API response object ($api.query(options))
+  - @route_path : string representing route used to call this template ("image_gallery_path")
+  - @content_label : OPTIONAL overrides @title for h1
+  - @preset_class : OPTIONAL adds CSS class on <div>
+%>
+
+<h1>Manuscripts</h1>
+
+<p>Displaying "category|Manuscripts"</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacus nibh, scelerisque vel egestas vel, commodo et odio. Cras congue sed lacus sagittis rutrum. Curabitur tempor pharetra leo. Proin blandit augue porta dolor tincidunt, scelerisque efficitur diam hendrerit. Pellentesque at elementum sapien. In tincidunt lectus ante, nec luctus lectus ultricies eu. </p>
+
+<%= render_overridable "items", "search_preset_header" %>
+
+<div class="row search_form search_preset search_preset_<%= @preset_class %>">
+
+  <%# do not display any facet options or summary boxes for this view %>
+
+  <%= render_overridable "items", "search_preset_text" %>
+  <%= render_overridable "items", "sort_and_page_ui" %>
+
+  <!-- search results section -->
+  <%= render_overridable "items", "search_res_count" %>
+  <%= render_overridable "items", "search_preset_res_items" %>
+
+  <%= render_overridable "items", "sort_and_page_ui" %>
+</div>
