@@ -88,6 +88,12 @@ a {
 
 // Header and Footer 
 
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+
 #header, #footer {
   background-color: $brand-info;
   color: $white;
@@ -104,11 +110,9 @@ a {
   }
 
   .navbar-nav {
-    display: flex;
-    flex-wrap: wrap;
     font-family: $font-headers;
     font-size: 1.1em;
-    justify-content: center;
+    
     width: 100%;
     
     a {
@@ -701,12 +705,13 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
     background-repeat: no-repeat;
     float: right;
   }
+
 }
 
 .test_home_banner_outer {
 
-  .test_home_banner_inner2 {
-    background-image: image-url("blend_mode.png");
+  .test_home_banner_inner {
+    background-image: none;
 
     float: left;
   }
@@ -725,3 +730,85 @@ ul.searchlinks {
     margin-right: 20px;
   }
 }
+
+.page_banner_outer {
+  margin-top: -48px;
+  background-image: image-url("stripes-light.png");
+
+  .page_banner_text {
+    width: 50%; 
+    float:left; 
+    clear: left; 
+    background-color: rgba(255,255,255,.8); 
+    padding: 10px;
+  }
+    h1 {}
+    p {}
+
+  .page_banner_illustration {
+    background-image: image-url("subtle_stripes.png");
+    height: 300px;
+    width: 400px;    
+    float: right;
+    border-radius: 200px 200px 10px 10px / 200px;
+    border: dashed #aaa 2px;
+  }
+}
+
+
+
+
+
+.page_subnav {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  align-content: stretch;
+
+li {
+  
+  list-style: none;
+  text-align: center;
+  
+  flex-grow: 1;
+  min-width: 50%;
+  
+}
+
+li:nth-child(4n + 1) {
+  a {
+    background-image: image-url("subtle_stripes.png");
+  }
+}
+
+li:nth-child(4n + 2) {
+  a {
+    background-image: image-url("chevron.png");
+  }
+}
+
+li:nth-child(4n + 3) {
+  a {
+    background-image: image-url("double-bubble-outline.png");
+  }
+}
+
+li:nth-child(4n + 4) {
+  a {
+    background-image: image-url("stripes-light.png");
+  }
+}
+
+li a {
+  display: block;
+  min-height: 100px;
+  padding: 10px;
+  border: solid #aaa 1px;
+  margin: 10px;
+
+}
+}
+
+
+

@@ -1,9 +1,41 @@
-<h1>Reception</h1>
-
-<div>
-  <%= link_to "Reviews", reception_reviews_path %>
 </div>
 
-<div>
-  <%= link_to "Biographical Sketches", reception_biographical_sketches_path %>
+<div class="page_banner_outer">
+  <div class="container">
+    
+
+    <div class="test_home_banner_text" style="width: 50%; float:left; clear: left; background-color: rgba(255,255,255,.8); padding: 10px;"><h1 style="">Reception</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacus nibh, scelerisque vel egestas vel, commodo et odio. Cras congue sed lacus sagittis rutrum. Curabitur tempor pharetra leo. Proin blandit augue porta dolor tincidunt, scelerisque efficitur diam hendrerit. Pellentesque at elementum sapien. In tincidunt lectus ante, nec luctus lectus ultricies eu. </p>
+      <!-- <div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default btn-sm">Stories 66</button>
+  <button type="button" class="btn btn-default btn-sm">Essays 26</button>
+  <button type="button" class="btn btn-default btn-sm">Novel 3</button>
+  <button type="button" class="btn btn-default btn-sm">Poems 3</button>
+  <button type="button" class="btn btn-default btn-sm">Collection 2</button>
+  <button type="button" class="btn btn-default btn-sm">Other Works 1</button>
+</div> -->
+    </div>
+
+    <div class="page_banner_illustration">
+    </div>
+  </div>
+
+  <div class="navbar navbar-inverse">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="<%= active?(reception_reviews_path) %>">
+        <%= link_to "Reviews", reception_reviews_path %>
+      </li>
+      <li class="<%= active?(reception_biographical_sketches_path) %>">
+        <%= link_to "Biographical Sketches", reception_biographical_sketches_path %>
+      </li>
+      
+    </ul>
+  </div>
+</div><!-- /navbar -->
+
 </div>
+
+<div class="container">
+
+  <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
