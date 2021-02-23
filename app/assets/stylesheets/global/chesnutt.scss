@@ -1,62 +1,13 @@
 @import "../bootstrap-variables.scss";
 
-// Google Fonts
-// Garamond for headers, Lora for body text
-//@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,562;1,562&display=swap');
-
-//page head font choices
-//@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
-// font-family: 'Tangerine', cursive;
-//@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
-// font-family: 'Allura', cursive;
-@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
-// font-family: 'Mrs Saint Delafield', cursive;
-
-// heading font choices
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
-// font-family: 'Montserrat', sans-serif;
-//@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
-// font-family: 'Nunito', sans-serif;
-
-
-
-// keeping these at the top until we finalize fonts
-.site-title {
-  font-family: 'Mrs Saint Delafield', cursive;
-  padding-top: .4em;
-  display: block;
-  word-spacing: .8rem;
-}
-
-.site-subtitle {
-  font-size: .38em !important;
-  display: inline-block !important;
-}
-
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6, 
-.navbar-nav {
-  font-family: 'Montserrat', sans-serif;
-}
-
-$font-headers: 'Montserrat', sans-serif;
-$font-body: 'Lora', serif;
-
-body {
-  font-family: $font-body;
-}
-
-body {
-  font-variation-settings: 'wght' 400;
-  font-weight: 400;
-}
-
 // ================
 // General settings
 // ================
 
 body {
   background-color: $white;
+  font-variation-settings: 'wght' 400;
+  font-weight: 400;
 }
 
 .main_content {
@@ -67,7 +18,7 @@ body {
   line-height: 1.8em;
 }
 
-// Adding underlines back on links with some exceptions
+// Adding underlines back
 
 a {
   text-decoration: underline;
@@ -77,36 +28,89 @@ a {
   }
 }
 
+// Then removing underlines
+
 #header a, #footer a, a.btn {
   text-decoration: none;
 }
 
-// Header and Footer 
+::selection {
+  background-color: rgb(229, 207, 169);
+}
 
-// navbar_mainnav
-// navbar_subnav
+// ================
+// Header and Footer
+// ================
 
 #header, #footer {
   background-color: $brand-info;
   color: $white;
   text-align: center;
 
-  .h1 {
-    font-variation-settings: 'wght' 300; //todo chane if we remove variable fonts
-    font-weight: 300;
-    margin-top: .1em;
-    display: inline-block;
-    border-bottom: double 3px $gold-metallic;
-  }
-
   a {
     color: $white;
+  }
+}
+
+// Browse and Search links on upper right when screen is larger
+ul.searchlinks {
+  display: block;
+  font-family: $font-family-sans-serif;
+  list-style-type: none;
+  margin-top: 10px;
+
+  li {
+    display: inline;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  ul.searchlinks {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    li {
+      margin-right: 20px;
+    }
+  }
+}
+
+// Header
+#header {
+  height: auto;
+
+  .site-title-container {
+    background-color: $brand-info;
+    width: 100%;
+  }
+
+  .site-title {
+    display: block;
+    font-family: $font-family-display;
+    padding-top: .4em;
+    word-spacing: .8rem;
+  }
+
+  .h1 {
+    border-bottom: double 3px $gold-metallic;
+    display: inline-block;
+    font-variation-settings: 'wght' 300; //todo change if we remove variable fonts
+    font-weight: 300;
+    margin-top: .1em;
+  }
+
+  .navbar-default, .navbar {
+    background-color: $gray-lighter;
+    border: 0;
+    margin-bottom: 0;
   }
 
   .navbar-nav {
     display: flex;
     flex-wrap: wrap;
-    font-family: $font-headers;
+    font-family: $font-family-sans-serif;
     font-size: 1.1em;
     justify-content: center;
     width: 100%;
@@ -116,72 +120,61 @@ a {
     }
   }
 
-  .navbar-default {
-    background-color: $gray-lighter;
-  }
+  // mainnav
 
-  .navbar {
-    margin-bottom: 0;
-  }
+  .navbar_mainnav {
+    background-color: $dark-purple;
+    border-bottom: solid $cultured 3px;
 
-  // navbar_mainnav
-  // navbar_subnav
-
-  .navbar_subnav {
-    height: 20px;
-  }
-  
-  .navbar_subnav.navbar {
-    min-height:25px;
-    background-color: white;
-    height: auto;
-    font-size: .8em;
-  }
-
-  .navbar_subnav.navbar a {
-    padding: 2px 10px 5px 10px;
-
-    &.active {
-      background-color: #C8963E;
-   }
+    a {
+      color: $white;
+    }
   }
 
   .navbar-default.navbar_mainnav .navbar-nav > .active > a, 
   .navbar-default.navbar_mainnav .navbar-nav > .active {
     background-color: $cultured;
-    color: $dark-purple !important;
-
+    color: $dark-purple;
   }
+
+  // subnav
+
   .navbar-default.navbar_subnav .navbar-nav > .active > a, 
   .navbar-default.navbar_msubnav .navbar-nav > .active {
     background-color: white;
-  
   }
 
-  .navbar_mainnav {
-    background-color: $dark-purple;
-    border-bottom: solid $cultured 3px !important;
+  .navbar_subnav.navbar {
+    height: 20px;
+    min-height:25px;
+    height: auto;
+    font-size: .8em;
+    background-color: $cultured;
 
     a {
-      color: $white !important;
-    }
+      padding: 2px 10px 5px 10px;
 
+      &.active {
+        background-color: $gold-metallic;
+      }
+    }
   }
-  .navbar_subnav {
-    background-color: $cultured !important;
-  }
-}
+} // end header 
 
 #footer {
+  padding-top: 1.5em;
   margin-bottom: 0;
   padding-bottom: 8em;
-}
-
-#header {
-  height: auto;
+  .footer_logo {
+    margin-top: 1.5em;
+  }
+  a {
+    color: $gold-metallic;
+  }
 }
 
 // Stick footer to bottom
+// todo: look at this, not working quite right
 
 #body-wrapper {
   display: flex;
@@ -194,570 +187,60 @@ a {
 }
 
 // ================
-// TEI
+// Item listing, top level pages, search
 // ================
 
-// Proofs
+// Secondary page listing (see about main page)
+// todo: see if we want to use this
 
-.tei_hi_rend_underline {
-  text-decoration: underline;
-}
-
-.tei_supplied {
-  background-color: $banana-mania;
-}
-
-// Metamark / adds
-
-.tei_add_place_margin-left {
-  &:before {
-    content: " [left margin] ";
-  }
-}
-
-.tei_add_place_margin-bottom {
-  &:before {
-    content: " [bottom margin] ";
-  }
-}
-
-.tei_add_place_margin-right {
-  &:before {
-    content: " [right margin] ";
-  }
-}
-
-.tei_add_place_margin-top {
-  &:before {
-    content: " [top margin] ";
-  }
-}
-
-.tei_add_place_left {
-  &:before {
-    content: " [left margin] ";
-  }
-}
-
-.tei_add_place_right {
-  &:before {
-    content: " [right margin] ";
-  }
-}
-
-.tei_add_place_top {
-  &:before {
-    content: " [top margin] ";
-  }
-}
-
-.tei_add {
-  font-style: normal;
-}
-
-.tei_add_rend_circle {
-  border-radius: 7px;
-}
-
-.tei_seg {
-  background-color: $platinum;
-  border-bottom: dashed black 1px;
-}
-
-
-.tei_metamark.tei_metamark_rend_lasso {
-  display: none;
-}
-
-// Note there will be empty select rules until 
-// I figure out if I need to style them
-
-// Poems
-
-div.poem {}
-
-.tei_lg_type_stanza {}
-
-.tei_lg {
-  display: block;
-  margin-bottom: 1em;
-}
-
-.tei_l {
-  display: block;
-}
-
-// Texts
-
-.tei_byline,
-.tei_ab {
-  display: block;
-}
-
-.tei_ab {
-  margin: 0 0 .69em;
-}
-
-.tei_byline {
-  margin-bottom: .5em;
-}
-
-.tei_ab_type_title {
-  font-size: 1.2em;
-  font-weight: 600;
-}
-
-.tei_note {
-  background-color: rgba(194,218,217,1);
-  border: solid #aaa 1px;
-  display: inline;
-}
-
-.bold {
-  font-weight: 600;
-}
-
-.tei_name {
-  font-style: italic;
-}
-
-.tei_fw, .tei_titlePage {
-  background-color: $gray-lighter;
-  display: block;
-  margin-bottom: .5em;
-  text-align: center;
-}
-
-.tei_titlePage {
-  border: solid 1px $gray-lighter;
-  margin: .5em 0;
-  padding: .5em;
-}
-
-.SmallCaps {
-  text-transform: uppercase;
-}
-
-.tei_sic {
-  background-color: $platinum;
-}
-
-.tei_sic:after {
-  content: " [sic]";
-}
-
-.milestone {
-  border-top: solid 2px $platinum;
-  display: block;
-}
-
-// figures
-
-.inline_figure {
-  border: solid 2px $platinum;
-  margin: 1em 3em;
-  text-align: center;
-}
-
-.tei_caption {}
-
-
-// Page images
-
-span.pageimage {
-  border-bottom: 2px solid $platinum;
-  border-left: 2px solid $platinum;
-  border-right: 2px solid $platinum;
-  clear: both;
-  float: right;
-  margin: 0 0 1em .5em;
+.page_subnav {
+  align-content: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
   padding: 0;
-}
 
-.hr {
-  border-top: 2px solid $platinum; 
-  clear: right;
-  display: block;
-  height: 0;
-  margin: 10px 0 0 0;
-  padding: 0px 0 0 0;
-  width: 100%;
-}
+  li {
+    flex-grow: 1;
+    list-style: none;
+    min-width: 50%;
+    text-align: center;
 
-.pageimage img {
-  background-color: $platinum;
-  min-height: 80px;
-  min-width: 80px;
-}
-
-// letters
-
-.tei_dateline {
-  display: block;
-}
-
-
-
-
-// From Whitman
-// =====
-
-// Editorial Marks
-
-.tei_ref_target, .internal_link.tei_ptr {
-  vertical-align: super;
-  font-size: 1em;
-}
-
-.editorial_note {
-  display: block;
-}
-
-// Quotes
-
-/*  q in TEI */
-.tei_q {
-  display: block;
-  margin: .5em 0;
-  padding: .5em 4em .5em 4em;
-}
-
-// Poems
-
-.inline_quote
-.tei_q,
-.tei_floatingText,
-.tei_lg_type_poem,
-.tei_lg,
-.tei_lg_type_linegroup,
-.tei_l {
-  display: block;
-}
-
-/* correspondence */
-
-.tei_salute {
-  display: block;
-  margin: .5em 0;
-}
-
-.tei_name_type_place {
-  display: block;
-}
-
-.tei_address {
-  display: block;
-  margin-top: 1.5em;
-}
-
-.tei_addrline {
-  display: block;
-}
-
-/* Manuscripts */
-
-.tei_del_rend_overwrite {
-  color:orange;
-}
-
-.tei_add_place_inline {
-}
-
-.unclear,
-.tei_gap_reason_illegible {
-  color: #aaa;
-}
-
-/* Will need to discuss if we want to keep this, 
-it is not supported in all browsers 
-see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
-.tei_del_rend_overstrike sup {
-  display:inline-block;
-  font-size: 1em;
-  padding-left: 0em;
-  text-decoration-skip-ink: none; 
-  text-decoration-skip: none;
-  text-decoration: underline;
-  text-indent: 0em;
-  text-underline-offset: -.3em;
-}
-
-.tei_milestone_unit_glued {
-  color: #939393;
-  margin: .5em;
-  text-align: center;
-}
-
-.inline_tei_rend_insertion {
-  vertical-align: sub; /* prevents triangle formation */
-}
-
-.tei_add_place_infralinear {
-  vertical-align: sub;
-}
-
-.tei_hashmark_title {
-  text-align: center;
-  margin: .5em 0;
-}
-
-.tei_delSpan_rend_hashmark {
-  background-color: #CCCCCC;
-  padding: .5em;
-}
-
-/* not sure if these stylings are manuscript specific */
-.tei_list_type_simple {
-  list-style: none;
-  margin: 0 0 1em 0;
-  padding: 0;
-}
-
-/* marginalia */
-
-.tei_titlePage {
-  display:block;
-  margin: 1em 0;
-}
-
-.tei_note_type_authorial span {
-  background-color: $gold-metallic;
-  border: double 3px blue;
-  border-right: none;
-  border-left: none;
-  display: inline;
-}
-
-.tei_note_type_authorial {
-  margin: .5em 0 1em 0;
-}
-
-.tei_titlePart_type_main {
-  display: block;
-  font-weight: 800;
-  margin: .5em 0 1em 0;
-}
-
-.tei_milestone_rend_horbar-short-center {
-  width: 6em;
-  margin: 1em auto;
-}
-
-.tei_pubPlace {
-  display: block;
-}
-
-
-// Hand CSS
-// DRAFT
-
-.tei_hand_resp_cwc {
-  border-bottom: double 3px $brand-success;
-}
-
-// .tei_hand_medium_black_pen {
-//   background-color: red;
-// }
-
-
-// ================
-// Home
-// ================
-
-.controller_general.action_index .lead {
-  margin-top: 1em;
-}
-
-.home-hero {
-  background-image: image-url("home/chesnutt_home_banner.jpg");
-  background-position: top center;
-  background-size: cover;
-  height: 300px;
-  margin-bottom: 1em;
-  width: 100%;
-  p {
-    color: #fff;
-    font-family: 'EB Garamond', serif;
-    font-size: 1.6em;
-    margin-top: 1em;
-    max-width: 400px;
+    a {
+      display: block;
+      min-height: 100px;
+      padding: 10px;
+      border: solid $dark-purple 1px;
+      margin: 10px;
+    }
   }
-}
 
-@media (min-width: 1200px) {
-  .home-hero {
-    height: 400px;
+  li:nth-child(4n + 1) {
+    a {
+      background-image: image-url("subtle_stripes.png");
+    }
   }
-}
 
-@media (min-width: 1600px) {
-  .home-hero {
-    height: 500px;
+  li:nth-child(4n + 2) {
+    a {
+      background-image: image-url("chevron.png");
+    }
   }
-}
 
-.controller_general.action_index #content-wrapper {
-  margin-bottom: 0;
-}
+  li:nth-child(4n + 3) {
+    a {
+      background-image: image-url("double-bubble-outline.png");
+    }
+  }
 
-.controller_general.action_index {
-  #header {
-    .h1 {
-        margin-bottom:.5em !important;
-        padding-bottom: 0 !important;
-        margin-top: .3em !important;
+  li:nth-child(4n + 4) {
+    a {
+      background-image: image-url("stripes-light.png");
     }
   }
 }
 
-.home-content-wrapper {
-  margin-bottom: 3em;
-}
-
-// interface changes
-.metadata ul {
-  columns: 2;
-}
-
-.metadata ul {
-  columns: 2;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-
-.metadata {
-  border: 1px solid silver;
-  padding: 10px 20px;
-  margin: 10px 0;
-}
-
-#footer {
-  padding-top: 1.5em;
-}
-
-.footer_logo {
-  margin-top: 1.5em;
-}
-
-.tei_note_type_authorial {}
-.tei_note_place_margin-bottom {}
-
-#header  {
-  //border-bottom: double 3px #C8963E;
-  background-color: transparent;
-}
-
-.site-title-container {
-  width: 100%;
-  background-color: $brand-info;
-}
-
-
-
-#header .navbar-default {
-  border: 0;
-}
-
-::selection {
-  background-color: rgb(229, 207, 169);
-}
-
-.home-hero p {
-  background-color: rgba(0,0,0,.5);
-  height: 100%;
-  line-height: 1.2em;
-  margin: 0;
-  padding: .5em .5em 1em .5em;
-  text-align: left;
-}
-
-.home-hero p em {
-  display: block;
-  text-align:right;
-}
-
-.controller_general.action_index #header .h1 {
-  font-size: 5em;
-  max-width: 10em;
-  margin: auto;
-  text-align: center;
-  padding-bottom: .3em;
-  line-height: .95em;
-}
-
-
-
-
-
-// Changes to work in
-
-.metadata h2 {
-  margin: 0 0 .5em 0;
-  padding: 0;
-  font-size: 1.2em;
-  font-weight: 800;
-}
-
-// interface changes
-.metadata ul {
-  columns: 1;
-
-}
-
-.metadata ul {
-  columns: 1;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  margin-bottom: .5em ;
-}
-
-
-.metadata {
-  border: 1px solid silver;
-  padding: 10px 20px;
-  margin: 10px 0;
-}
-
-.test_home_banner_outer {
-  background-image: image-url("watercolorbg.jpg");
-  height: 400px;
-  background-size: cover;
-  .test_home_banner_inner,
-  .test_home_banner_inner2 {
-    background-image: image-url("chesnutt_sm.png");
-    height: 400px;
-    width: 300px;
-    background-repeat: no-repeat;
-    float: right;
-  }
-
-}
-
-.test_home_banner_outer {
-
-  .test_home_banner_inner {
-    background-image: none;
-
-    float: left;
-  }
-}
-
-ul.searchlinks {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  list-style-type: none;
-  margin-top: 10px;
-
-  li {
-    display: inline;
-    margin-right: 20px;
-  }
-}
+// Page decorative banners
 
 .page_banner_outer {
   margin-top: -48px;
@@ -779,7 +262,108 @@ ul.searchlinks {
     width: 400px;    
     float: right;
     border-radius: 200px 200px 10px 10px / 200px;
-    border: dashed #aaa 2px;
+    border: dashed $dark-purple 2px;
+  }
+}
+
+// ================
+// Items
+// ================
+
+.metadata {
+  border: 1px solid silver;
+  margin: 10px 0;
+  padding: 10px 20px;
+  ul {
+    columns: 1;
+    list-style-type: none;
+    margin: 0 0 .5em 0;
+    padding: 0;
+  }
+  h2 {
+    font-size: 1.2em;
+    font-weight: 800;
+    margin: 0 0 .5em 0;
+    padding: 0;
+  }
+}
+
+// ================
+// Home
+// ================
+
+.controller_general.action_index {
+
+  #header {
+    .h1 {
+      font-size: 5em;
+      line-height: .95em;
+      margin: .5em auto .3em auto;
+      max-width: 10em;
+      padding-bottom: 0;
+      text-align: center;
+    }
+  }
+
+  .navbar-default.navbar_mainnav {
+    font-size: 1.3em;
+
+    // Hide Home button on home page
+    .navbar-nav > .active {
+      display: none;
+    }
+  }
+
+  .lead {
+    margin-top: 1em;
+  }
+
+  #content-wrapper {
+    margin-bottom: 0;
+  }
+} 
+
+.home-content-wrapper {
+  margin-bottom: 3em;
+}
+
+// Home Hero
+
+.home-hero {
+  background-image: image-url("home/chesnutt_home_banner.jpg");
+  background-position: top center;
+  background-size: cover;
+  height: 300px;
+  margin-bottom: 1em;
+  width: 100%;
+
+  p {
+    background-color: rgba(0,0,0,.5);
+    color: $white;
+    font-size: 1.6em;
+    height: 100%;
+    line-height: 1.2em;
+    margin: 1em 0 0 0;
+    max-width: 400px;
+    padding: .5em .5em 1em .5em;
+    text-align: left;
+
+    em {
+      display: block;
+      text-align: right;
+    }
+  }
+} 
+
+@media (min-width: 1200px) {
+  .home-hero {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .home-hero {
+    height: 500px;
   }
 }
 
@@ -787,55 +371,35 @@ ul.searchlinks {
 
 
 
-.page_subnav {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  flex-wrap: wrap;
-  align-content: stretch;
 
-li {
-  
-  list-style: none;
-  text-align: center;
-  
-  flex-grow: 1;
-  min-width: 50%;
-  
-}
 
-li:nth-child(4n + 1) {
-  a {
-    background-image: image-url("subtle_stripes.png");
+
+// ================
+// Test Pages (remove before launch)
+// ================
+
+.test_home_banner_outer {
+  background-image: image-url("watercolorbg.jpg");
+  height: 400px;
+  background-size: cover;
+
+  .test_home_banner_inner,
+  .test_home_banner_inner2 {
+    background-image: image-url("chesnutt_sm.png");
+    height: 400px;
+    width: 300px;
+    background-repeat: no-repeat;
+    float: right;
   }
 }
 
-li:nth-child(4n + 2) {
-  a {
-    background-image: image-url("chevron.png");
+.test_home_banner_outer {
+
+  .test_home_banner_inner {
+    background-image: none;
+
+    float: left;
   }
-}
-
-li:nth-child(4n + 3) {
-  a {
-    background-image: image-url("double-bubble-outline.png");
-  }
-}
-
-li:nth-child(4n + 4) {
-  a {
-    background-image: image-url("stripes-light.png");
-  }
-}
-
-li a {
-  display: block;
-  min-height: 100px;
-  padding: 10px;
-  border: solid #aaa 1px;
-  margin: 10px;
-
-}
 }
 
 
@@ -845,7 +409,7 @@ li a {
 
 .tei_metamark {
   background-color: rgba(194,218,217,1);
-  border: solid #aaa 1px;
+  border: solid $dark-purple 1px;
   display: inline;
   padding: 1px 3px 0px 3px;
 }

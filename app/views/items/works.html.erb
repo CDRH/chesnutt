@@ -8,6 +8,7 @@ to docs/search_preset.md %>
   - @preset_class : OPTIONAL adds CSS class on <div>
 %>
 
+<% if @header == true %>
 </div>
 
 <div class="page_banner_outer">
@@ -28,7 +29,9 @@ to docs/search_preset.md %>
 
 <div class="container">
 
-<h2>[<%= @title %>]</h2>
+  <% end %>
+
+
 
 
 <%= render_overridable "items", "search_preset_header" %>

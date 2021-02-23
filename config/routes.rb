@@ -2,7 +2,15 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   get "works", to: "items#works", as: "works"
+  get "works/stories", to: "items#works_stories", as: "works_stories"
+  get "works/essays", to: "items#works_essays", as: "works_essays"
+  get "works/novels", to: "items#works_novels", as: "works_novels"
+  get "works/poems", to: "items#works_poems", as: "works_poems"
+  get "works/collection", to: "items#works_collection", as: "works_collection"
+  get "works/other", to: "items#works_other", as: "works_other"
+
   get "manuscripts", to: "items#manuscripts", as: "manuscripts"
+  
   get "correspondence", to: "items#correspondence", as: "correspondence"
 
   get "reception", to: "items#reception", as: "reception"

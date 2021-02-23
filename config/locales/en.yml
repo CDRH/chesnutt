@@ -21,7 +21,7 @@ en:
     # <title>, meta application-name
     project_shortname: chesnutt
     # Header subtitle
-    #project_subtitle: 
+    # project_subtitle: ""
   #########
   # ABOUT #
   #########
