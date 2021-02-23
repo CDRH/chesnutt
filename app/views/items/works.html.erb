@@ -9,30 +9,23 @@ to docs/search_preset.md %>
 %>
 
 <% if @header == true %>
-</div>
+  </div><%# close container div for full width  %>
 
-<div class="page_banner_outer">
-  <div class="container">
-    
-
-    <div class="test_home_banner_text" style="width: 50%; float:left; clear: left; background-color: rgba(255,255,255,.8); padding: 10px;"><h1 style="">Works</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacus nibh, scelerisque vel egestas vel, commodo et odio. Cras congue sed lacus sagittis rutrum. Curabitur tempor pharetra leo. Proin blandit augue porta dolor tincidunt, scelerisque efficitur diam hendrerit. Pellentesque at elementum sapien. In tincidunt lectus ante, nec luctus lectus ultricies eu. </p>
-    </div>
-
-    <div class="page_banner_illustration">
+  <div class="page_banner_outer">
+    <div class="container">
+      <div class="page_banner_text"><h1 style="">Works</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque lacus nibh, scelerisque vel egestas vel, commodo et odio. Cras congue sed lacus sagittis rutrum. Curabitur tempor pharetra leo. Proin blandit augue porta dolor tincidunt, scelerisque efficitur diam hendrerit. Pellentesque at elementum sapien. In tincidunt lectus ante, nec luctus lectus ultricies eu. </p>
+      </div>
+      <div class="page_banner_illustration">
+        <div class="page_banner_illustration_inner">
+          <%= image_tag("sample_image.png") %>
+        </div>
+      </div>
     </div>
   </div>
 
-  
-
-</div>
-
-<div class="container">
-
-  <% end %>
-
-
-
+  <div class="container"><%# reopen container div %>
+<% end %><%# end if @header == true  %>
 
 <%= render_overridable "items", "search_preset_header" %>
 
