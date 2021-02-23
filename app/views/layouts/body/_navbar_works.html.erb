@@ -1,0 +1,27 @@
+<div class="navbar navbar-default navbar_subnav">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="<%= active?(works_path) %>">
+        <%= link_to "All Works", works_path %>
+      </li>
+      <li class="<%= active?(works_stories_path) %>">
+        <%= link_to "Stories", works_stories_path %>
+      </li>
+      <li class="<%= active?(works_essays_path) %>">
+        <%= link_to "Essays", works_essays_path %>
+      </li>
+      <li class="<%= active?(works_novels_path) %>">
+        <%= link_to "Novels", works_novels_path %>
+      </li>
+      <li class="<%= active?(works_poems_path) %>">
+        <%= link_to "Poems", works_poems_path %>
+      </li>
+      <li class="<%= active?(works_collection_path) %>">
+        <%= link_to "Collection", works_collection_path %>
+      </li>
+      <li class="<%= active?(works_other_path) %>">
+        <%= link_to "Other Works", works_other_path %>
+      </li>
+    </ul>
+  </div>
+</div><!-- /navbar -->

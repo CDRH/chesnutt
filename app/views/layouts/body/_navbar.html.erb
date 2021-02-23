@@ -1,12 +1,12 @@
 <%# template is to remove collapsing menu %>
 
-<div class="navbar navbar-default">
+<div class="navbar navbar-default navbar_mainnav">
   <div class="container">
     <ul class="nav navbar-nav">
       <li class="<%= active?(home_path) %>">
         <%= link_to t("home.title", default: "Home"), home_path %>
       </li>
-      <li class="<%= active?(works_path) %>">
+      <li class="<%= 'active' if params[:action].include?("works") == true %>">
         <%= link_to "Works", works_path %>
       </li>
       <li class="<%= active?(manuscripts_path) %>">
@@ -15,42 +15,37 @@
       <li class="<%= active?(correspondence_path) %>">
         <%= link_to "Correspondence", correspondence_path %>
       </li>
-      <li class="<%= active?(reception_path) %>">
+      <li class="<%= 'active' if params[:action].include?("reception") == true %>">
         <%= link_to "Reception", reception_path %>
       </li>
-      <li class="<%= active?(scholarship_path) %>">
+      <li class="<%= 'active' if params[:action].include?("scholarship") == true%>">
         <%= link_to "Scholarship", scholarship_path %>
       </li>
-      <li class="<%= active?(about_path) %>">
+      <li class="<%= 'active' if params[:action].include?("about") == true %>">
         <%= link_to "About", about_path %>
       </li>
     </ul>
   </div>
 </div><!-- /navbar -->
-<div class="navbar navbar-inverse">
-  <div class="container">
-    <ul class="nav navbar-nav">
-      <li class="<%= active?(about_history_path) %>">
-    <%= link_to "History", about_history_path %>
-  </li>
-  <li class="<%= active?(about_editorial_policy_path) %>">
-    <%= link_to "Editorial Policy", about_editorial_policy_path %>
-  </li>
-  <li class="<%= active?(about_encoding_guidelines_path) %>">
-    <%= link_to "Encoding Guidelines", about_encoding_guidelines_path %>
-  </li>
-  <li class="<%= active?(about_use_statement_path) %>">
-    <%= link_to "Use Statement", about_use_statement_path %>
-  </li>
-  <li class="<%= active?(about_people_path) %>">
-    <%= link_to "People", about_people_path %>
-  </li>
-  <li class="<%= active?(about_biographical_sketch_path) %>">
-    <%= link_to "About Chesnutt", about_biographical_sketch_path %>
-  </li>
-   <li class="<%= active?(about_white_paper_path) %>">
-    <%= link_to "White Paper", about_white_paper_path %>
-  </li>
-    </ul>
-  </div>
-</div><!-- /navbar -->
+
+<% if params[:action].include?("works") %>
+  <%= render_overridable("layouts/body", "navbar_works") %>
+<% end %>
+
+<% if params[:action].include?("reception") %>
+  <%= render_overridable("layouts/body", "navbar_reception") %>
+<% end %>
+
+<% if params[:action].include?("scholarship") %>
+  <%= render_overridable("layouts/body", "navbar_scholarship") %>
+<% end %>
+
+<% if params[:action].include?("about") %>
+  <%= render_overridable("layouts/body", "navbar_about") %>
+<% end %>
+
+
+
+
+
+
