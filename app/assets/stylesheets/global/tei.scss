@@ -10,6 +10,22 @@
   text-decoration: underline;
 }
 
+.tei_hi_rend_overline {
+  border-top: solid black 1px;
+}
+
+.tei_hi_rend_circled {
+  border: solid black 1px;
+}
+
+.tei_hi_rend_dotted {
+  border-bottom: dotted black 4px;
+}
+
+.tei_hi_rend_overstrike {
+  text-underline-offset: -.3em;
+}
+
 .tei_supplied {
   background-color: $banana-mania;
 }
@@ -58,6 +74,31 @@
   }
 }
 
+.tei_add_place_bottom {
+  &:before {
+    content: " [bottom margin] ";
+  }
+}
+
+.tei_add_place_above {
+  &:before {
+    content: " [above line] ";
+  }
+}
+
+.tei_add_place_below {
+  &:before {
+    content: " [below line] ";
+  }
+}
+
+
+.tei_add_place_supralinear {
+  &:before {
+    content: " [above line] ";
+  }
+}
+
 .tei_add {
   font-style: normal;
 }
@@ -65,6 +106,9 @@
 .tei_add_rend_circle {
   border-radius: 7px;
 }
+
+
+
 
 .tei_seg {
   background-color: $platinum;
