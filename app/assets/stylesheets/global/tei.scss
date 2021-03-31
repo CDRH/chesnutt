@@ -307,8 +307,10 @@ span.pageimage {
 
 /* Manuscripts */
 
-.tei_del_rend_overwrite {
-  color:orange;
+.tei_subst_rend_overwrite {
+  del, .tei_add {
+    color: rgb(210, 144, 2);
+  }
 }
 
 .tei_add_place_inline {
