@@ -6,14 +6,14 @@
     This item does not have a "category" in its metadata
   <% else %>
     <% if @res["category"] == "Manuscripts" %>
-      Manuscripts Metadata
+    Source text: <%= @res["title"] %>
     <% elsif @res["category"] == "Works" %>
       <% if @res["subcategory"].blank? %>
         This item does not have a "subcategory" in its metadata
       <% else %>
         <% if @res["subcategory"] == "Essays" ||
               @res["subcategory"] == "Stories" %>
-          Essays / Stories Metadata
+              Source text: <%= @res["creator"].first["name"] %>, "<%= @res["title"] %>," <%= @res["source"] %> (<%= @res["date_display"] %>)
         <% elsif @res["subcategory"] == "Novel" %>
           Novel Metadata
         <% else %>

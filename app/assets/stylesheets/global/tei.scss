@@ -30,6 +30,10 @@
   background-color: $banana-mania;
 }
 
+.tei_del_rend_circled {
+  border: solid black 1px;
+}
+
 // Metamark / adds
 
 .tei_add_place_margin-left {
@@ -234,6 +238,7 @@ span.pageimage {
   padding: 0px 0 0 0;
   width: 100%;
 }
+
 
 .pageimage img {
   background-color: $platinum;
