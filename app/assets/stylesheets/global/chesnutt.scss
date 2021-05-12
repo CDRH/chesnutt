@@ -1,5 +1,7 @@
 @import "../bootstrap-variables.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
+
 // ================
 // General settings
 // ================
@@ -14,8 +16,8 @@ body {
   background-color: $white;
   border-radius: 5px;
   border: solid 1px $platinum;
-  padding: 20px;
   line-height: 1.8em;
+  padding: 20px;
 }
 
 // Adding underlines back
@@ -28,14 +30,13 @@ a {
   }
 }
 
-#content-wrapper p {
-  text-indent: 3em;
-}
-
 // Then removing underlines
 
 #header a, #footer a, a.btn {
   text-decoration: none;
+}
+#content-wrapper p {
+  text-indent: 3em;
 }
 
 ::selection {
@@ -69,6 +70,7 @@ ul.searchlinks {
   }
 }
 
+// Header
 @media (min-width: $screen-md-min) {
   ul.searchlinks {
     position: absolute;
@@ -81,7 +83,6 @@ ul.searchlinks {
   }
 }
 
-// Header
 #header {
   height: auto;
 
@@ -91,24 +92,29 @@ ul.searchlinks {
   }
 
   .site-title {
+    border-bottom: double 3px $gold-metallic;
     display: block;
+    display: inline-block;
     font-family: $font-family-display;
+    margin-top: .1em;
     padding-top: .4em;
-    word-spacing: .8rem;
+
+    .title_the, .title_archive  {
+      font-size: .7em;
+    }
+    .title_cwc {
+      font-family: 'Marcellus SC';
+      letter-spacing: .1em;
+      margin: 0 .1em 0 .3em;
+      word-spacing: -.1em;
+    }
   }
 
-  .h1 {
-    border-bottom: double 3px $gold-metallic;
-    display: inline-block;
-    font-variation-settings: 'wght' 300; //todo change if we remove variable fonts
-    font-weight: 300;
-    margin-top: .1em;
-  }
+  //navbar 
 
   .navbar-default, .navbar {
-    background-color: $gray-lighter;
-    border: 0;
-    margin-bottom: 0;
+     border: 0;
+     margin-bottom: 0;
   }
 
   .navbar-nav {
@@ -149,11 +155,9 @@ ul.searchlinks {
   }
 
   .navbar_subnav.navbar {
-    height: 20px;
-    min-height:25px;
+    min-height: 25px;
     height: auto;
     font-size: .8em;
-    background-color: $cultured;
 
     a {
       padding: 2px 10px 5px 10px;
@@ -178,7 +182,6 @@ ul.searchlinks {
 }
 
 // Stick footer to bottom
-// todo: look at this, not working quite right
 
 #body-wrapper {
   display: flex;
@@ -313,13 +316,8 @@ ul.searchlinks {
 .controller_general.action_index {
 
   #header {
-    .h1 {
-      font-size: 5em;
-      line-height: .95em;
-      margin: .5em auto .3em auto;
-      max-width: 10em;
-      padding-bottom: 0;
-      text-align: center;
+    .site-title {
+      font-size: 1.4em;
     }
   }
 
@@ -327,6 +325,7 @@ ul.searchlinks {
     font-size: 1.3em;
 
     // Hide Home button on home page
+    // todo: talk to PI's about this
     .navbar-nav > .active {
       display: none;
     }
@@ -384,13 +383,6 @@ ul.searchlinks {
     height: 500px;
   }
 }
-
-
-
-
-
-
-
 
 // ================
 // Test Pages (remove before launch)
@@ -459,6 +451,3 @@ hr {
 .tei_p_rend_right {
   text-align: right;
 }
-
-
-
