@@ -29,8 +29,4 @@ Rails.application.routes.draw do
   get "about/biographical_sketch", to: "general#about_biographical_sketch", as: "about_biographical_sketch"
   get "about/white_paper", to: "general#about_white_paper", as: "about_white_paper"
 
-
-  # temp page to work out some design options
-  get "design", to: "general#temp_design", as: "design"
-
 end

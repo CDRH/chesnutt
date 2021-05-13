@@ -114,4 +114,14 @@ ItemsController.class_eval do
     render_overridable "items", "reception_reviews"
   end
 
+  def scholarship
+    @title = "Scholarship"
+    @header = true
+  end
+
+  def about
+    @title = "About"
+    @header = true
+  end
+
 end

@@ -133,7 +133,7 @@ ul.searchlinks {
   // mainnav
 
   .navbar_mainnav {
-    background-color: $dark-purple;
+    background-color: $brand-info;
     border-bottom: solid $cultured 3px;
 
     a {
@@ -144,7 +144,7 @@ ul.searchlinks {
   .navbar-default.navbar_mainnav .navbar-nav > .active > a, 
   .navbar-default.navbar_mainnav .navbar-nav > .active {
     background-color: $cultured;
-    color: $dark-purple;
+    color: $brand-primary;
   }
 
   // subnav
@@ -287,6 +287,55 @@ ul.searchlinks {
   }
 }
 
+
+.page_banner_outer {
+  background-position: top center;
+  background-size: cover; //contain
+  //background-repeat: no-repeat;
+  //background-position: center;
+  height: 550px;
+  margin-bottom: 1em;
+  width: 100%;
+  .container {
+    .page_banner_text{
+    }
+  }
+}
+
+// Works
+.action_works {
+  .page_banner_outer {
+    background-image: image-url("chesnutt-works.jpg");
+  }
+}
+
+//Scholarship
+.action_scholarship {
+  .page_banner_outer {
+    background-image: image-url("chesnutt-scholarship.jpg");
+  }
+}
+
+//About
+.action_about {
+  .page_banner_outer {
+    background-image: image-url("chesnutt-about.jpg");
+    height:900px;
+  }
+}
+
+// Manuscripts
+
+.page_illustration_outer {
+  background-image: image-url("chesnutt-manuscripts.jpg");
+  background-size: cover;
+  float: right;
+  display: block;
+  width: 400px;
+  height: 800px;
+
+}
+
 // ================
 // Items
 // ================
@@ -347,10 +396,10 @@ ul.searchlinks {
 // Home Hero
 
 .home-hero {
-  background-image: image-url("home/chesnutt_home_banner.jpg");
+  background-image: image-url("chesnutt-home.jpg");
   background-position: top center;
   background-size: cover;
-  height: 300px;
+  height: 200px;
   margin-bottom: 1em;
   width: 100%;
 
@@ -374,46 +423,9 @@ ul.searchlinks {
 
 @media (min-width: 1200px) {
   .home-hero {
-    height: 400px;
+    height: 550px;
   }
 }
-
-@media (min-width: 1600px) {
-  .home-hero {
-    height: 500px;
-  }
-}
-
-// ================
-// Test Pages (remove before launch)
-// ================
-
-.test_home_banner_outer {
-  background-image: image-url("watercolorbg.jpg");
-  height: 400px;
-  background-size: cover;
-
-  .test_home_banner_inner,
-  .test_home_banner_inner2 {
-    background-image: image-url("chesnutt_sm.png");
-    height: 400px;
-    width: 300px;
-    background-repeat: no-repeat;
-    float: right;
-  }
-}
-
-.test_home_banner_outer {
-
-  .test_home_banner_inner {
-    background-image: none;
-
-    float: left;
-  }
-}
-
-
-
 
 // Kevin's additions start here
 
@@ -451,3 +463,10 @@ hr {
 .tei_p_rend_right {
   text-align: right;
 }
+
+// Flex sketch 
+
+.flex {
+  display: flex;
+}
+

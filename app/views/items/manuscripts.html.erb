@@ -10,22 +10,35 @@ to docs/search_preset.md %>
 
 <h1>Manuscripts</h1>
 
-<p>Displaying "category|Manuscripts"</p>
+<div class="flex">
+  <div class="flex_inner">
+    <p>Displaying "category|Manuscripts"</p>
 
-<p>This section offers editions of Chesnutt’s manuscripts, including galley proofs of book-length works featuring his emendations. We will supplement this collection further as time and resources allow. For manuscripts, we try whenever possible to provide both a transcription and digital images of the individual pages. </p>
+    <p>This section offers editions of Chesnutt’s manuscripts, including galley proofs of book-length works featuring his emendations. We will supplement this collection further as time and resources allow. For manuscripts, we try whenever possible to provide both a transcription and digital images of the individual pages. </p>
 
-<%= render_overridable "items", "search_preset_header" %>
+    <%= render_overridable "items", "search_preset_header" %>
 
-<div class="row search_form search_preset search_preset_<%= @preset_class %>">
+    <div class="row search_form search_preset search_preset_<%= @preset_class %>">
 
-  <%# do not display any facet options or summary boxes for this view %>
+      <%# do not display any facet options or summary boxes for this view %>
 
-  <%= render_overridable "items", "search_preset_text" %>
-  <%= render_overridable "items", "sort_and_page_ui" %>
+      <%= render_overridable "items", "search_preset_text" %>
+      <%= render_overridable "items", "sort_and_page_ui" %>
 
-  <!-- search results section -->
-  <%= render_overridable "items", "search_res_count" %>
-  <%= render_overridable "items", "search_preset_res_items" %>
+      <!-- search results section -->
+      <%= render_overridable "items", "search_res_count" %>
+      <%= render_overridable "items", "search_preset_res_items" %>
 
-  <%= render_overridable "items", "sort_and_page_ui" %>
+      <%= render_overridable "items", "sort_and_page_ui" %>
+    </div>
+
+
+  </div>
+  <div class="flex_inner">
+    <div class="page_illustration_outer"></div>
+  </div>
 </div>
+
+
+
+
