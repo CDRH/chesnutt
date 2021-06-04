@@ -13,7 +13,7 @@
       <% else %>
         <% if @res["subcategory"] == "Essays" ||
               @res["subcategory"] == "Stories" %>
-              Source text: <%= @res["creator"].first["name"] %>, "<%= @res["title"] %>," <%= @res["source"] %> (<%= @res["date_display"] %>)
+              Source text: <%= @res["creator"].first["name"] %>, "<%= @res["title"] %>," <em><%= @res["source"] %></em> (<%= @res["date_display"] %>)
         <% elsif @res["subcategory"] == "Novel" %>
           Novel Metadata
         <% else %>
