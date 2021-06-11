@@ -1,55 +1,72 @@
 <div id="more-metadata" class="metadata">
-      <li>
-        <%# metadata(@res, t("item.metadata.cite", default: "Cite this item"),
-          "cite", link: false) %>
-          <strong>Cite (Chicago style):</strong> Charles Chesnutt, "Aunt Mimy's Son", <em>The Charles W. Chesnutt Archive</em>, Gen. Ed. Stephanie Browner, Matt Cohen, and Kenneth M. Price, accessed {TODAY'S DATE}.
-      </li>
 
-    <!-- <%# if @res["title"].present? %>
-      <li>
-        <%# metadata(@res, t("item.metadata.title", default: "Title"),
-          "title", link: false) %>
-      </li>
-    <%# end %> -->
+  <ul>
+    <li>
+      <%# Citation field for digital item %>
+      <strong>Cite (Chicago style):</strong> 
+      <%= @res["author_cite_k"] %>, 
+      "<%= @res["title"] %>", 
+      <em>The Charles W. Chesnutt Archive</em>, 
+      <%= t("general.editors") %>, 
+      accessed <%= Time.now.strftime("%B %d, %Y") %>.
+    </li>
 
-
-
-
-
-
-
-    <%# When copying this template into projects, consider adding rel tag to the source link
-    to note the format and if the link is external %>
     <% if @res["uri_data"].present? %>
-    <li><strong>Source File: </strong>
-      <a href="<%= @res["uri_data"] %>"><%= File.basename(@res["uri_data"]) %></a>
+      <li><strong>Source File: </strong>
+        <a href="<%= @res["uri_data"] %>"><%= File.basename(@res["uri_data"]) %></a>
+      </li>
+    <% end %>
+
+    <li><%= metadata(@res, "Document ID", "identifier", link: false) %></li>
+      
+    <% if @res["rights"].present? || @res["rights_uri"].present? %>    
+    <li>
+      <strong>Rights information: </strong> 
+      <%= @res["rights"] %>
+      <% if @res["rights_uri"].present? %>
+        [<%= link_to "License", @res["rights_uri"] %>]
+      <% end %>
     </li>
     <% end %>
 
-     <li><%= metadata(@res, "Document ID",
-          "identifier", link: false) %></li>
-        
-
-        <!-- Editorial note <notesStmt><note></note></notesStmt> use description field -->
-          <% if @res["description"].present? %>
+    <% if @res["contributor"].present? %>
       <li>
-        <%= metadata(@res, t("item.metadata.title", default: "Title"),
-          "title", link: false) %>
+        <%= metadata(@res, "Contributors to the digital file", 
+          "contributor.name", link: false) %>
       </li>
     <% end %>
 
-     <li><!-- Kevin will send an example -->   
+  </ul>
 
-Rights information (from availability statement in header)</li>
+  <br/><br/>
+  <h4><strong>Test Metadata (Delete this before publication)</strong></h4>
+  <ul>
 
-<% if @res["contributor"].present? %>
-      <li>
-        <%= metadata(@res, "Contributors to the digital file:",
-                     "contributor.name", link: false) %>
-      </li>
-    <% end %>
+    <li><strong>Author:</strong> <%= @res["author_cite_k"] %></li>
 
+    <li><strong>Title:</strong> <%= @res["title"] %></li>
 
+    <li><strong>Source (Journal):</strong> <%= @res["source"] %></li>
+
+    <li><strong>Publisher:</strong> <%= @res["publisher_k"] %></li>
+
+    <li><strong>Volume:</strong> <%= @res["volume_number_k"] %></li>
+
+    <li><strong>Issue:</strong> <%= @res["issue_number_k"] %></li>
+
+    <li><strong>Date:</strong> <%= @res["date_display"] %></li>
+
+    <li><strong>Pages:</strong> <%= @res["page_number_k"] %></li> 
+
+    <li><strong>Format:</strong> <%= @res["format"] %></li> 
+
+    <li><strong>Archive Location:</strong> <%= @res["archive_location_k"] %></li>
+
+    <li><strong>Rights Holder:</strong> <%= @res["rights_holder"] %></li>
+
+    <li><strong>Rights URI:</strong> <%= @res["rights_uri"] %></li>
+
+    <li><strong>Rights Statement:</strong> <%= @res["rights"] %></li>
 
   </ul>
 
