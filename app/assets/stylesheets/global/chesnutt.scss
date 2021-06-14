@@ -35,7 +35,9 @@ a {
 #header a, #footer a, a.btn {
   text-decoration: none;
 }
-#content-wrapper p {
+
+//changed indent to apply only to "archive_item"
+.archive_item p {
   text-indent: 3em;
 }
 
@@ -495,8 +497,7 @@ ul.searchlinks {
 hr {
   &.horBar {
     width: 50%;
-    height: 3px;
-    color: black;
+    border: solid 3px black;
   }
 }
 

@@ -189,8 +189,10 @@ div.poem {}
   padding: .5em;
 }
 
-.SmallCaps {
-  text-transform: uppercase;
+.SmallCaps,
+.tei_hi_rend_smallCaps
+ {
+   font-variant: small-caps;
 }
 
 .tei_sic {
@@ -227,6 +229,7 @@ span.pageimage {
   float: right;
   margin: 0 0 1em .5em;
   padding: 0;
+  text-indent: 0;
 }
 
 .hr {
@@ -420,3 +423,33 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 
 .tei_note_type_authorial {}
 .tei_note_place_margin-bottom {}
+
+
+// karin added
+
+.margin-bottom-note {
+  font-size: .9em;
+  margin: .2em 0 .7em 0;
+}
+
+.tei_del_rend_closeup {
+  &:before {
+    // added metamark &#8272;
+    content: "⁐";
+  }
+  
+}
+
+del {
+  text-decoration: none;
+
+  &.tei_del_rend_overstrike,
+  &.tei_del_rend_strikethrough {
+    text-decoration: line-through;
+  }
+}
+
+.tei_del_rend_overstrike,
+.tei_del_rend_strikethrough {
+  text-decoration: line-through;
+}
