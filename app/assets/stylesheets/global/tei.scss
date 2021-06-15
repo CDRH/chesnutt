@@ -196,12 +196,13 @@ div.poem {}
 }
 
 .tei_sic {
-  background-color: $platinum;
+  background-color: $banana-mania;
+  
 }
 
-.tei_sic:after {
-  content: " [sic]";
-}
+.tei_sic_ed {
+    background-color: $platinum;
+  }
 
 .milestone {
   border-top: solid 2px $platinum;
@@ -368,7 +369,8 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 }
 
 /* not sure if these stylings are manuscript specific */
-.tei_list_type_simple {
+.tei_list_type_simple,
+.tei_list_rend_simple {
   list-style: none;
   margin: 0 0 1em 0;
   padding: 0;
