@@ -508,3 +508,30 @@ del {
 .tei_p_rend_right {
   text-align: right;
 }
+
+.tei_hi_rend_tripleUnderline {
+  border-bottom: double 6px black;
+  text-decoration: underline;
+  text-decoration-thickness: 0.11em;
+}
+
+.tei_hi_rend_doubleUnderline {
+  border-bottom: double 6px black;
+}
+
+.bibliography_books .tei_bibl {
+  margin-left: 3em;
+  display: block;
+  padding-left: 3em;
+  text-indent: -3em;
+  .tei_note {
+    padding: 0 .3em;
+    display: inline;
+    text-indent: 0;
+  }
+}
+
+//subheads
+.tei_head_type_sub {
+  font-size-adjust: .4;
+}
