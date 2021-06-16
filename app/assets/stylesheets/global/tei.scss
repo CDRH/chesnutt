@@ -376,29 +376,30 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
   padding: 0;
 }
 
-// Experimental code for list of characters on ccda.works00060
-
 .tei_lb {
   display: block;
 }
 
+// Experimental code for list of characters on ccda.works00060
 
-@media (min-width: $screen-sm-min) {
-  .tei_list_rend_simple li {
-    display: flex;
-    .tei_ab {
-      margin: 0;
-      padding: 0;
-    }
-  }
+// this code broke list display on proof00003, so commenting out for now
 
-  .tei_ab_rend_double_height {
-    margin-left: .5em;
-    display: flex;
-    align-items: center;
-    height: 3em;
-  }
-}
+// @media (min-width: $screen-sm-min) {
+//   .tei_list_rend_simple li {
+//     display: flex;
+//     .tei_ab_rend_double_height {
+//       margin: 0;
+//       padding: 0;
+//     }
+//   }
+
+//   .tei_ab_rend_double_height {
+//     margin-left: .5em;
+//     display: flex;
+//     align-items: center;
+//     height: 3em;
+//   }
+// }
 
 /* marginalia */
 
