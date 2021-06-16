@@ -196,18 +196,18 @@ div.poem {}
 }
 
 .tei_sic {
-  background-color: $banana-mania;
+ 
   
 }
 
 .tei_sic_ed {
-    background-color: $platinum;
+    background-color: $banana-mania;
   }
 
-.milestone {
-  border-top: solid 2px $platinum;
-  display: block;
-}
+// .milestone {
+//   border-top: solid 2px $platinum;
+//   display: block;
+// }
 
 // figures
 
@@ -458,12 +458,23 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
   margin: .2em 0 .7em 0;
 }
 
+.tei_metamark,
 .tei_del_rend_closeup {
+  background-color: rgba(194,218,217,1);
+  border: solid $dark-purple 1px;
+  display: inline;
+}
+
+.tei_metamark {
+  padding: 1px 3px 0px 3px;
+}
+
+.tei_del_rend_closeup {
+  padding-left: 3px;
   &:before {
     // added metamark &#8272;
     content: "⁐";
   }
-  
 }
 
 del {
@@ -476,6 +487,24 @@ del {
 }
 
 .tei_del_rend_overstrike,
-.tei_del_rend_strikethrough {
+.tei_del_rend_strikethrough,
+.tei_hi_rend_overstrike,
+.tei_hi_rend_strikethrough {
   text-decoration: line-through;
+}
+
+.milestone {
+  width: 50%;
+  border-top: solid 3px black;
+  display: block;
+  text-align: center;
+  margin: .3em auto;
+}
+
+.tei_p_rend_center {
+  text-align: center;
+}
+
+.tei_p_rend_right {
+  text-align: right;
 }
