@@ -1,0 +1,31 @@
+<div class="metadata">
+  <%= link_to "See more information about this item", "#more-metadata",
+    class: "btn btn-default pull-right" %>
+
+  <% vol_issue = (@res["volume_number_k"].present? ? " " + @res["volume_number_k"] + " " : "")
+     vol_issue << (@res["issue_number_k"].present? ? "no. " + @res["issue_number_k"] + " " : "") %>
+  
+  <strong>Source Text:</strong> 
+  <% if @res["format"] == "periodical" %>
+    <%= @res["author_cite_k"] %>, 
+    "<%= @res["title"] %>," 
+    <em><%= @res["publisher_k"] %></em>
+    <%= vol_issue %> 
+    (<%= @res["date_display"] %>): 
+    <%= @res["page_number_k"] %>. 
+  <% elsif @res["format"] == "book" %>
+    <%= @res["author_cite_k"] %>, 
+    <em><%= @res["title"] %></em> 
+    (<%= @res["publisher_k"] %>, 
+    <%= @res["date_display"]  %>). 
+  <% elsif @res["format"] == "manuscript" %>
+    <%= @res["author_cite_k"] %>, 
+    <em><%= @res["title"] %></em> (galley proof) 
+    <%= @res["date_display"] %>, 
+    <%= @res["archive_location_k"] %>, 
+    <%= @res["rights_holder"] %>.
+  <% else %>
+    <%= @res["title"] %>,
+    <%= @res["date_display"] %>.
+  <% end %>
+</div>

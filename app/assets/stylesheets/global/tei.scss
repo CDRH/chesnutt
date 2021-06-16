@@ -1,0 +1,538 @@
+@import "../bootstrap-variables.scss";
+
+// ================
+// TEI
+// ================
+
+// Proofs
+
+.tei_hi_rend_underline {
+  text-decoration: underline;
+}
+
+.tei_hi_rend_overline {
+  border-top: solid black 1px;
+}
+
+.tei_hi_rend_circled {
+  border: solid black 1px;
+}
+
+.tei_hi_rend_dotted {
+  border-bottom: dotted black 4px;
+}
+
+.tei_hi_rend_overstrike {
+  text-underline-offset: -.3em;
+}
+
+.tei_supplied {
+  background-color: $banana-mania;
+}
+
+.tei_del_rend_circled {
+  border: solid black 1px;
+}
+
+// Metamark / adds
+
+.tei_add_place_margin-left {
+  &:before {
+    content: " [left margin] ";
+  }
+}
+
+.tei_add_place_margin-bottom {
+  &:before {
+    content: " [bottom margin] ";
+  }
+}
+
+.tei_add_place_margin-right {
+  &:before {
+    content: " [right margin] ";
+  }
+}
+
+.tei_add_place_margin-top {
+  &:before {
+    content: " [top margin] ";
+  }
+}
+
+.tei_add_place_left {
+  &:before {
+    content: " [left margin] ";
+  }
+}
+
+.tei_add_place_right {
+  &:before {
+    content: " [right margin] ";
+  }
+}
+
+.tei_add_place_top {
+  &:before {
+    content: " [top margin] ";
+  }
+}
+
+.tei_add_place_bottom {
+  &:before {
+    content: " [bottom margin] ";
+  }
+}
+
+.tei_add_place_above {
+  &:before {
+    content: " [above line] ";
+  }
+}
+
+.tei_add_place_below {
+  &:before {
+    content: " [below line] ";
+  }
+}
+
+
+.tei_add_place_supralinear {
+  &:before {
+    content: " [above line] ";
+  }
+}
+
+.tei_add {
+  font-style: normal;
+}
+
+.tei_add_rend_circle {
+  border-radius: 7px;
+}
+
+
+
+
+.tei_seg {
+  background-color: $platinum;
+  border-bottom: dashed black 1px;
+}
+
+
+.tei_metamark.tei_metamark_rend_lasso {
+  display: none;
+}
+
+// Note there will be empty select rules until 
+// I figure out if I need to style them
+
+// Poems
+
+div.poem {}
+
+.tei_lg_type_stanza {}
+
+.tei_lg {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.tei_l {
+  display: block;
+}
+
+// Texts
+
+.tei_byline,
+.tei_ab {
+  display: block;
+}
+
+.tei_ab {
+  margin: 0 0 .69em;
+}
+
+.tei_byline {
+  margin-bottom: .5em;
+}
+
+.tei_ab_type_title {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.tei_note {
+  background-color: rgba(194,218,217,1);
+  border: solid #aaa 1px;
+  display: inline;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.tei_name {
+  font-style: italic;
+}
+
+.tei_fw, .tei_titlePage {
+  background-color: $gray-lighter;
+  display: block;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+.tei_titlePage {
+  border: solid 1px $gray-lighter;
+  margin: .5em 0;
+  padding: .5em;
+}
+
+.SmallCaps,
+.tei_hi_rend_smallCaps
+ {
+   font-variant: small-caps;
+}
+
+.tei_sic {
+ 
+  
+}
+
+.tei_sic_ed {
+    background-color: $banana-mania;
+  }
+
+// .milestone {
+//   border-top: solid 2px $platinum;
+//   display: block;
+// }
+
+// figures
+
+.inline_figure {
+  border: solid 2px $platinum;
+  margin: 1em 3em;
+  text-align: center;
+}
+
+.tei_caption {}
+
+
+// Page images
+
+span.pageimage {
+  border-bottom: 2px solid $platinum;
+  border-left: 2px solid $platinum;
+  border-right: 2px solid $platinum;
+  clear: both;
+  float: right;
+  margin: 0 0 1em .5em;
+  padding: 0;
+  text-indent: 0;
+}
+
+.hr {
+  border-top: 2px solid $platinum; 
+  clear: right;
+  display: block;
+  height: 0;
+  margin: 10px 0 0 0;
+  padding: 0px 0 0 0;
+  width: 100%;
+}
+
+
+.pageimage img {
+  background-color: $platinum;
+  min-height: 80px;
+  min-width: 80px;
+}
+
+// letters
+
+.tei_dateline {
+  display: block;
+}
+
+
+
+
+// From Whitman
+// =====
+
+// Editorial Marks
+
+.tei_ref_target, .internal_link.tei_ptr {
+  vertical-align: super;
+  font-size: 1em;
+}
+
+.editorial_note {
+  display: block;
+}
+
+// Quotes
+
+/*  q in TEI */
+.tei_q {
+  display: block;
+  margin: .5em 0;
+  padding: .5em 4em .5em 4em;
+}
+
+// Poems
+
+.inline_quote
+.tei_q,
+.tei_floatingText,
+.tei_lg_type_poem,
+.tei_lg,
+.tei_lg_type_linegroup,
+.tei_l {
+  display: block;
+}
+
+/* correspondence */
+
+.tei_salute {
+  display: block;
+  margin: .5em 0;
+}
+
+.tei_name_type_place {
+  display: block;
+}
+
+.tei_address {
+  display: block;
+  margin-top: 1.5em;
+}
+
+.tei_addrline {
+  display: block;
+}
+
+/* Manuscripts */
+
+.tei_subst_rend_overwrite {
+  del, .tei_add {
+    color: rgb(210, 144, 2);
+  }
+}
+
+.tei_add_place_inline {
+}
+
+.unclear,
+.tei_gap_reason_illegible {
+  color: #aaa;
+}
+
+/* Will need to discuss if we want to keep this, 
+it is not supported in all browsers 
+see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
+.tei_del_rend_overstrike sup {
+  display:inline-block;
+  font-size: 1em;
+  padding-left: 0em;
+  text-decoration-skip-ink: none; 
+  text-decoration-skip: none;
+  text-decoration: underline;
+  text-indent: 0em;
+  text-underline-offset: -.3em;
+}
+
+.tei_milestone_unit_glued {
+  color: #939393;
+  margin: .5em;
+  text-align: center;
+}
+
+.inline_tei_rend_insertion {
+  vertical-align: sub; /* prevents triangle formation */
+}
+
+.tei_add_place_infralinear {
+  vertical-align: sub;
+}
+
+.tei_hashmark_title {
+  text-align: center;
+  margin: .5em 0;
+}
+
+.tei_delSpan_rend_hashmark {
+  background-color: #CCCCCC;
+  padding: .5em;
+}
+
+/* not sure if these stylings are manuscript specific */
+.tei_list_type_simple,
+.tei_list_rend_simple {
+  list-style: none;
+  margin: 0 0 1em 0;
+  padding: 0;
+}
+
+.tei_lb {
+  display: block;
+}
+
+// Experimental code for list of characters on ccda.works00060
+
+// this code broke list display on proof00003, so commenting out for now
+
+// @media (min-width: $screen-sm-min) {
+//   .tei_list_rend_simple li {
+//     display: flex;
+//     .tei_ab_rend_double_height {
+//       margin: 0;
+//       padding: 0;
+//     }
+//   }
+
+//   .tei_ab_rend_double_height {
+//     margin-left: .5em;
+//     display: flex;
+//     align-items: center;
+//     height: 3em;
+//   }
+// }
+
+/* marginalia */
+
+.tei_titlePage {
+  display:block;
+  margin: 1em 0;
+}
+
+.tei_note_type_authorial span {
+  background-color: $gold-metallic;
+  border: double 3px blue;
+  border-right: none;
+  border-left: none;
+  display: inline;
+}
+
+.tei_note_type_authorial {
+  margin: .5em 0 1em 0;
+}
+
+.tei_titlePart_type_main {
+  display: block;
+  font-weight: 800;
+  margin: .5em 0 1em 0;
+}
+
+.tei_milestone_rend_horbar-short-center {
+  width: 6em;
+  margin: 1em auto;
+}
+
+.tei_pubPlace {
+  display: block;
+}
+
+
+// Hand CSS
+// DRAFT
+
+.tei_hand_resp_cwc {
+  border-bottom: double 3px $brand-success;
+}
+
+// .tei_hand_medium_black_pen {
+//   background-color: red;
+// }
+
+
+.tei_note_type_authorial {}
+.tei_note_place_margin-bottom {}
+
+
+// karin added
+
+.margin-bottom-note {
+  font-size: .9em;
+  margin: .2em 0 .7em 0;
+}
+
+.tei_metamark,
+.tei_del_rend_closeup {
+  background-color: rgba(194,218,217,1);
+  border: solid $dark-purple 1px;
+  display: inline;
+}
+
+.tei_metamark {
+  padding: 1px 3px 0px 3px;
+}
+
+.tei_del_rend_closeup {
+  padding-left: 3px;
+  &:before {
+    // added metamark &#8272;
+    content: "⁐";
+  }
+}
+
+del {
+  text-decoration: none;
+
+  &.tei_del_rend_overstrike,
+  &.tei_del_rend_strikethrough {
+    text-decoration: line-through;
+  }
+}
+
+.tei_del_rend_overstrike,
+.tei_del_rend_strikethrough,
+.tei_hi_rend_overstrike,
+.tei_hi_rend_strikethrough {
+  text-decoration: line-through;
+}
+
+.milestone {
+  width: 50%;
+  border-top: solid 3px black;
+  display: block;
+  text-align: center;
+  margin: .3em auto;
+}
+
+.tei_p_rend_center {
+  text-align: center;
+}
+
+.tei_p_rend_right {
+  text-align: right;
+}
+
+.tei_hi_rend_tripleUnderline {
+  border-bottom: double 6px black;
+  text-decoration: underline;
+  text-decoration-thickness: 0.11em;
+}
+
+.tei_hi_rend_doubleUnderline {
+  border-bottom: double 6px black;
+}
+
+.bibliography_books .tei_bibl {
+  margin-left: 3em;
+  display: block;
+  padding-left: 3em;
+  text-indent: -3em;
+  .tei_note {
+    padding: 0 .3em;
+    display: inline;
+    text-indent: 0;
+  }
+}
+
+//subheads
+.tei_head_type_sub {
+  font-size-adjust: .4;
+}

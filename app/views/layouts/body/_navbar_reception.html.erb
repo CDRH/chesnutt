@@ -1,0 +1,12 @@
+<div class="navbar navbar-default navbar_subnav">
+  <div class="container">
+    <ul class="nav navbar-nav">
+      <li class="<%= active?(reception_reviews_path) %>">
+        <%= link_to "Reviews", reception_reviews_path %>
+      </li>
+      <li class="<%= active?(reception_biographical_sketches_path) %>">
+        <%= link_to "Biographical Sketches", reception_biographical_sketches_path %>
+      </li>
+    </ul>
+  </div>
+</div><!-- /navbar -->

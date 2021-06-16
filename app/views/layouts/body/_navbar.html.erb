@@ -1,21 +1,51 @@
 <%# template is to remove collapsing menu %>
 
-<div class="navbar navbar-default">
+<div class="navbar navbar-default navbar_mainnav">
   <div class="container">
     <ul class="nav navbar-nav">
       <li class="<%= active?(home_path) %>">
         <%= link_to t("home.title", default: "Home"), home_path %>
       </li>
-      <li class="<%= active?(/^#{config.relative_url_root}\/browse/,
-        request.path) %>">
-        <%= link_to t("browse.title", default: "Browse"), browse_path %>
+      <li class="<%= 'active' if params[:action].include?("works") == true %>">
+        <%= link_to "Works", works_path %>
       </li>
-      <li class="<%= active?(search_path) %>">
-        <%= link_to t("search.title", default: "Search"), search_path, rel: "search" %>
+      <li class="<%= active?(manuscripts_path) %>">
+        <%= link_to "Manuscripts", manuscripts_path %>
       </li>
-      <li class="<%= active?(about_path) %>">
-        <%= link_to t("about.title", default: "About"), about_path %>
+      <li class="<%= active?(correspondence_path) %>">
+        <%= link_to "Correspondence", correspondence_path %>
+      </li>
+      <li class="<%= 'active' if params[:action].include?("reception") == true %>">
+        <%= link_to "Reception", reception_path %>
+      </li>
+      <li class="<%= 'active' if params[:action].include?("scholarship") == true%>">
+        <%= link_to "Scholarship", scholarship_path %>
+      </li>
+      <li class="<%= 'active' if params[:action].include?("about") == true %>">
+        <%= link_to "About", about_path %>
       </li>
     </ul>
   </div>
 </div><!-- /navbar -->
+
+<% if params[:action].include?("works") %>
+  <%= render_overridable("layouts/body", "navbar_works") %>
+<% end %>
+
+<% if params[:action].include?("reception") %>
+  <%= render_overridable("layouts/body", "navbar_reception") %>
+<% end %>
+
+<% if params[:action].include?("scholarship") %>
+  <%= render_overridable("layouts/body", "navbar_scholarship") %>
+<% end %>
+
+<% if params[:action].include?("about") %>
+  <%= render_overridable("layouts/body", "navbar_about") %>
+<% end %>
+
+
+
+
+
+

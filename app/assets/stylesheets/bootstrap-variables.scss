@@ -3,39 +3,53 @@ $bootstrap-sass-asset-helper: false !default;
 // Variables
 // --------------------------------------------------
 
+// Move these to <script> declaration when finalized?
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,562;1,562&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+$font-headers: 'Montserrat', sans-serif;
+$font-body: 'Lora', serif;
 
 //== Colors
 
 //Chesnutt Colors
-// https://coolors.co/853d00-c8963e-e3c567-ffffff-f4f5f5-dfe2e2-2b5554-1c1d1e
-// todo clean up
+// https://coolors.co/324257-545b5e-7f7382-342740-cfd9e6-f4f5f5-dfe2e2-ffedc2-e3bb45-873636
 
-$saddle-brown: #853D00;
-$gold: #c8963e;
-$light-gold: #e3c567;
-$white: #fff;
-$light-silver: #f4f5f5;
+/* SCSS HEX */
+$charcoal: #324257;
+$davys-grey: #545b5e;
+$old-lavender: #7f7382;
+$dark-purple: #342740;
+$beau-blue: #cfd9e6;
+$cultured: #EEEFF0;
+$eggshell: #faf1dc;
+$banana-mania: #ffedc2;
+$gold-metallic: #e3bb45;
+$brandy: #873636;
+$merlot: #491D1D;
 $platinum: #dFe2e2;
-$dark-teal: #2B5554;
-$dark: #1c1d1e;
+
+$white: #fff;
+$dark: #000;
 
 // Bootstrap colors
 
-$gray-base:              #1c1d1e !default;
+$gray-base:              $dark !default;
 $gray-darker:            lighten($gray-base, 13.5%) !default; // #222
 $gray-dark:              lighten($gray-base, 20%) !default;   // #333
 $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             $platinum !default; // #777
-$gray-lighter:           $light-silver !default; // #eee
+$gray-lighter:           $cultured !default; // #eee
 
 $light-base: $platinum;
-$light-lighter: $light-silver;
+$light-lighter: $beau-blue;
 
-$brand-primary:         $saddle-brown !default;
-$brand-success:         $gold !default; //gold
-$brand-info:            $dark-teal !default; //earl gray
-$brand-warning:         $light-gold !default; //yellow
-$brand-danger:          $dark-teal !default; //nickel
+$brand-primary:         $dark-purple !default;
+$brand-success:         $gold-metallic !default;
+$brand-info:            $merlot !default; //earl gray
+$brand-warning:         $banana-mania !default; //yellow
+$brand-danger:          $charcoal !default; //nickel
 
 $nav-accent:            $platinum !default;
 
@@ -61,8 +75,9 @@ $link-hover-decoration: underline !default;
 //
 //## Font, line-height, and color for body text, headings, and more.
 
-$font-family-sans-serif:  Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif:  'Montserrat', Helvetica, Arial, sans-serif !default;
+$font-family-serif:       'Lora', Georgia, "Times New Roman", Times, serif !default;
+$font-family-display:     'Mrs Saint Delafield', cursive;;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-serif !default;
@@ -84,7 +99,7 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
 
 //** By default, this inherits from the `<body>`.
-$headings-font-family:    inherit !default;
+$headings-font-family:    $font-family-sans-serif !default;
 $headings-font-weight:    500 !default;
 $headings-line-height:    1.1 !default;
 $headings-color:          inherit !default;
@@ -389,7 +404,7 @@ $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;
-$navbar-default-bg:                $nav-accent !default;
+$navbar-default-bg:                $cultured !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links

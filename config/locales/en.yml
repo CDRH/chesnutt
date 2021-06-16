@@ -17,11 +17,12 @@ en:
     close: Close
 
     # Header title
-    project_name: The Charles Chesnutt Digital Archive
+    project_name: The Charles W. Chesnutt Archive
     # <title>, meta application-name
     project_shortname: chesnutt
     # Header subtitle
-    #project_subtitle: 
+    # project_subtitle: ""
+    editors: Gen. Ed. Stephanie Browner, Matt Cohen, and Kenneth M. Price
   #########
   # ABOUT #
   #########
@@ -120,6 +121,8 @@ en:
       title: Title
       # any works (often literary) referenced by this item, such as "O Pioneers!"
       works: Works
+      # Cite this 
+      cite: Cite this item
     # description of missing item error
     no_item: "No item with identifier %{id} found!"
     # title for error when item not found
