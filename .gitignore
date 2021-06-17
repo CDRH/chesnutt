@@ -28,3 +28,7 @@ public/assets
 
 # We all know my feelings on this, I just want to make extra sure
 .DS_Store
+
+# Yarn files
+node_modules
+yarn.lock
