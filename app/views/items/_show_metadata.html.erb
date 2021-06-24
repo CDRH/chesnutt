@@ -2,8 +2,11 @@
   <%= link_to "See more information about this item", "#more-metadata",
     class: "btn btn-default pull-right" %>
 
-  <% vol_issue = (@res["volume_number_k"].present? ? " " + @res["volume_number_k"] + " " : "")
-     vol_issue << (@res["issue_number_k"].present? ? "no. " + @res["issue_number_k"] + " " : "") %>
+  <% 
+    vol_iss_num_sep = ((@res["volume_number_k"].present? && @res["issue_number_k"].present?) ? "," : "")
+    vol_issue = (@res["volume_number_k"].present? ? " " + @res["volume_number_k"] + vol_iss_num_sep + " " : "")
+    vol_issue << (@res["issue_number_k"].present? ? "no. " + @res["issue_number_k"] + " " : "") 
+  %>
   
   <strong>Source Text:</strong> 
   <% if @res["format"] == "periodical" %>
@@ -15,7 +18,12 @@
     <%= @res["page_number_k"] %>. 
   <% elsif @res["format"] == "book" %>
     <%= @res["author_cite_k"] %>, 
-    <em><%= @res["title"] %></em> 
+    <em><%= @res["title"] %></em>
+
+<%# come back to this, look at item works00049, showing up as periodical still %>
+    <%#(@res["volume_title_k"].present? ? "in " + volume_title_k : "") %>
+    <%#(@res["volume_creator_k"].present? ? "(" + volume_creator_k + ") " : "") %>
+
     (<%= @res["publisher_k"] %>, 
     <%= @res["date_display"]  %>). 
   <% elsif @res["format"] == "manuscript" %>
@@ -28,4 +36,5 @@
     <%= @res["title"] %>,
     <%= @res["date_display"] %>.
   <% end %>
+  
 </div>
