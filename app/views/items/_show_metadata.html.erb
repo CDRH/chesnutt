@@ -3,38 +3,71 @@
     class: "btn btn-default pull-right" %>
 
   <% 
+    # setting up the seperator variable- only add a comma if both volume and issue are present
     vol_iss_num_sep = ((@res["volume_number_k"].present? && @res["issue_number_k"].present?) ? "," : "")
     vol_issue = (@res["volume_number_k"].present? ? " " + @res["volume_number_k"] + vol_iss_num_sep + " " : "")
     vol_issue << (@res["issue_number_k"].present? ? "no. " + @res["issue_number_k"] + " " : "") 
   %>
   
   <strong>Source Text:</strong> 
+
+  <%# ======
+  Periodical
+  ========== %>
   <% if @res["format"] == "periodical" %>
+
     <%= @res["author_cite_k"] %>, 
     "<%= @res["title"] %>," 
     <em><%= @res["publisher_k"] %></em>
     <%= vol_issue %> 
     (<%= @res["date_display"] %>): 
     <%= @res["page_number_k"] %>. 
-  <% elsif @res["format"] == "book" %>
-    <%= @res["author_cite_k"] %>, 
-    <em><%= @res["title"] %></em>
 
-<%# come back to this, look at item works00049, showing up as periodical still %>
-    <%#(@res["volume_title_k"].present? ? "in " + volume_title_k : "") %>
-    <%#(@res["volume_creator_k"].present? ? "(" + volume_creator_k + ") " : "") %>
+  <%# ======
+  Book
+  ========== %>
+  <% elsif @res["format"] == "book" %>
+
+    <%= @res["author_cite_k"] %>, 
+
+    <%# if there is a volume title, put title in quotes, otherwise, emphasis %>
+    <% if @res["volume_title_k"].present? %>
+      "<%= @res["title"] %>,"
+    <% else %>
+      <em><%= @res["title"] %></em>,
+    <% end %>
+
+    <% if @res["volume_title_k"].present? %>
+      in <em> <%= @res["volume_title_k"] %>, </em>
+    <% end %>
+
+    <% if @res["volume_creator_k"].present? %>
+      ed. <%= @res["volume_creator_k"] %>
+    <% end %>
 
     (<%= @res["publisher_k"] %>, 
-    <%= @res["date_display"]  %>). 
+
+    <%= @res["date_display"]  %>)<%# here for to eliminate space
+    %><%= (@res["page_number_k"].present? ? ": " + @res["page_number_k"] : "") %>. 
+
+  <%# ======
+  Manuscript
+  ========== %>
   <% elsif @res["format"] == "manuscript" %>
+  
     <%= @res["author_cite_k"] %>, 
     <em><%= @res["title"] %></em> (galley proof) 
     <%= @res["date_display"] %>, 
     <%= @res["archive_location_k"] %>, 
     <%= @res["rights_holder"] %>.
+
+  <%# ======
+  no format defined
+  ========== %>
   <% else %>
     <%= @res["title"] %>,
     <%= @res["date_display"] %>.
+
   <% end %>
   
 </div>
