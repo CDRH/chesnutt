@@ -20,8 +20,10 @@
     "<%= @res["title"] %>," 
     <em><%= @res["publisher_k"] %></em>
     <%= vol_issue %> 
-    (<%= @res["date_display"] %>): 
-    <%= @res["page_number_k"] %>. 
+    (<%= @res["date_display"] %>)<% if @res["page_number_k"].present? %>: 
+    <%= @res["page_number_k"] %>.
+    <% else %>.
+    <% end %> 
 
   <%# ======
   Book
@@ -38,7 +40,7 @@
     <% end %>
 
     <% if @res["volume_title_k"].present? %>
-      in <em> <%= @res["volume_title_k"] %>, </em>
+      in <em> <%= @res["volume_title_k"] %></em><%if @res["volume_creator_k"].present? %>,<% end %> 
     <% end %>
 
     <% if @res["volume_creator_k"].present? %>
