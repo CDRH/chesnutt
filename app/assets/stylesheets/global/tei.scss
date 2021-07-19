@@ -282,10 +282,15 @@ span.pageimage {
   padding: .5em 4em .5em 4em;
 }
 
+.tei_floatingText .tei_lg,
+.tei_floatingText .tei_p {
+  font-size: .9em;
+  margin-left: 3.3em;
+}
+
 // Poems
 
-.inline_quote
-.tei_q,
+.inline_quote .tei_q,
 .tei_floatingText,
 .tei_lg_type_poem,
 .tei_lg,
@@ -488,6 +493,7 @@ del {
 }
 
 .tei_del_rend_overstrike,
+.tei_subst_rend_overwrite,
 .tei_del_rend_strikethrough,
 .tei_hi_rend_overstrike,
 .tei_hi_rend_strikethrough {
