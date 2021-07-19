@@ -18,8 +18,8 @@
       <li class="<%= 'active' if params[:action].include?("reception") == true %>">
         <%= link_to "Reception", reception_path %>
       </li>
-      <li class="<%= 'active' if params[:action].include?("scholarship") == true%>">
-        <%= link_to "Scholarship", scholarship_path %>
+      <li class="<%= 'active' if params[:action].include?("resources") == true%>">
+        <%= link_to "Resources", resources_path %>
       </li>
       <li class="<%= 'active' if params[:action].include?("about") == true %>">
         <%= link_to "About", about_path %>
@@ -36,8 +36,8 @@
   <%= render_overridable("layouts/body", "navbar_reception") %>
 <% end %>
 
-<% if params[:action].include?("scholarship") %>
-  <%= render_overridable("layouts/body", "navbar_scholarship") %>
+<% if params[:action].include?("resources") %>
+  <%= render_overridable("layouts/body", "navbar_resources") %>
 <% end %>
 
 <% if params[:action].include?("about") %>

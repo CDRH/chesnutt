@@ -17,8 +17,8 @@ Rails.application.routes.draw do
   get "reception/reviews", to: "items#reception_reviews", as: "reception_reviews"
   get "reception/biographical_sketches", to: "items#reception_biographical_sketches", as: "reception_biographical_sketches"
 
-  get "scholarship", to: "items#scholarship", as: "scholarship"
-  get "scholarship/bibliography", to: "items#scholarship_bibliography", as: "scholarship_bibliography"
+  get "resources", to: "items#resources", as: "resources"
+  get "resources/bibliography", to: "items#resources_bibliography", as: "resources_bibliography"
 
   get "about", to: "general#about", as: "about"
   get "about/history", to: "general#about_history", as: "about_history"
