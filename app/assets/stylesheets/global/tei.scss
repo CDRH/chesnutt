@@ -162,7 +162,15 @@ div.poem {}
   font-weight: 600;
 }
 
+// tei note most items
+
 .tei_note {
+  display: block;
+}
+
+// tei note on proofs
+
+.galley_proofs .tei_note {
   background-color: rgba(194,218,217,1);
   border: solid #aaa 1px;
   display: inline;

@@ -1,7 +1,5 @@
 @import "../bootstrap-variables.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
-
 // ================
 // General settings
 // ================
@@ -12,7 +10,7 @@ body {
   font-weight: 400;
 }
 
-.main_content {
+.archive_item {  // class around tei -> html generations
   background-color: $white;
   border-radius: 5px;
   border: solid 1px $platinum;
@@ -20,8 +18,17 @@ body {
   padding: 20px;
 }
 
-// Adding underlines back
+.flex {
+  display: flex;
+}
 
+// HTML Elements
+
+.archive_item p {
+  text-indent: 3em;
+}
+
+// Adding underlines back
 a {
   text-decoration: underline;
   &:hover {
@@ -31,18 +38,35 @@ a {
 }
 
 // Then removing underlines in some places
-
 #header a, #footer a, a.btn {
   text-decoration: none;
 }
 
-//changed indent to apply only to "archive_item"
-.archive_item p {
-  text-indent: 3em;
-}
-
 ::selection {
   background-color: rgb(229, 207, 169);
+}
+
+.rend_bold {
+  font-weight: 600;
+}
+
+hr {
+  &.horBar {
+    border-top: solid 3px black;
+    width: 50%;
+  }
+}
+
+blockquote {
+  border: none;
+  font-size: 1em;
+  margin-left: 3em;
+  padding: 0;
+
+  p {
+    font-size: .9em;
+    line-height: 1.4em
+  }
 }
 
 // ================
@@ -72,7 +96,6 @@ ul.searchlinks {
   }
 }
 
-// Header
 @media (min-width: $screen-md-min) {
   ul.searchlinks {
     position: absolute;
@@ -85,17 +108,18 @@ ul.searchlinks {
   }
 }
 
+// Header
+// see bottom of header for mobile font sizes
+
 #header {
   height: auto;
 
   .site-title-container {
-    background-color: $brand-info;
     width: 100%;
   }
 
   .site-title {
     border-bottom: double 3px $gold-metallic;
-    display: block;
     display: inline-block;
     font-family: $font-family-display;
     margin-top: .1em;
@@ -104,6 +128,7 @@ ul.searchlinks {
     .title_the, .title_archive  {
       font-size: .7em;
     }
+
     .title_cwc {
       font-family: 'Marcellus SC';
       letter-spacing: .1em;
@@ -128,10 +153,6 @@ ul.searchlinks {
     font-size: 1.1em;
     justify-content: center;
     width: 100%;
-    
-    a {
-      color: $dark;
-    }
   }
 
   // mainnav
@@ -155,15 +176,17 @@ ul.searchlinks {
 
   .navbar-default.navbar_subnav .navbar-nav > .active > a, 
   .navbar-default.navbar_msubnav .navbar-nav > .active {
-    background-color: white;
+    background-color: $white;
   }
 
   .navbar_subnav.navbar {
-    min-height: 25px;
-    height: auto;
+    color: $dark;
     font-size: .8em;
+    height: auto;
+    min-height: 25px;
 
     a {
+      color: $dark;
       padding: 2px 10px 5px 10px;
 
       &.active {
@@ -175,9 +198,21 @@ ul.searchlinks {
   .navbar-default.navbar_subnav {
     background-color: $subnav;
   }
-    
 
 } // end header 
+
+@media (max-width: $screen-xs-max) {
+  #header {
+    .site-title-container {
+      .h1 {
+        font-size: 6vw;
+      }
+    }
+    .navbar-nav {
+      font-size: .9em;
+    }
+  }
+}
 
 // Footer
 
@@ -186,29 +221,35 @@ ul.searchlinks {
   margin-bottom: 0;
   padding-bottom: 8em;
   padding-top: 1.5em;
+
   .footer_info {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
       .footer_logo {
         align-items: center;
         background-color: rgba(255, 255, 255, 0.07);
         margin: 1em;
         padding: 20px;
+
       p {
         font-size: 1.4em;
         margin: 0;
         padding: 0;
+
         a {
           color: #fff;
         }
       }
+
       img {
         max-width: 100%;
       }
     }
   }
+
   a {
     color: $gold-metallic;
   }
@@ -236,10 +277,8 @@ ul.searchlinks {
 // ================
 
 // Secondary page listing (see about main page)
-// todo: see if we want to use this
 
 .page_subnav {
-  align-content: stretch;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -252,13 +291,15 @@ ul.searchlinks {
     text-align: center;
 
     a {
+      border: solid $dark-purple 1px;
       display: block;
+      margin: 10px;
       min-height: 100px;
       padding: 10px;
-      border: solid $dark-purple 1px;
-      margin: 10px;
     }
   }
+
+  // repeating backgrounds
 
   li:nth-child(4n + 1) {
     a {
@@ -285,7 +326,9 @@ ul.searchlinks {
   }
 }
 
+// =======================
 // Page decorative banners
+// =======================
 
 // .page_banner_outer
 //   .container
@@ -311,11 +354,11 @@ ul.searchlinks {
     padding: 0 10px 10px 10px;
   }
   .page_banner_illustration {
+    align-self: flex-end;
     flex-grow: 2;
     min-width: 383px;
     padding: 10px 10px 0px 10px;
     text-align: center;
-    align-self: flex-end;
   }
 }
 
@@ -325,12 +368,9 @@ ul.searchlinks {
   }
 }
 
-
 .page_banner_outer {
   background-position: top center;
   background-size: cover; //contain
-  //background-repeat: no-repeat;
-  //background-position: center;
   height: 550px;
   margin-bottom: 1em;
   width: 100%;
@@ -360,15 +400,15 @@ ul.searchlinks {
 .action_about {
   .page_banner_outer {
     background-image: image-url("chesnutt-about.jpg");
+    height: 46vw;
     height:900px;
     width: 100vw;
-    height: 46vw;
   }
 }
 
 .action_about_history.page_about img {
-  max-width: 100%;
   margin: auto;
+  max-width: 100%;
   text-align: center;
 }
 
@@ -377,11 +417,10 @@ ul.searchlinks {
 .page_illustration_outer {
   background-image: image-url("chesnutt-manuscripts.jpg");
   background-size: cover;
-  float: right;
   display: block;
-  width: 400px;
+  float: right;
   height: 800px;
-
+  width: 400px;
 }
 
 // ================
@@ -394,18 +433,21 @@ ul.searchlinks {
   margin: 10px 0;
   padding: 10px 20px 35px 20px;
   position: relative;
+
   .btn-metadata {
     bottom: 0;
     position: absolute;
     right: 0;
     width: 100%
   }
+
   ul {
     columns: 1;
     list-style-type: none;
     margin: 0 0 .5em 0;
     padding: 0;
   }
+
   h2 {
     font-size: 1.2em;
     font-weight: 800;
@@ -418,142 +460,86 @@ ul.searchlinks {
 // Home
 // ================
 
-.controller_general.action_index {
+@media (min-width: $screen-sm) { // only make home items bigger if non mobile
+  .controller_general.action_index {
 
-  #header {
-    .site-title {
-      font-size: 1.4em;
+    #header {
+      .site-title {
+        font-size: 1.4em;
+      }
     }
-  }
 
-  .navbar-default.navbar_mainnav {
-    font-size: 1.3em;
+    .navbar-default.navbar_mainnav {
+      font-size: 1.3em;
 
-    // Hide Home button on home page
-    // todo: talk to PI's about this
-    .navbar-nav > .active {
-      display: none;
+      // Hide Home button on home page
+      // todo: talk to PI's about this
+      .navbar-nav > .active {
+        display: none;
+      }
     }
-  }
 
-  .lead {
-    margin-top: 1em;
-  }
+    .lead {
+      margin-top: 1em;
+    }
 
-  #content-wrapper {
-    margin-bottom: 0;
-  }
-} 
+    #content-wrapper {
+      margin-bottom: 0;
+    }
+  } 
 
-.home-content-wrapper {
-  margin-bottom: 3em;
+  .home-content-wrapper {
+    margin-bottom: 3em;
+  }
 }
 
 // Home Hero
 
 .home-hero {
-  //background-image: image-url("chesnutt-home.jpg");
+  background-color: #aaa;
+  background-image: image-url('chesnutt-home.jpg');
   background-position: top center;
-  background-size: cover;
   background-repeat: no-repeat;
-  //height: 200px;
+  background-size: cover;
+  height: 200px; // fallback
+  height: 39vw;
   margin-bottom: 1em;
   padding:  0;
-  width: 100%;
-  background-color: #aaa;
-  z-index: 1;
   position: relative;
-  background-image: image-url('chesnutt-home.jpg');
+  width: 100%; //fallback
   width: 100vw;
-  height: 39vw;
-
-
-
-
+  z-index: 1;
 } 
 
 .home-content-wrapper {
   .callout_quote {
+    background-color:  $gold-metallic;
+    box-shadow: 0px 0px 7px $gray-darker;
     display: block;
-    max-width: 400px;
     float:  left;
     margin-top:  -4em !important;
-    background-color:  $gold-metallic;
     margin: .1em .8em .2em 0;
+    max-width: 400px;
     padding: .6em;
-    z-index: 200;
     position: relative;
-    box-shadow: 0px 0px 7px $gray-darker;
+    z-index: 200;
 
     p {
-      text-indent: 0 !important;
       background-color: rgba(255,255,255,.2);
+      border:  double 3px $brandy;
       color: $gray-base;
       font-size: 1.3em;
       height: 100%;
       line-height: 1.2em;
-      border:  double 3px $brandy;
-      padding:  .6em;
       margin:  0;
-      
-      
-      
+      padding:  .6em;
       text-align: left;
+      text-indent: 0 !important;
 
       em {
         display: block;
         text-align: right;
+      }
     }
-  }
-}
-
-}
-
-@media (min-width: 1200px) {
-  .home-hero {
-    //height: 550px;
-  }
-}
-
-// Kevin's additions start here
-
-
-
-// .tei_hi_rend_bold {
-//  font-weight: 600;
-// }
-
-// .tei_fw_rend_bold {
-//  font-weight: 600;
-// }
-
-.rend_bold {
-  font-weight: 600;
-}
-
-hr {
-  &.horBar {
-    width: 50%;
-    border-top: solid 3px black;
-  }
-}
-
-
-
-// Flex sketch 
-
-.flex {
-  display: flex;
-}
-
-blockquote {
-  border: none;
-  margin-left: 3em;
-  font-size: 1em;
-  padding: 0;
-
-  p {
-    font-size: .9em;
-    line-height: 1.4em
   }
 }

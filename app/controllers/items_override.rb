@@ -136,7 +136,7 @@ ItemsController.class_eval do
       @title = "Item #{params["id"]} not found"
       render "items/show_not_found", status: 404
     end
-
+    
   end
 
 end
