@@ -15,8 +15,8 @@
       <li class="<%= active?(correspondence_path) %>">
         <%= link_to "Correspondence", correspondence_path %>
       </li>
-      <li class="<%= 'active' if params[:action].include?("reception") == true %>">
-        <%= link_to "Reception", reception_path %>
+      <li class="<%= 'active' if params[:action].include?("reception_reviews") == true %>">
+        <%= link_to "Reviews", reception_reviews_path %>
       </li>
       <li class="<%= 'active' if params[:action].include?("resources") == true%>">
         <%= link_to "Resources", resources_path %>
@@ -32,9 +32,10 @@
   <%= render_overridable("layouts/body", "navbar_works") %>
 <% end %>
 
-<% if params[:action].include?("reception") %>
-  <%= render_overridable("layouts/body", "navbar_reception") %>
-<% end %>
+<%# add back once we have more in Reception %>
+<%# if params[:action].include?("reception") %>
+  <%# render_overridable("layouts/body", "navbar_reception") %>
+<%# end %>
 
 <% if params[:action].include?("resources") %>
   <%= render_overridable("layouts/body", "navbar_resources") %>

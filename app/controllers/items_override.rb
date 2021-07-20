@@ -124,4 +124,19 @@ ItemsController.class_eval do
     @header = true
   end
 
+  def resources_bibliography
+    id = "ccda.oth00001"
+    @res = $api.get_item_by_id(id).first
+    if @res
+      url = @res["uri_html"]
+      @html = Net::HTTP.get(URI.parse(url)) if url
+      @title = @res["title"]
+      render "items/page"
+    else
+      @title = "Item #{params["id"]} not found"
+      render "items/show_not_found", status: 404
+    end
+
+  end
+
 end
