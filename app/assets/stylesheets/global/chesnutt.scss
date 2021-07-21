@@ -424,7 +424,14 @@ ul.searchlinks {
 // Resources
 @include horizontal_bar (
   resources,
-  image-url("chesnutt-scholarship.jpg"), 
+  image-url("chesnutt-resources.jpg"), 
+  32vw
+  );
+
+// Reviews
+@include horizontal_bar (
+  reception_reviews,
+  image-url("chesnutt-resources.jpg"), 
   32vw
   );
 
@@ -474,7 +481,7 @@ ul.searchlinks {
 //   display: block !important;
 // }
 
-.page_illustration_outer {
+.action_manuscripts .page_illustration_outer {
   background-image: image-url("chesnutt-manuscripts.jpg");
   background-size: cover;
   display: block;
@@ -482,6 +489,83 @@ ul.searchlinks {
   width: 400px;
   background-position: center;
 }
+
+
+
+
+
+// Switch order of flex elements for large display
+.action_reception_reviews.flex .flex_inner:nth-child(2) {
+  order: 1;
+  margin-right: 20px;
+}
+
+.action_reception_reviews .flex .flex_inner:nth-child(1) {
+  order: 2;
+}
+
+@media (max-width: $screen-xs-max) {
+  .action_reception_reviews .flex {
+    display: block !important;
+
+    .flex_inner:nth-child(2) {
+      margin-right: 0;
+    }
+
+    .page_illustration_outer {
+      max-height: 300px;
+      width: 100%
+    }
+  }
+}
+
+
+// .action_manuscripts .flex {
+//   display: block !important;
+// }
+
+.action_reception_reviews .page_illustration_outer {
+  background-image: image-url("chesnutt-reviews.jpg");
+  background-size: contain;
+  display: block;
+  height: 270px;
+  width: 180px;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $screen-xs) {
+  .action_reception_reviews .page_illustration_outer {
+    height: 270px;
+    width: 180px;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .action_reception_reviews .page_illustration_outer {
+    height: 400px;
+    width: 266px;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .action_reception_reviews .page_illustration_outer {
+    height: 320px;
+    width: 213px;
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .action_reception_reviews .page_illustration_outer {
+    height: 270px;
+    width: 180px;
+  }
+}
+
+
+
+
+
 
 // ================
 // Items
@@ -602,4 +686,10 @@ ul.searchlinks {
       }
     }
   }
+}
+
+
+.right_image {
+  margin: 0 0 10px 10px;
+  max-width: 100%;
 }

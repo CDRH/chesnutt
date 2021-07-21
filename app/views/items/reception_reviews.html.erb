@@ -9,18 +9,24 @@ to docs/search_preset.md %>
 %>
 
 <h1>Reviews</h1>
+<div class="flex">
+  <div class="flex_inner display_illustration">
+    <div class="page_illustration_outer"></div>
+  </div>
+  <div class="flex_inner display_content">
+    <%# <p>Displaying "category|Manuscripts"</p> %>
 
-<p>Displaying "category|Reviews"</p>
+    <p>This section offers the most complete collection of contemporary reviews of Chesnutt to be found anywhere. We will supplement this collection further as more reviews are located, and we are grateful when users alert us to missing items.</p>
 
-<p>This section offers the most complete collection of contemporary reviews of Chesnutt to be found anywhere. We will supplement this collection further as more reviews are located, and we are grateful when users alert us to missing items.</p>
+    <p>During his lifetime, Chesnutt's works earned publication notices and reviews in a wide variety of newspapers and magazines. Our collection includes reviews published in city newspapers, regional magazines, and national outlets. The collection includes materials from the Black press as well as the White press.</p>
 
-<p>During his lifetime, Chesnutt's works earned publication notices and reviews in a wide variety of newspapers and magazines. Our collection includes reviews published in city newspapers, regional magazines, and national outlets. The collection includes materials from the Black press as well as the White press.</p>
-
-<p>In the late 1990s John M. Freiermuth, then a graduate student in the Department of English, University of North Carolina, Greensboro, collected a large batch of reviews and offered them to project co-editor Stephanie Browner for use on the initial version of the <em>Chesnutt Archive</em>. Since then many more reviews have been located thanks to the increasing availability of historic periodicals through online databases. Samantha Gilmore of the University of Nebraska-Lincoln has led the effort to discover more reviews, an effort that has vastly increased our ability to study Chesnutt’s early reception.</p>
+    <p>In the late 1990s John M. Freiermuth, then a graduate student in the Department of English, University of North Carolina, Greensboro, collected a large batch of reviews and offered them to project co-editor Stephanie Browner for use on the initial version of the <em>Chesnutt Archive</em>. Since then many more reviews have been located thanks to the increasing availability of historic periodicals through online databases. Samantha Gilmore of the University of Nebraska-Lincoln has led the effort to discover more more reviews, an effort that has vastly increased our ability to study Chesnutt’s early reception. </p>
+  </div>
+</div>
 
 <%= render_overridable "items", "search_preset_header" %>
 
-<div class="row search_form search_preset search_preset_<%= @preset_class %>">
+<div class="search_form search_preset search_preset_<%= @preset_class %>">
 
   <%# do not display any facet options or summary boxes for this view %>
 
