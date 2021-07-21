@@ -162,15 +162,10 @@ div.poem {}
   font-weight: 600;
 }
 
-// tei note most items
-
-.tei_note {
-  display: block;
-}
-
 // tei note on proofs
 
-.galley_proofs .tei_note {
+.subcat_galley_proofs .tei_note,
+.tei_note_demo {
   background-color: rgba(194,218,217,1);
   border: solid #aaa 1px;
   display: inline;
@@ -421,6 +416,7 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
   margin: 1em 0;
 }
 
+// todo: karin look at this
 .tei_note_type_authorial span {
   background-color: $gold-metallic;
   border: double 3px blue;

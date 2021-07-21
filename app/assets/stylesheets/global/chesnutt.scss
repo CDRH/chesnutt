@@ -338,89 +338,149 @@ ul.searchlinks {
 //     .page_banner_illustration
 //       .page_banner_illustration_inner
 
+// Settings for all horizontal illustrations
+
+// make banner sit flush at top
 .page_banner_outer {
-  background-image: image-url("stripes-light.png");
   margin-top: -49px;
 }
 
-.page_banner_outer > .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .page_banner_text {
-    background-color: rgba(255,255,255,.8); 
-    flex-grow: 1;
-    padding: 0 10px 10px 10px;
+// if screen > sm, place text over image
+@media (min-width: $screen-sm) {
+  .page_banner_outer {
+    position: relative;
+    z-index: 1;
   }
+
   .page_banner_illustration {
-    align-self: flex-end;
-    flex-grow: 2;
-    min-width: 383px;
-    padding: 10px 10px 0px 10px;
-    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
-@media (min-width: $screen-md-min) {
-  .page_banner_outer > .container {
-    flex-direction: row;
+// Style semi transparent background for page text 
+.page_banner_text {
+  background-color:rgba(255, 255, 255, 0.8);
+  padding: 20px 20px 10px 20px;
+  position: relative;
+  z-index: 4;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 2em;
   }
 }
 
-.page_banner_outer {
-  background-position: top center;
-  background-size: cover; //contain
-  height: 550px;
-  margin-bottom: 1em;
+// set illustration to cover entire area
+.page_banner_illustration {
+  background-size: cover;
+}
+
+// set width of outer and inner illustration holders 
+// to 100%. note: tried 100vw, but it was too wide
+.page_banner_outer,
+.page_banner_illustration { 
   width: 100%;
-  .container {
-    .page_banner_text{
+}
+
+// for larger screens, move semi transparent text 
+// box to left
+@media (min-width: $screen-lg) {
+  .page_banner_text {
+    width: 60%;
+  }
+}
+
+// =====
+// Repeat per horizontal banner
+
+@mixin horizontal_bar($section, $img, $height) 
+{
+  .action_#{$section} {
+    .page_banner_illustration {
+      background-image: $img;
+      height: $height;
+    }
+  }
+  
+  @media (min-width: $screen-sm) {
+    .action_#{$section} {
+      .page_banner_outer {
+         height: $height;
+      }
     }
   }
 }
 
-// Works
-.action_works {
-  .page_banner_outer {
-    background-image: image-url("chesnutt-works.jpg");
-    width: 100vw;
-    height: 32vw;
+//Works
+@include horizontal_bar (
+  works,
+  image-url("chesnutt-works.jpg"), 
+  32vw
+  );
+
+// Resources
+@include horizontal_bar (
+  resources,
+  image-url("chesnutt-scholarship.jpg"), 
+  32vw
+  );
+
+// About
+@include horizontal_bar (
+  about,
+  image-url("chesnutt-about.jpg"), 
+  46vw
+  );
+
+//Manuscripts and About_history will work different, todo: work on this
+
+// .action_about_history.page_about img {
+//   margin: auto;
+//   max-width: 100%;
+//   text-align: center;
+// }
+
+// // Manuscripts
+
+// Switch order of flex elements for large display
+.action_manuscripts .flex .flex_inner:nth-child(2) {
+  order: 1;
+  margin-right: 20px;
+}
+
+.action_manuscripts .flex .flex_inner:nth-child(1) {
+  order: 2;
+}
+
+@media (max-width: $screen-xs-max) {
+  .action_manuscripts .flex {
+    display: block !important;
+
+    .flex_inner:nth-child(2) {
+      margin-right: 0;
+    }
+
+    .page_illustration_outer {
+      max-height: 300px;
+      width: 100%
+    }
   }
 }
 
-//Scholarship
-.action_scholarship {
-  .page_banner_outer {
-    background-image: image-url("chesnutt-scholarship.jpg");
-  }
-}
-
-//About
-.action_about {
-  .page_banner_outer {
-    background-image: image-url("chesnutt-about.jpg");
-    height: 46vw;
-    height:900px;
-    width: 100vw;
-  }
-}
-
-.action_about_history.page_about img {
-  margin: auto;
-  max-width: 100%;
-  text-align: center;
-}
-
-// Manuscripts
+// .action_manuscripts .flex {
+//   display: block !important;
+// }
 
 .page_illustration_outer {
   background-image: image-url("chesnutt-manuscripts.jpg");
   background-size: cover;
   display: block;
-  float: right;
   height: 800px;
   width: 400px;
+  background-position: center;
 }
 
 // ================
