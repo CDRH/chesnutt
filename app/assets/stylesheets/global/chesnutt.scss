@@ -667,6 +667,12 @@ ul.searchlinks {
 // Home
 // ================
 
+.controller_general.action_index {
+  #content-wrapper {
+    margin-bottom: 0;
+  }
+}
+
 @media (min-width: $screen-sm) { // only make home items bigger if non mobile
   .controller_general.action_index {
 
@@ -689,10 +695,6 @@ ul.searchlinks {
     .lead {
       margin-top: 1em;
     }
-
-    #content-wrapper {
-      margin-bottom: 0;
-    }
   } 
 
   .home-content-wrapper {
@@ -713,8 +715,7 @@ ul.searchlinks {
   margin-bottom: 1em;
   padding:  0;
   position: relative;
-  width: 100%; //fallback
-  width: 100vw;
+  width: 100%;
   z-index: 1;
 } 
 
