@@ -107,6 +107,7 @@ ItemsController.class_eval do
   def reception_reviews
     options = params.permit!.deep_dup
     options["f"] = ["category|Reviews"]
+    options["sort"] = ["date|asc"]
     @res = $api.query(options)
 
     # render search preset with route information

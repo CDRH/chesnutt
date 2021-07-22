@@ -13,7 +13,7 @@ body {
 .archive_item {  // class around tei -> html generations
   background-color: $white;
   border-radius: 5px;
-  border: solid 1px $platinum;
+  border: 1px solid $platinum;
   line-height: 1.8em;
   padding: 20px;
 }
@@ -28,10 +28,11 @@ body {
 }
 
 .center_image {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
   margin: 1.5em 0;
+
   img {
     max-width: 100%;
   }
@@ -46,6 +47,7 @@ body {
 // Adding underlines back
 a {
   text-decoration: underline;
+
   &:hover {
     text-decoration-color: $brand-success;
     text-decoration-thickness: 3px;
@@ -58,7 +60,7 @@ a {
 }
 
 ::selection {
-  background-color: rgb(229, 207, 169);
+  background-color: $banana-mania;
 }
 
 .rend_bold {
@@ -67,7 +69,7 @@ a {
 
 hr {
   &.horBar {
-    border-top: solid 3px black;
+    border-top: 3px solid $dark;
     width: 50%;
   }
 }
@@ -134,7 +136,7 @@ ul.searchlinks {
   }
 
   .site-title {
-    border-bottom: double 3px $gold-metallic;
+    border-bottom: 3px double $gold-metallic;
     display: inline-block;
     font-family: $font-family-display;
     margin-top: .1em;
@@ -145,7 +147,7 @@ ul.searchlinks {
     }
 
     .title_cwc {
-      font-family: 'Marcellus SC';
+      font-family: $font-family-smallcaps;
       letter-spacing: .1em;
       margin: 0 .1em 0 .3em;
       word-spacing: -.1em;
@@ -157,7 +159,7 @@ ul.searchlinks {
   $subnav: $cultured;
 
   .navbar-default, .navbar {
-     border: 0;
+     border: none;
      margin-bottom: 0;
   }
 
@@ -174,7 +176,7 @@ ul.searchlinks {
 
   .navbar_mainnav {
     background-color: $brand-info;
-    border-bottom: solid $subnav 3px;
+    border-bottom: 3px solid $subnav;
 
     a {
       color: $white;
@@ -306,7 +308,7 @@ ul.searchlinks {
     text-align: center;
 
     a {
-      border: solid $brand-success 2px;
+      border: 2px solid $brand-success;
       display: block;
       font-family: $font-family-sans-serif;
       margin: 10px;
@@ -314,7 +316,7 @@ ul.searchlinks {
       padding: 10px;
 
       &:hover {
-        border: solid $dark-purple 2px;
+        border: 2px solid $dark-purple;
 
         span {
           background-color:rgba(255, 255, 255, 1);
@@ -324,15 +326,13 @@ ul.searchlinks {
       }
       
       span {
-        background-color:rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 0.8);
         color: $link-color !important;
         display: inline-block;
         text-decoration: underline;
         font-size: 1.3em;
         padding: .1em .4em;
       }
-
-
     }
   }
 
@@ -387,14 +387,6 @@ ul.searchlinks {
 
 // Horizontal Banners
 
-// .page_banner_outer
-//   .container
-//     .page_banner_text 
-//       h1 
-//       p
-//     .page_banner_illustration
-//       .page_banner_illustration_inner
-
 // Settings for all horizontal illustrations
 
 // make banner sit flush at top
@@ -418,7 +410,7 @@ ul.searchlinks {
 
 // Style semi transparent background for page text 
 .page_banner_text {
-  background-color:rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 20px 20px 10px 20px;
   position: relative;
   z-index: 4;
@@ -503,8 +495,8 @@ ul.searchlinks {
 
 // Switch order of flex elements for large display
 .flex.page_banner_vertical .flex_inner:nth-child(2) {
-  order: 1;
   margin-right: 20px;
+  order: 1;
 }
 
 .flex.page_banner_vertical .flex_inner:nth-child(1) {
@@ -602,32 +594,38 @@ ul.searchlinks {
 
 .action_about_people.page_about #content-wrapper {
   img {
+    clear: both;
     float: left;
     padding: 0 20px 10px 0;
-    clear: both;
   } 
 
   p {
-    margin-bottom: 2em;
-    clear:both;
-    border-bottom: solid 1px #aaa;
+    border-bottom: 1px solid $gray;
+    clear: both;
     height: auto;
-    min-height: 180px;
+    margin-bottom: 2em;
     margin-top: 1em;
-    padding-bottom: 20px
+    min-height: 180px;
+    padding-bottom: 20px;
   }
 }
 
 // About - biographical sketch
 
 .essay.biographical_sketch {
-  backdrop-filter: blur(4px);
-  background:rgba(255, 255, 255, .9);
-  border-radius: 30px;
-  margin-top: -13vw;
-  padding: 20px;
-  position: relative;
-  z-index: 500;
+  padding-top: 20px;
+}
+
+@media (min-width: $screen-sm) {
+  .essay.biographical_sketch {
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, .9);
+    border-radius: 30px;
+    margin-top: -13vw;
+    padding: 20px;
+    position: relative;
+    z-index: 500;
+  }
 }
 
 // ================
@@ -635,7 +633,7 @@ ul.searchlinks {
 // ================
 
 .metadata {
-  border: 1px solid silver;
+  border: 1px solid $gray;
   clear: both;
   margin: 10px 0;
   padding: 10px 20px 35px 20px;
@@ -713,7 +711,7 @@ ul.searchlinks {
   height: 200px; // fallback
   height: 39vw;
   margin-bottom: 1em;
-  padding:  0;
+  padding: 0;
   position: relative;
   width: 100%;
   z-index: 1;
@@ -721,11 +719,11 @@ ul.searchlinks {
 
 .home-content-wrapper {
   .callout_quote {
-    background-color:  $gold-metallic;
+    background-color: $gold-metallic;
     box-shadow: 0px 0px 7px $gray-darker;
     display: block;
-    float:  left;
-    margin-top:  -4em !important;
+    float: left;
+    margin-top: -4em !important;
     margin: .1em .8em .2em 0;
     max-width: 400px;
     padding: .6em;
@@ -734,15 +732,15 @@ ul.searchlinks {
 
     p {
       background-color: rgba(255,255,255,.2);
-      border:  double 3px $brandy;
+      border: 3px double $brandy;
       color: $gray-base;
       font-size: 1.3em;
       height: 100%;
       line-height: 1.2em;
-      margin:  0;
-      padding:  .6em;
+      margin: 0;
+      padding: .6em;
       text-align: left;
-      text-indent: 0 !important;
+      text-indent: 0;
 
       em {
         display: block;
