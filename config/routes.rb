@@ -29,6 +29,6 @@ Rails.application.routes.draw do
   get "about/white_paper", to: "general#about_white_paper", as: "about_white_paper"
   
   # no subnav for biographical sketch
-  get "about/biographical_sketch", to: "general#biographical_sketch", as: "biographical_sketch"
+  get "about/chesnutt", to: "general#biographical_sketch", as: "about_chesnutt"
 
 end
