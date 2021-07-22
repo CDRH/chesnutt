@@ -27,6 +27,16 @@ body {
   max-width: 100%;
 }
 
+.center_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5em 0;
+  img {
+    max-width: 100%;
+  }
+}
+
 // HTML Elements
 
 .archive_item p {
@@ -587,6 +597,26 @@ ul.searchlinks {
 // End Banners
 
 // Other Page code
+
+// About - people 
+
+.action_about_people.page_about {
+  img {
+    float: left;
+    padding: 0 20px 10px 0;
+    clear: both;
+  } 
+
+  p {
+    margin-bottom: 2em;
+    clear:both;
+    border-bottom: solid 1px #aaa;
+    height: auto;
+    min-height: 180px;
+    margin-top: 1em;
+    padding-bottom: 20px
+  }
+}
 
 // About - biographical sketch
 
