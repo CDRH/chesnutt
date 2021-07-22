@@ -22,6 +22,21 @@ body {
   display: flex;
 }
 
+.right_image {
+  margin: 0 0 10px 10px;
+  max-width: 100%;
+}
+
+.center_image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5em 0;
+  img {
+    max-width: 100%;
+  }
+}
+
 // HTML Elements
 
 .archive_item p {
@@ -276,7 +291,7 @@ ul.searchlinks {
 // Item listing, top level pages, search
 // ================
 
-// Secondary page listing (see about main page)
+// Secondary page listing (see about the site main page)
 
 .page_subnav {
   display: flex;
@@ -291,11 +306,33 @@ ul.searchlinks {
     text-align: center;
 
     a {
-      border: solid $dark-purple 1px;
+      border: solid $brand-success 2px;
       display: block;
+      font-family: $font-family-sans-serif;
       margin: 10px;
       min-height: 100px;
       padding: 10px;
+
+      &:hover {
+        border: solid $dark-purple 2px;
+
+        span {
+          background-color:rgba(255, 255, 255, 1);
+          text-decoration-color: $brand-success;
+          text-decoration-thickness: 3px;
+        }
+      }
+      
+      span {
+        background-color:rgba(255, 255, 255, 0.8);
+        color: $link-color !important;
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 1.3em;
+        padding: .1em .4em;
+      }
+
+
     }
   }
 
@@ -303,25 +340,43 @@ ul.searchlinks {
 
   li:nth-child(4n + 1) {
     a {
-      background-image: image-url("subtle_stripes.png");
+      background-image: image-url("marble_01.jpg");
     }
   }
 
   li:nth-child(4n + 2) {
     a {
-      background-image: image-url("chevron.png");
+      background-image: image-url("marble_02.jpg");
     }
   }
 
   li:nth-child(4n + 3) {
     a {
-      background-image: image-url("double-bubble-outline.png");
+      background-image: image-url("marble_03.jpg");
     }
   }
 
   li:nth-child(4n + 4) {
     a {
-      background-image: image-url("stripes-light.png");
+      background-image: image-url("marble_04.jpg");
+    }
+  }
+
+  li:nth-child(5n + 5) {
+    a {
+      background-image: image-url("marble_05.jpg");
+    }
+  }
+
+  li:nth-child(6n + 6) {
+    a {
+      background-image: image-url("marble_06.jpg");
+    }
+  }
+
+  li:nth-child(7n + 7) {
+    a {
+      background-image: image-url("marble_07.jpg");
     }
   }
 }
@@ -329,6 +384,8 @@ ul.searchlinks {
 // =======================
 // Page decorative banners
 // =======================
+
+// Horizontal Banners
 
 // .page_banner_outer
 //   .container
@@ -435,83 +492,65 @@ ul.searchlinks {
   32vw
   );
 
-// About
+// About - Biographical sketch
 @include horizontal_bar (
-  about,
+  biographical_sketch,
   image-url("chesnutt-about.jpg"), 
   46vw
   );
 
-//Manuscripts and About_history will work different, todo: work on this
-
-// .action_about_history.page_about img {
-//   margin: auto;
-//   max-width: 100%;
-//   text-align: center;
-// }
-
-// // Manuscripts
+// Vertical Banners
 
 // Switch order of flex elements for large display
-.action_manuscripts .flex .flex_inner:nth-child(2) {
+.flex.page_banner_vertical .flex_inner:nth-child(2) {
   order: 1;
   margin-right: 20px;
 }
 
-.action_manuscripts .flex .flex_inner:nth-child(1) {
+.flex.page_banner_vertical .flex_inner:nth-child(1) {
   order: 2;
 }
 
 @media (max-width: $screen-xs-max) {
-  .action_manuscripts .flex {
+  .flex.page_banner_vertical {
     display: block !important;
 
     .flex_inner:nth-child(2) {
       margin-right: 0;
     }
-
-    .page_illustration_outer {
-      max-height: 300px;
-      width: 100%
-    }
   }
 }
 
-// .action_manuscripts .flex {
-//   display: block !important;
-// }
+.page_banner_vertical .page_illustration_outer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+
+// Manuscripts
+
+@media (max-width: $screen-xs-max) {
+  .action_manuscripts .flex.page_banner_vertical {
+    .page_illustration_outer {
+      max-height: 300px;
+      width: 100%;
+    }
+  }
+}
 
 .action_manuscripts .page_illustration_outer {
   background-image: image-url("chesnutt-manuscripts.jpg");
-  background-size: cover;
+  background-position: center;
   display: block;
   height: 800px;
   width: 400px;
-  background-position: center;
 }
 
-
-
-
-
-// Switch order of flex elements for large display
-.action_reception_reviews.flex .flex_inner:nth-child(2) {
-  order: 1;
-  margin-right: 20px;
-}
-
-.action_reception_reviews .flex .flex_inner:nth-child(1) {
-  order: 2;
-}
+// Reviews/Reception
 
 @media (max-width: $screen-xs-max) {
-  .action_reception_reviews .flex {
-    display: block !important;
-
-    .flex_inner:nth-child(2) {
-      margin-right: 0;
-    }
-
+  .action_reception_reviews .flex.page_banner_vertical {
     .page_illustration_outer {
       max-height: 300px;
       width: 100%
@@ -519,19 +558,12 @@ ul.searchlinks {
   }
 }
 
-
-// .action_manuscripts .flex {
-//   display: block !important;
-// }
-
 .action_reception_reviews .page_illustration_outer {
   background-image: image-url("chesnutt-reviews.jpg");
+  background-position: top;
   background-size: contain;
-  display: block;
   height: 270px;
   width: 180px;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 @media (min-width: $screen-xs) {
@@ -562,13 +594,44 @@ ul.searchlinks {
   }
 }
 
+// End Banners
 
+// Other Page code
 
+// About - people 
 
+.action_about_people.page_about {
+  img {
+    float: left;
+    padding: 0 20px 10px 0;
+    clear: both;
+  } 
 
+  p {
+    margin-bottom: 2em;
+    clear:both;
+    border-bottom: solid 1px #aaa;
+    height: auto;
+    min-height: 180px;
+    margin-top: 1em;
+    padding-bottom: 20px
+  }
+}
+
+// About - biographical sketch
+
+.essay.biographical_sketch {
+  backdrop-filter: blur(4px);
+  background:rgba(255, 255, 255, .9);
+  border-radius: 30px;
+  margin-top: -13vw;
+  padding: 20px;
+  position: relative;
+  z-index: 500;
+}
 
 // ================
-// Items
+// Items 
 // ================
 
 .metadata {
@@ -686,10 +749,4 @@ ul.searchlinks {
       }
     }
   }
-}
-
-
-.right_image {
-  margin: 0 0 10px 10px;
-  max-width: 100%;
 }
