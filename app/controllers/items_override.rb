@@ -17,7 +17,7 @@ ItemsController.class_eval do
     @title = "Stories"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Stories"]
+    options["f"] = ["subcategory|Works/Stories"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -29,7 +29,7 @@ ItemsController.class_eval do
     @title = "Essays"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Essays"]
+    options["f"] = ["subcategory|Works/Essays"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -40,7 +40,7 @@ ItemsController.class_eval do
   def works_novels
     @title = "Novels"
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Novel"]
+    options["f"] = ["subcategory|Works/Novel"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -52,7 +52,7 @@ ItemsController.class_eval do
     @title = "Poems"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Poems"]
+    options["f"] = ["subcategory|Works/Poems"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -64,7 +64,7 @@ ItemsController.class_eval do
     @title = "Collections"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Collection"]
+    options["f"] = ["subcategory|Works/Collection"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -76,7 +76,7 @@ ItemsController.class_eval do
     @title = "Other Works"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Other Works"]
+    options["f"] = ["subcategory|Works/Other Works"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -106,7 +106,7 @@ ItemsController.class_eval do
 
   def reception_reviews
     options = params.permit!.deep_dup
-    options["f"] = ["category|Reviews"]
+    options["f"] = ["subcategory|Reception/Reviews"]
     options["sort"] = ["date|asc"]
     @res = $api.query(options)
 
