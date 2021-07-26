@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get "works/poems", to: "items#works_poems", as: "works_poems"
   get "works/collection", to: "items#works_collection", as: "works_collection"
   get "works/other", to: "items#works_other", as: "works_other"
+  get "works/reviews", to: "items#works_reviews", as: "works_reviews"
 
   get "manuscripts", to: "items#manuscripts", as: "manuscripts"
   

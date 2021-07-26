@@ -84,6 +84,18 @@ ItemsController.class_eval do
     render_overridable "items", "works"
   end
 
+  def works_reviews
+    @title = "Reviews by Chesnutt"
+
+    options = params.permit!.deep_dup
+    options["f"] = ["subcategory|Works/Reviews"]
+    @res = $api.query(options)
+
+    # render search preset with route information
+    @route_path = "works_reviews_path"
+    render_overridable "items", "works"
+  end
+
   def manuscripts
     options = params.permit!.deep_dup
     options["f"] = ["category|Manuscripts"]

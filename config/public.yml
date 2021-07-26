@@ -86,6 +86,8 @@ default: &default
         label: Works
         flags:
           - search_filter
+      source:
+        label: Source
 # Add fields for other languages with their language code
 #    es:
 #      category:
