@@ -290,7 +290,7 @@ ul.searchlinks {
 }
 
 // ================
-// Item listing, top level pages, search
+// Item listing, top level pages
 // ================
 
 // Secondary page listing (see about the site main page)
@@ -628,12 +628,37 @@ ul.searchlinks {
   }
 }
 
+// ============
+// Search Results
+// ============
+
+.search_results_info {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      padding-left: 1.5em;
+      text-indent: -1.5em;  
+    }
+  }
+  p em {
+    background-color: $banana-mania;
+  }
+}
+
+.searchResults {
+  border-bottom: 1px solid $gray-light;
+  padding-bottom: 1.5em;
+}
+
 // ================
 // Items 
 // ================
 
 .metadata {
-  border: 1px solid $gray;
+  border: 1px solid $gray-light;
   clear: both;
   margin: 10px 0;
   padding: 10px 20px 35px 20px;
