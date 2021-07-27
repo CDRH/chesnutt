@@ -6,6 +6,9 @@
       <li class="<%= active?(home_path) %>">
         <%= link_to t("home.title", default: "Home"), home_path %>
       </li>
+      <li class="<%= 'active' if params[:action].include?("biographical_sketch") == true %>">
+        <%= link_to "About Chesnutt", about_chesnutt_path %>
+      </li>
       <li class="<%= 'active' if params[:action].include?("works") == true %>">
         <%= link_to "Works", works_path %>
       </li>
@@ -20,9 +23,6 @@
       </li>
       <li class="<%= 'active' if params[:action].include?("resources") == true%>">
         <%= link_to "Resources", resources_path %>
-      </li>
-      <li class="<%= 'active' if params[:action].include?("biographical_sketch") == true %>">
-        <%= link_to "About Chesnutt", about_chesnutt_path %>
       </li>
     </ul>
   </div>

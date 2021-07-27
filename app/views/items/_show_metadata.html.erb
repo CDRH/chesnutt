@@ -36,7 +36,8 @@
     <% if @res["volume_title_k"].present? %>
       "<%= @res["title"] %>,"
     <% else %>
-      <em><%= @res["title"] %></em>,
+      <em><%= @res["title"] %></em>
+      <%if @res["volume_creator_k"].present? %>,<% end %>
     <% end %>
 
     <% if @res["volume_title_k"].present? %>
