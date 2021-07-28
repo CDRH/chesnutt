@@ -83,7 +83,7 @@ default: &default
         flags:
           - search_filter
       works:
-        label: Works
+        label: Works in Reviews
         flags:
           - search_filter
       source:
