@@ -5,7 +5,7 @@
 
 <h1><%= @res["title"] %></h1>
 <%= render_overridable("show_metadata") %>
-<% if @res["subcategory"] == "Galley Proofs" %>
+<% if @res["subcategory"] == "Manuscripts/Galley Proofs" %>
   <%= render_overridable("show_key") %>
 <% end %>
 <%= render_overridable("show_content") %>
