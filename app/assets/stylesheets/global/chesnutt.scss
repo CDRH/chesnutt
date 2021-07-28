@@ -703,6 +703,13 @@ ul.searchlinks {
   }
 }
 
+// border around publication statement
+.archive_item .tei_note_type_publication {
+  border: 1px solid $gray-light;
+  display: block;
+  padding: 10px 20px;
+}
+
 // ================
 // Home
 // ================
