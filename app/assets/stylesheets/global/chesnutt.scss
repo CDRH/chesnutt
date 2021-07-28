@@ -44,6 +44,10 @@ body {
   text-indent: 3em;
 }
 
+ul {
+  list-style-type: square;
+}
+
 // Adding underlines back
 a {
   text-decoration: underline;
@@ -628,6 +632,19 @@ ul.searchlinks {
   }
 }
 
+.chesnutt_about_image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+@media (min-width: $screen-md) {
+  .chesnutt_about_image {
+    margin: 0 0 20px 20px;
+    float: right;
+  }
+}
+
 // ============
 // Search Results
 // ============
@@ -671,7 +688,7 @@ ul.searchlinks {
     width: 100%
   }
 
-  ul {
+  .archive_item ul {
     columns: 1;
     list-style-type: none;
     margin: 0 0 .5em 0;
