@@ -9,6 +9,7 @@
       <em>The Charles W. Chesnutt Archive</em>, 
       <%= t("general.editors") %>, 
       accessed <%= Time.now.strftime("%B %d, %Y") %>.
+      <%= @res["uri"] %>.
     </li>
 
     <% if @res["uri_data"].present? %>
