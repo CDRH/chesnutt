@@ -162,7 +162,10 @@ div.poem {}
   font-weight: 600;
 }
 
-.tei_note {
+// tei note on proofs
+
+.subcat_galley_proofs .tei_note,
+.tei_note_demo {
   background-color: rgba(194,218,217,1);
   border: solid #aaa 1px;
   display: inline;
@@ -282,10 +285,15 @@ span.pageimage {
   padding: .5em 4em .5em 4em;
 }
 
+.tei_floatingText .tei_lg,
+.tei_floatingText .tei_p {
+  font-size: .9em;
+  margin-left: 3.3em;
+}
+
 // Poems
 
-.inline_quote
-.tei_q,
+.inline_quote .tei_q,
 .tei_floatingText,
 .tei_lg_type_poem,
 .tei_lg,
@@ -408,6 +416,7 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
   margin: 1em 0;
 }
 
+// todo: karin look at this
 .tei_note_type_authorial span {
   background-color: $gold-metallic;
   border: double 3px blue;
@@ -488,13 +497,14 @@ del {
 }
 
 .tei_del_rend_overstrike,
+.tei_subst_rend_overwrite,
 .tei_del_rend_strikethrough,
 .tei_hi_rend_overstrike,
 .tei_hi_rend_strikethrough {
   text-decoration: line-through;
 }
 
-.milestone {
+.‹‹ {
   width: 50%;
   border-top: solid 3px black;
   display: block;
@@ -534,5 +544,5 @@ del {
 
 //subheads
 .tei_head_type_sub {
-  font-size-adjust: .4;
+  font-size: 1.2em;
 }

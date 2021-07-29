@@ -2,7 +2,10 @@
   <div class="container">
     <ul class="nav navbar-nav">
       <li class="<%= active?(about_history_path) %>">
-        <%= link_to "History", about_history_path %>
+        <%= link_to "Project History", about_history_path %>
+      </li>
+            <li class="<%= active?(about_people_path) %>">
+        <%= link_to "People", about_people_path %>
       </li>
       <li class="<%= active?(about_editorial_policy_path) %>">
         <%= link_to "Editorial Policy", about_editorial_policy_path %>
@@ -13,14 +16,8 @@
       <li class="<%= active?(about_use_statement_path) %>">
         <%= link_to "Use Statement", about_use_statement_path %>
       </li>
-      <li class="<%= active?(about_people_path) %>">
-        <%= link_to "People", about_people_path %>
-      </li>
-      <li class="<%= active?(about_biographical_sketch_path) %>">
-        <%= link_to "About Chesnutt", about_biographical_sketch_path %>
-      </li>
        <li class="<%= active?(about_white_paper_path) %>">
-        <%= link_to "White Paper", about_white_paper_path %>
+        <%= link_to "Statement of Principles", about_white_paper_path %>
       </li>
     </ul>
   </div>

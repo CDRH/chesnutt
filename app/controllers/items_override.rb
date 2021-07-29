@@ -17,7 +17,7 @@ ItemsController.class_eval do
     @title = "Stories"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Stories"]
+    options["f"] = ["subcategory|Works/Stories"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -29,7 +29,7 @@ ItemsController.class_eval do
     @title = "Essays"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Essays"]
+    options["f"] = ["subcategory|Works/Essays"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -40,7 +40,7 @@ ItemsController.class_eval do
   def works_novels
     @title = "Novels"
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Novel"]
+    options["f"] = ["subcategory|Works/Novels"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -52,7 +52,7 @@ ItemsController.class_eval do
     @title = "Poems"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Poems"]
+    options["f"] = ["subcategory|Works/Poems"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -64,7 +64,7 @@ ItemsController.class_eval do
     @title = "Collections"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Collection"]
+    options["f"] = ["subcategory|Works/Collections"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -76,11 +76,23 @@ ItemsController.class_eval do
     @title = "Other Works"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Other Works"]
+    options["f"] = ["subcategory|Works/Other Works"]
     @res = $api.query(options)
 
     # render search preset with route information
     @route_path = "works_other_path"
+    render_overridable "items", "works"
+  end
+
+  def works_reviews
+    @title = "Reviews by Chesnutt"
+
+    options = params.permit!.deep_dup
+    options["f"] = ["subcategory|Works/Reviews"]
+    @res = $api.query(options)
+
+    # render search preset with route information
+    @route_path = "works_reviews_path"
     render_overridable "items", "works"
   end
 
@@ -106,7 +118,8 @@ ItemsController.class_eval do
 
   def reception_reviews
     options = params.permit!.deep_dup
-    options["f"] = ["category|Reviews"]
+    options["f"] = ["subcategory|Reception/Reviews"]
+    options["sort"] = ["date|asc"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -122,6 +135,21 @@ ItemsController.class_eval do
   def about
     @title = "About"
     @header = true
+  end
+
+  def resources_bibliography
+    id = "ccda.oth00001"
+    @res = $api.get_item_by_id(id).first
+    if @res
+      url = @res["uri_html"]
+      @html = Net::HTTP.get(URI.parse(url)) if url
+      @title = @res["title"]
+      render "items/page"
+    else
+      @title = "Item #{params["id"]} not found"
+      render "items/show_not_found", status: 404
+    end
+    
   end
 
 end

@@ -1,9 +1,12 @@
-<%# overridden from orchid to add assets, no other changes %>
+<%# overridden from orchid to add assets, key, bottom metadata %>
 
 <% @ext_css = [ "fancybox.min" ] %>
 <% @ext_js = [ "fancybox.min", "item_gallery_lightbox" ] %>
 
 <h1><%= @res["title"] %></h1>
 <%= render_overridable("show_metadata") %>
+<% if @res["subcategory"] == "Manuscripts/Galley Proofs" %>
+  <%= render_overridable("show_key") %>
+<% end %>
 <%= render_overridable("show_content") %>
 <%= render_overridable("show_bottom_metadata") %>

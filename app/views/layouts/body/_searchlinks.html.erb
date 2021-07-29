@@ -1,7 +1,6 @@
 <ul class="searchlinks">
-  <li class="<%= active?(/^#{config.relative_url_root}\/browse/,
-    request.path) %>">
-    <%= link_to t("browse.title", default: "Browse"), browse_path %>
+  <li class="<%= 'active' if params[:action].include?("about") == true %>">
+    <%= link_to "About the Site", about_path %>
   </li>
   <li class="<%= active?(search_path) %>">
     <%= link_to t("search.title", default: "Search"), search_path, rel: "search" %>

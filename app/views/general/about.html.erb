@@ -1,45 +1,35 @@
 
-  </div><%# close container div for full width  %>
-
-  <div class="page_banner_outer">
-    <div class="container">
-      <div class="page_banner_text"><h1 style="">About</h1>
-        <p>Lorum Ipsum </p>
-      </div>
-      <div class="page_banner_illustration">
-        <div class="page_banner_illustration_inner">
-          
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container"><%# reopen container div %>
-
+<h1>About the Site</h1>
 
 <ul class="page_subnav">
-  <li class="<%= active?(about_history_path) %>">
-    <%= link_to "History", about_history_path %>
+  <li>
+    <%= link_to about_history_path  do %>
+      <span>Project History</span>
+    <% end %>
   </li>
-  <li class="<%= active?(about_editorial_policy_path) %>">
-    <%= link_to "Editorial Policy", about_editorial_policy_path %>
+    <li>
+    <%= link_to about_people_path do %>
+      <span>People</span>
+    <% end %>
   </li>
-  <li class="<%= active?(about_encoding_guidelines_path) %>">
-    <%= link_to "Encoding Guidelines", about_encoding_guidelines_path %>
+  <li>
+    <%= link_to about_editorial_policy_path do %>
+    <span>Editorial Policy</span>
+    <% end %>
   </li>
-  <li class="<%= active?(about_history_path) %>">
-    <%= link_to "History", about_history_path %>
+  <li>
+    <%= link_to about_encoding_guidelines_path do %>
+    <span>Encoding Guidelines</span>
+    <% end %>
   </li>
-  <li class="<%= active?(about_use_statement_path) %>">
-    <%= link_to "Use Statement", about_use_statement_path %>
+  <li>
+    <%= link_to about_use_statement_path do %>
+    <span>Use Statement</span>
+    <% end %>
   </li>
-  <li class="<%= active?(about_people_path) %>">
-    <%= link_to "People", about_people_path %>
-  </li>
-  <li class="<%= active?(about_biographical_sketch_path) %>">
-    <%= link_to "About Chesnutt (Biographical Sketch)", about_biographical_sketch_path %>
-  </li>
-   <li class="<%= active?(about_white_paper_path) %>">
-    <%= link_to "White Paper", about_white_paper_path %>
+   <li>
+    <%= link_to about_white_paper_path do %>
+    <span>Statement of Purpose and Principles</span>
+    <% end %>
   </li>
 </ul>

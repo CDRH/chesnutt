@@ -1,7 +1,5 @@
 @import "../bootstrap-variables.scss";
 
-@import url('https://fonts.googleapis.com/css2?family=Marcellus+SC&display=swap');
-
 // ================
 // General settings
 // ================
@@ -12,18 +10,48 @@ body {
   font-weight: 400;
 }
 
-.main_content {
+.archive_item {  // class around tei -> html generations
   background-color: $white;
   border-radius: 5px;
-  border: solid 1px $platinum;
+  border: 1px solid $platinum;
   line-height: 1.8em;
   padding: 20px;
 }
 
-// Adding underlines back
+.flex {
+  display: flex;
+}
 
+.right_image {
+  margin: 0 0 10px 10px;
+  max-width: 100%;
+}
+
+.center_image {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 1.5em 0;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+// HTML Elements
+
+.archive_item p {
+  text-indent: 3em;
+}
+
+ul {
+  list-style-type: square;
+}
+
+// Adding underlines back
 a {
   text-decoration: underline;
+
   &:hover {
     text-decoration-color: $brand-success;
     text-decoration-thickness: 3px;
@@ -31,18 +59,35 @@ a {
 }
 
 // Then removing underlines in some places
-
 #header a, #footer a, a.btn {
   text-decoration: none;
 }
 
-//changed indent to apply only to "archive_item"
-.archive_item p {
-  text-indent: 3em;
+::selection {
+  background-color: $banana-mania;
 }
 
-::selection {
-  background-color: rgb(229, 207, 169);
+.rend_bold {
+  font-weight: 600;
+}
+
+hr {
+  &.horBar {
+    border-top: 3px solid $dark;
+    width: 50%;
+  }
+}
+
+blockquote {
+  border: none;
+  font-size: 1em;
+  margin-left: 3em;
+  padding: 0;
+
+  p {
+    font-size: .9em;
+    line-height: 1.4em
+  }
 }
 
 // ================
@@ -72,7 +117,6 @@ ul.searchlinks {
   }
 }
 
-// Header
 @media (min-width: $screen-md-min) {
   ul.searchlinks {
     position: absolute;
@@ -85,17 +129,18 @@ ul.searchlinks {
   }
 }
 
+// Header
+// see bottom of header for mobile font sizes
+
 #header {
   height: auto;
 
   .site-title-container {
-    background-color: $brand-info;
     width: 100%;
   }
 
   .site-title {
-    border-bottom: double 3px $gold-metallic;
-    display: block;
+    border-bottom: 3px double $gold-metallic;
     display: inline-block;
     font-family: $font-family-display;
     margin-top: .1em;
@@ -104,8 +149,9 @@ ul.searchlinks {
     .title_the, .title_archive  {
       font-size: .7em;
     }
+
     .title_cwc {
-      font-family: 'Marcellus SC';
+      font-family: $font-family-smallcaps;
       letter-spacing: .1em;
       margin: 0 .1em 0 .3em;
       word-spacing: -.1em;
@@ -117,7 +163,7 @@ ul.searchlinks {
   $subnav: $cultured;
 
   .navbar-default, .navbar {
-     border: 0;
+     border: none;
      margin-bottom: 0;
   }
 
@@ -128,17 +174,13 @@ ul.searchlinks {
     font-size: 1.1em;
     justify-content: center;
     width: 100%;
-    
-    a {
-      color: $dark;
-    }
   }
 
   // mainnav
 
   .navbar_mainnav {
     background-color: $brand-info;
-    border-bottom: solid $subnav 3px;
+    border-bottom: 3px solid $subnav;
 
     a {
       color: $white;
@@ -155,15 +197,17 @@ ul.searchlinks {
 
   .navbar-default.navbar_subnav .navbar-nav > .active > a, 
   .navbar-default.navbar_msubnav .navbar-nav > .active {
-    background-color: white;
+    background-color: $white;
   }
 
   .navbar_subnav.navbar {
-    min-height: 25px;
-    height: auto;
+    color: $dark;
     font-size: .8em;
+    height: auto;
+    min-height: 25px;
 
     a {
+      color: $dark;
       padding: 2px 10px 5px 10px;
 
       &.active {
@@ -175,20 +219,66 @@ ul.searchlinks {
   .navbar-default.navbar_subnav {
     background-color: $subnav;
   }
-    
 
 } // end header 
 
+@media (max-width: $screen-xs-max) {
+  #header {
+    .site-title-container {
+      .h1 {
+        font-size: 6vw;
+      }
+    }
+    .navbar-nav {
+      font-size: .9em;
+    }
+  }
+}
+
+// Footer
+
 #footer {
-  padding-top: 1.5em;
+  font-family: $font-family-sans-serif;
   margin-bottom: 0;
   padding-bottom: 8em;
-  .footer_logo {
-    margin-top: 1.5em;
+  padding-top: 1.5em;
+
+  .footer_info {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+      .footer_logo {
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.07);
+        margin: 1em;
+        padding: 20px;
+
+      p {
+        font-size: 1.4em;
+        margin: 0;
+        padding: 0;
+
+        a {
+          color: #fff;
+        }
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
   }
+
   a {
     color: $gold-metallic;
   }
+}
+
+.footer_additional_info {
+  font-size: 1.4em;
+  margin-top: 2em;
 }
 
 // Stick footer to bottom
@@ -204,14 +294,12 @@ ul.searchlinks {
 }
 
 // ================
-// Item listing, top level pages, search
+// Item listing, top level pages
 // ================
 
-// Secondary page listing (see about main page)
-// todo: see if we want to use this
+// Secondary page listing (see about the site main page)
 
 .page_subnav {
-  align-content: stretch;
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -224,146 +312,389 @@ ul.searchlinks {
     text-align: center;
 
     a {
+      border: 2px solid $brand-success;
       display: block;
+      font-family: $font-family-sans-serif;
+      margin: 10px;
       min-height: 100px;
       padding: 10px;
-      border: solid $dark-purple 1px;
-      margin: 10px;
+
+      &:hover {
+        border: 2px solid $dark-purple;
+
+        span {
+          background-color:rgba(255, 255, 255, 1);
+          text-decoration-color: $brand-success;
+          text-decoration-thickness: 3px;
+        }
+      }
+      
+      span {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: $link-color !important;
+        display: inline-block;
+        text-decoration: underline;
+        font-size: 1.3em;
+        padding: .1em .4em;
+      }
     }
   }
 
+  // repeating backgrounds
+
   li:nth-child(4n + 1) {
     a {
-      background-image: image-url("subtle_stripes.png");
+      background-image: image-url("marble_01.jpg");
     }
   }
 
   li:nth-child(4n + 2) {
     a {
-      background-image: image-url("chevron.png");
+      background-image: image-url("marble_02.jpg");
     }
   }
 
   li:nth-child(4n + 3) {
     a {
-      background-image: image-url("double-bubble-outline.png");
+      background-image: image-url("marble_03.jpg");
     }
   }
 
   li:nth-child(4n + 4) {
     a {
-      background-image: image-url("stripes-light.png");
+      background-image: image-url("marble_04.jpg");
+    }
+  }
+
+  li:nth-child(5n + 5) {
+    a {
+      background-image: image-url("marble_05.jpg");
+    }
+  }
+
+  li:nth-child(6n + 6) {
+    a {
+      background-image: image-url("marble_06.jpg");
+    }
+  }
+
+  li:nth-child(7n + 7) {
+    a {
+      background-image: image-url("marble_07.jpg");
     }
   }
 }
 
+// =======================
 // Page decorative banners
+// =======================
 
-// .page_banner_outer
-//   .container
-//     .page_banner_text 
-//       h1 
-//       p
-//     .page_banner_illustration
-//       .page_banner_illustration_inner
+// Horizontal Banners
 
+// Settings for all horizontal illustrations
+
+// make banner sit flush at top
 .page_banner_outer {
-  background-image: image-url("stripes-light.png");
   margin-top: -49px;
 }
 
-.page_banner_outer > .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  .page_banner_text {
-    background-color: rgba(255,255,255,.8); 
-    flex-grow: 1;
-    padding: 0 10px 10px 10px;
+// if screen > sm, place text over image
+@media (min-width: $screen-sm) {
+  .page_banner_outer {
+    position: relative;
+    z-index: 1;
   }
+
   .page_banner_illustration {
-    flex-grow: 2;
-    min-width: 383px;
-    padding: 10px 10px 0px 10px;
-    text-align: center;
-    align-self: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
-@media (min-width: $screen-md-min) {
-  .page_banner_outer > .container {
-    flex-direction: row;
+// Style semi transparent background for page text 
+.page_banner_text {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 20px 10px 20px;
+  position: relative;
+  z-index: 4;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.8em;
   }
 }
 
+// set illustration to cover entire area
+.page_banner_illustration {
+  background-size: cover;
+}
 
-.page_banner_outer {
-  background-position: top center;
-  background-size: cover; //contain
-  //background-repeat: no-repeat;
-  //background-position: center;
-  height: 550px;
-  margin-bottom: 1em;
+// set width of outer and inner illustration holders 
+// to 100%. note: tried 100vw, but it was too wide
+.page_banner_outer,
+.page_banner_illustration { 
   width: 100%;
-  .container {
-    .page_banner_text{
+}
+
+// for larger screens, move semi transparent text 
+// box to left
+@media (min-width: $screen-lg) {
+  .page_banner_text {
+    width: 60%;
+  }
+}
+
+// =====
+// Repeat per horizontal banner
+
+@mixin horizontal_bar($section, $img, $height) 
+{
+  .action_#{$section} {
+    .page_banner_illustration {
+      background-image: $img;
+      height: $height;
+    }
+  }
+  
+  @media (min-width: $screen-sm) {
+    .action_#{$section} {
+      .page_banner_outer {
+         height: $height;
+      }
     }
   }
 }
 
-// Works
-.action_works {
-  .page_banner_outer {
-    background-image: image-url("chesnutt-works.jpg");
-    width: 100vw;
-    height: 32vw;
+//Works
+@include horizontal_bar (
+  works,
+  image-url("chesnutt-works.jpg"), 
+  32vw
+  );
+
+// Resources
+@include horizontal_bar (
+  resources,
+  image-url("chesnutt-resources.jpg"), 
+  32vw
+  );
+
+// Reviews
+@include horizontal_bar (
+  reception_reviews,
+  image-url("chesnutt-resources.jpg"), 
+  32vw
+  );
+
+// About - Biographical sketch
+@include horizontal_bar (
+  biographical_sketch,
+  image-url("chesnutt-about.jpg"), 
+  46vw
+  );
+
+// Vertical Banners
+
+// Switch order of flex elements for large display
+.flex.page_banner_vertical .flex_inner:nth-child(2) {
+  margin-right: 20px;
+  order: 1;
+}
+
+.flex.page_banner_vertical .flex_inner:nth-child(1) {
+  order: 2;
+}
+
+@media (max-width: $screen-xs-max) {
+  .flex.page_banner_vertical {
+    display: block !important;
+
+    .flex_inner:nth-child(2) {
+      margin-right: 0;
+    }
   }
 }
 
-//Scholarship
-.action_scholarship {
-  .page_banner_outer {
-    background-image: image-url("chesnutt-scholarship.jpg");
-  }
-}
-
-//About
-.action_about {
-  .page_banner_outer {
-    background-image: image-url("chesnutt-about.jpg");
-    height:900px;
-    width: 100vw;
-    height: 46vw;
-  }
+.page_banner_vertical .page_illustration_outer {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
 }
 
 // Manuscripts
 
-.page_illustration_outer {
-  background-image: image-url("chesnutt-manuscripts.jpg");
-  background-size: cover;
-  float: right;
-  display: block;
-  width: 400px;
-  height: 800px;
+@media (max-width: $screen-xs-max) {
+  .action_manuscripts .flex.page_banner_vertical {
+    .page_illustration_outer {
+      max-height: 300px;
+      width: 100%;
+    }
+  }
+}
 
+.action_manuscripts .page_illustration_outer {
+  background-image: image-url("chesnutt-manuscripts.jpg");
+  background-position: center;
+  display: block;
+  height: 800px;
+  width: 400px;
+}
+
+// Reviews/Reception
+
+@media (max-width: $screen-xs-max) {
+  .action_reception_reviews .flex.page_banner_vertical {
+    .page_illustration_outer {
+      max-height: 300px;
+      width: 100%
+    }
+  }
+}
+
+.action_reception_reviews .page_illustration_outer {
+  background-image: image-url("chesnutt-reviews.jpg");
+  background-position: top;
+  background-size: contain;
+  height: 270px;
+  width: 180px;
+}
+
+@media (min-width: $screen-xs) {
+  .action_reception_reviews .page_illustration_outer {
+    height: 270px;
+    width: 180px;
+  }
+}
+
+@media (min-width: $screen-sm) {
+  .action_reception_reviews .page_illustration_outer {
+    height: 400px;
+    width: 266px;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .action_reception_reviews .page_illustration_outer {
+    height: 320px;
+    width: 213px;
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .action_reception_reviews .page_illustration_outer {
+    height: 270px;
+    width: 180px;
+  }
+}
+
+// End Banners
+
+// Other Page code
+
+// About - people 
+
+.action_about_people.page_about #content-wrapper {
+  img {
+    clear: both;
+    float: left;
+    padding: 0 20px 10px 0;
+  } 
+
+  p {
+    border-bottom: 1px solid $gray;
+    clear: both;
+    height: auto;
+    margin-bottom: 2em;
+    margin-top: 1em;
+    min-height: 180px;
+    padding-bottom: 20px;
+  }
+}
+
+// About - biographical sketch
+
+.essay.biographical_sketch {
+  padding-top: 20px;
+}
+
+@media (min-width: $screen-sm) {
+  .essay.biographical_sketch {
+    backdrop-filter: blur(4px);
+    background: rgba(255, 255, 255, .9);
+    border-radius: 30px;
+    margin-top: -13vw;
+    padding: 20px;
+    position: relative;
+    z-index: 500;
+  }
+}
+
+.chesnutt_about_image {
+  display: block;
+  margin: 20px auto;
+  max-width: 100%;
+}
+
+@media (min-width: $screen-md) {
+  .chesnutt_about_image {
+    margin: 0 0 20px 20px;
+    float: right;
+  }
+}
+
+// ============
+// Search Results
+// ============
+
+.search_results_info {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      padding-left: 1.5em;
+      text-indent: -1.5em;  
+    }
+  }
+  p em {
+    background-color: $banana-mania;
+  }
+}
+
+.searchResults {
+  border-bottom: 1px solid $gray-light;
+  padding-bottom: 1.5em;
 }
 
 // ================
-// Items
+// Items 
 // ================
 
 .metadata {
-  border: 1px solid silver;
+  border: 1px solid $gray-light;
+  clear: both;
   margin: 10px 0;
-  padding: 10px 20px;
-  ul {
+  padding: 10px 20px 35px 20px;
+  position: relative;
+
+  .btn-metadata {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    width: 100%
+  }
+
+  .archive_item ul {
     columns: 1;
     list-style-type: none;
     margin: 0 0 .5em 0;
     padding: 0;
   }
+
   h2 {
     font-size: 1.2em;
     font-weight: 800;
@@ -372,135 +703,98 @@ ul.searchlinks {
   }
 }
 
+// border around publication statement
+.archive_item .editorial_note {
+  border: 1px solid $gray-light;
+  display: block;
+  padding: 10px 20px;
+}
+
 // ================
 // Home
 // ================
 
 .controller_general.action_index {
-
-  #header {
-    .site-title {
-      font-size: 1.4em;
-    }
-  }
-
-  .navbar-default.navbar_mainnav {
-    font-size: 1.3em;
-
-    // Hide Home button on home page
-    // todo: talk to PI's about this
-    .navbar-nav > .active {
-      display: none;
-    }
-  }
-
-  .lead {
-    margin-top: 1em;
-  }
-
   #content-wrapper {
     margin-bottom: 0;
   }
-} 
+}
 
-.home-content-wrapper {
-  margin-bottom: 3em;
+@media (min-width: $screen-sm) { // only make home items bigger if non mobile
+  .controller_general.action_index {
+
+    #header {
+      .site-title {
+        font-size: 1.4em;
+      }
+    }
+
+    .navbar-default.navbar_mainnav {
+      font-size: 1.3em;
+
+      // Hide Home button on home page
+      // todo: talk to PI's about this
+      .navbar-nav > .active {
+        display: none;
+      }
+    }
+
+    .lead {
+      margin-top: 1em;
+    }
+  } 
+
+  .home-content-wrapper {
+    margin-bottom: 3em;
+  }
 }
 
 // Home Hero
 
 .home-hero {
-  //background-image: image-url("chesnutt-home.jpg");
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  //height: 200px;
-  margin-bottom: 1em;
-  padding:  0;
-  width: 100%;
   background-color: #aaa;
-  z-index: 1;
-  position: relative;
   background-image: image-url('chesnutt-home.jpg');
-  width: 100vw;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px; // fallback
   height: 39vw;
-
-
-
-
+  margin-bottom: 1em;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: 1;
 } 
 
 .home-content-wrapper {
   .callout_quote {
-    display: block;
-    max-width: 400px;
-    float:  left;
-    margin-top:  -4em !important;
-    background-color:  $gold-metallic;
-    margin: .1em .8em .2em 0;
-    padding: .6em;
-    z-index: 200;
-    position: relative;
+    background-color: $gold-metallic;
     box-shadow: 0px 0px 7px $gray-darker;
+    display: block;
+    float: left;
+    margin-top: -4em !important;
+    margin: .1em .8em .2em 0;
+    max-width: 400px;
+    padding: .6em;
+    position: relative;
+    z-index: 200;
 
     p {
-      text-indent: 0 !important;
       background-color: rgba(255,255,255,.2);
+      border: 3px double $brandy;
       color: $gray-base;
       font-size: 1.3em;
       height: 100%;
       line-height: 1.2em;
-      border:  double 3px $brandy;
-      padding:  .6em;
-      margin:  0;
-      
-      
-      
+      margin: 0;
+      padding: .6em;
       text-align: left;
+      text-indent: 0;
 
       em {
         display: block;
         text-align: right;
+      }
     }
   }
 }
-
-}
-
-@media (min-width: 1200px) {
-  .home-hero {
-    //height: 550px;
-  }
-}
-
-// Kevin's additions start here
-
-
-
-// .tei_hi_rend_bold {
-//  font-weight: 600;
-// }
-
-// .tei_fw_rend_bold {
-//  font-weight: 600;
-// }
-
-.rend_bold {
-  font-weight: 600;
-}
-
-hr {
-  &.horBar {
-    width: 50%;
-    border-top: solid 3px black;
-  }
-}
-
-
-
-// Flex sketch 
-
-.flex {
-  display: flex;
-}
-

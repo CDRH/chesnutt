@@ -3,11 +3,6 @@ $bootstrap-sass-asset-helper: false !default;
 // Variables
 // --------------------------------------------------
 
-// Move these to <script> declaration when finalized?
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,562;1,562&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
-
 $font-headers: 'Montserrat', sans-serif;
 $font-body: 'Lora', serif;
 
@@ -64,7 +59,7 @@ $body-bg:               $light-base !default;
 $text-color:            $gray-darker !default;
 
 //** Global textual link color.
-$link-color:            $brand-primary !default;
+$link-color:            $brandy !default;
 //** Link hover color set via `darken()` function.
 $link-hover-color:      darken($link-color, 15%) !default;
 //** Link hover decoration.
@@ -77,6 +72,7 @@ $link-hover-decoration: underline !default;
 
 $font-family-sans-serif:  'Montserrat', Helvetica, Arial, sans-serif !default;
 $font-family-serif:       'Lora', Georgia, "Times New Roman", Times, serif !default;
+$font-family-smallcaps:   'Marcellus SC', sans-serif;
 $font-family-display:     'Mrs Saint Delafield', cursive;;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
@@ -141,9 +137,9 @@ $padding-xs-horizontal:     5px !default;
 $line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5 !default;
 
-$border-radius-base:        4px !default;
-$border-radius-large:       6px !default;
-$border-radius-small:       3px !default;
+$border-radius-base:        0px !default;
+$border-radius-large:       0px !default;
+$border-radius-small:       0px !default;
 
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
@@ -199,7 +195,7 @@ $btn-info-color:                 #fff !default;
 $btn-info-bg:                    $brand-info !default;
 $btn-info-border:                darken($btn-info-bg, 5%) !default;
 
-$btn-warning-color:              #fff !default;
+$btn-warning-color:              #000 !default;
 $btn-warning-bg:                 $brand-warning !default;
 $btn-warning-border:             darken($btn-warning-bg, 5%) !default;
 
