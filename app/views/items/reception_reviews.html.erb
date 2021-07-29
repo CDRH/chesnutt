@@ -35,13 +35,6 @@ to docs/search_preset.md %>
 
   <%= render_overridable "items", "search_preset_text" %>
   <%= render_overridable "items", "sort_and_page_ui" %>
-  <div class="row search_controls">
-    <div class="col-md-4 search_limit">
-    </div>
-    <div class="col-md-8 pagination_container">
-      <%= paginator @res.pages %>
-    </div>
-  </div>
 
   <!-- search results section -->
   <%= render_overridable "items", "search_res_count" %>
