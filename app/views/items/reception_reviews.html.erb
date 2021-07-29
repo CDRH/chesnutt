@@ -34,8 +34,7 @@ to docs/search_preset.md %>
   <%# do not display any facet options or summary boxes for this view %>
 
   <%= render_overridable "items", "search_preset_text" %>
-  <%# sort broken due to change in default sort, see orchid issue #226
-  <%# render_overridable "items", "sort_and_page_ui" %>
+  <%= render_overridable "items", "sort_and_page_ui" %>
   <div class="row search_controls">
     <div class="col-md-4 search_limit">
     </div>
