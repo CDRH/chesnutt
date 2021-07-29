@@ -1,0 +1,1106 @@
+# Reviews Section
+#################
+# Conjure Woman
+-
+  method:     r301
+  from:       !ruby/regexp /^\/Reviews/ConjureWomanReviews/woman(\d).html$/
+  to:         /item/ccda.rev0000$1
+-
+  method:     r301
+  from:       !ruby/regexp /^\/Reviews/ConjureWomanReviews/woman([1-6][0-9]|7[0-7]).html$/
+  to:         /item/ccda.rev000$1
+
+# Other
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other1.html
+  to:         /item/ccda.rev00078
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other2.html
+  to:         /item/ccda.rev00079
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other3.html
+  to:         /item/ccda.rev00080
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other4.html
+  to:         /item/ccda.rev00081
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other5.html
+  to:         /item/ccda.rev00082
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other6.html
+  to:         /item/ccda.rev00083
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other.html
+  to:         /item/ccda.rev00084
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other8.html
+  to:         /item/ccda.rev00085
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other9.html
+  to:         /item/ccda.rev00086
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other10.html
+  to:         /item/ccda.rev00087
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other11.html
+  to:         /item/ccda.rev00088
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other12.html
+  to:         /item/ccda.rev00089
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other13.html
+  to:         /item/ccda.rev00090
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other14.html
+  to:         /item/ccda.rev00091
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other15.html
+  to:         /item/ccda.rev00092
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other16.html
+  to:         /item/ccda.rev00093
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other17.html
+  to:         /item/ccda.rev00094
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other18.html
+  to:         /item/ccda.rev00095
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other19.html
+  to:         /item/ccda.rev00096
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other20.html
+  to:         /item/ccda.rev00097
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other21.html
+  to:         /item/ccda.rev00098
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/other22.html
+  to:         /item/ccda.rev00099
+-
+  method:     r301
+  from:       /Reviews/OthersReviews/othermiller.html
+  to:         /item/ccda.rev00100
+
+# Frederick Douglas
+-
+  method:     r301
+  from:       !ruby/regexp /^\/Reviews/FrederickReviews/fred(\d).html$/
+  to:         /item/ccda.rev0010$1
+-
+  method:     r301
+  from:       !ruby/regexp /^\/Reviews/FrederickReviews/fred([1-2][0-9]|3[0-6]).html$/
+  to:         /item/ccda.rev001$1
+-
+  method:     r301
+  from:       /Reviews/FrederickReviews/dougrev_howells.html
+  to:         /item/ccda.rev00137
+-
+  method:     r301
+  from:       /Reviews/FrederickReviews/douglas_review.html
+  to:         /item/ccda.rev00138
+
+# House Behind
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house2.html
+  to:         /item/ccda.rev00139
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house3.html
+  to:         /item/ccda.rev00140
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house4.html
+  to:         /item/ccda.rev00141
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house5.html
+  to:         /item/ccda.rev00142
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house6.html
+  to:         /item/ccda.rev00143
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house7.html
+  to:         /item/ccda.rev00144
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house8.html
+  to:         /item/ccda.rev00145
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house87.html
+  to:         /item/ccda.rev00146
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house10.html
+  to:         /item/ccda.rev00147
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house11.html
+  to:         /item/ccda.rev00148
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house12.html
+  to:         /item/ccda.rev00149
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house13.html
+  to:         /item/ccda.rev00150
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house14.html
+  to:         /item/ccda.rev00151
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house15.html
+  to:         /item/ccda.rev00152
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house16.html
+  to:         /item/ccda.rev00153
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house17.html
+  to:         /item/ccda.rev00154
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house18.html
+  to:         /item/ccda.rev00155
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house19.html
+  to:         /item/ccda.rev00156
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house20.html
+  to:         /item/ccda.rev00157
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house21.html
+  to:         /item/ccda.rev00158
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house22.html
+  to:         /item/ccda.rev00159
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house23.html
+  to:         /item/ccda.rev00160
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house24.html
+  to:         /item/ccda.rev00161
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house25.html
+  to:         /item/ccda.rev00162
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house26.html
+  to:         /item/ccda.rev00163
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house27.html
+  to:         /item/ccda.rev00164
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house28.html
+  to:         /item/ccda.rev00165
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house29.html
+  to:         /item/ccda.rev00166
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house30.html
+  to:         /item/ccda.rev00167
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house31.html
+  to:         /item/ccda.rev00168
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house32.html
+  to:         /item/ccda.rev00169
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house33.html
+  to:         /item/ccda.rev00170
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house34.html
+  to:         /item/ccda.rev00171
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house35.html
+  to:         /item/ccda.rev00172
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house36.html
+  to:         /item/ccda.rev00173
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house37.html
+  to:         /item/ccda.rev00174
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house38.html
+  to:         /item/ccda.rev00175
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house39.html
+  to:         /item/ccda.rev00176
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house40.html
+  to:         /item/ccda.rev00177
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house41.html
+  to:         /item/ccda.rev00178
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house42.html
+  to:         /item/ccda.rev00179
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house43.html
+  to:         /item/ccda.rev00180
+-
+  method:     r301
+  from:       /Reviews/HouseReviews/house44.html
+  to:         /item/ccda.rev00181
+
+# Colonel's Dream
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels1.html
+  to:         /item/ccda.rev00182
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels2.html
+  to:         /item/ccda.rev00183
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels3.html
+  to:         /item/ccda.rev00184
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels4.html
+  to:         /item/ccda.rev00185
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels5.html
+  to:         /item/ccda.rev00186
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels6.html
+  to:         /item/ccda.rev00187
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels7.html
+  to:         /item/ccda.rev00188
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels8.html
+  to:         /item/ccda.rev00189
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels9.html
+  to:         /item/ccda.rev00190
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels10.html
+  to:         /item/ccda.rev00191
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels11.html
+  to:         /item/ccda.rev00192
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels12.html
+  to:         /item/ccda.rev00193
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels13.html
+  to:         /item/ccda.rev00194
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels14.html
+  to:         /item/ccda.rev00195
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels15.html
+  to:         /item/ccda.rev00196
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels16.html
+  to:         /item/ccda.rev00197
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels17.html
+  to:         /item/ccda.rev00198
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels18.html
+  to:         /item/ccda.rev00199
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels19.html
+  to:         /item/ccda.rev00200
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels20.html
+  to:         /item/ccda.rev00201
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels21.html
+  to:         /item/ccda.rev00202
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels22.html
+  to:         /item/ccda.rev00203
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels23.html
+  to:         /item/ccda.rev00204
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels24.html
+  to:         /item/ccda.rev00205
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels25.html
+  to:         /item/ccda.rev00206
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels26.html
+  to:         /item/ccda.rev00207
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels27.html
+  to:         /item/ccda.rev00208
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels28.html
+  to:         /item/ccda.rev00209
+-
+  method:     r301
+  from:       /Reviews/ColonelReviews/colonels29.html
+  to:         /item/ccda.rev00210
+
+# Spingarn Medal
+-
+  method:     r301
+  from:       /Reviews/SpingarnReviews/medal1.html
+  to:         /item/ccda.rev00211
+-
+  method:     r301
+  from:       /Reviews/SpingarnReviews/medal3.html
+  to:         /item/ccda.rev00212
+-
+  method:     r301
+  from:       /Reviews/SpingarnReviews/medal4.html
+  to:         /item/ccda.rev00213
+-
+  method:     r301
+  from:       /Reviews/SpingarnReviews/medal5.html
+  to:         /item/ccda.rev00214
+-
+  method:     r301
+  from:       /Reviews/SpingarnReviews/medal2.html
+  to:         /item/ccda.rev00215
+
+# Wife of His Youth
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife1.html
+  to:         /item/ccda.rev00216
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife2.html
+  to:         /item/ccda.rev00217
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife3.html
+  to:         /item/ccda.rev00218
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife4.html
+  to:         /item/ccda.rev00219
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife5.html
+  to:         /item/ccda.rev00220
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife6.html
+  to:         /item/ccda.rev00221
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife7.html
+  to:         /item/ccda.rev00222
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife8.html
+  to:         /item/ccda.rev00223
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife9.html
+  to:         /item/ccda.rev00224
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife10.html
+  to:         /item/ccda.rev00225
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife11.html
+  to:         /item/ccda.rev00226
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife12.html
+  to:         /item/ccda.rev00227
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife13.html
+  to:         /item/ccda.rev00228
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife14.html
+  to:         /item/ccda.rev00229
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife15.html
+  to:         /item/ccda.rev00230
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife16.html
+  to:         /item/ccda.rev00231
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife17.html
+  to:         /item/ccda.rev00232
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife18.html
+  to:         /item/ccda.rev00233
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife19.html
+  to:         /item/ccda.rev00234
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife20.html
+  to:         /item/ccda.rev00235
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife21.html
+  to:         /item/ccda.rev00236
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife22.html
+  to:         /item/ccda.rev00237
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife23.html
+  to:         /item/ccda.rev00238
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife24.html
+  to:         /item/ccda.rev00239
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife25.html
+  to:         /item/ccda.rev00240
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife26.html
+  to:         /item/ccda.rev00241
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife27.html
+  to:         /item/ccda.rev00242
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife28.html
+  to:         /item/ccda.rev00243
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife29.html
+  to:         /item/ccda.rev00244
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife30.html
+  to:         /item/ccda.rev00245
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife31.html
+  to:         /item/ccda.rev00246
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife32.html
+  to:         /item/ccda.rev00247
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife33.html
+  to:         /item/ccda.rev00248
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife34.html
+  to:         /item/ccda.rev00249
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife35.html
+  to:         /item/ccda.rev00250
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife36.html
+  to:         /item/ccda.rev00251
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife37.html
+  to:         /item/ccda.rev00252
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife38.html
+  to:         /item/ccda.rev00253
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife39.html
+  to:         /item/ccda.rev00254
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife40.html
+  to:         /item/ccda.rev00255
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife41.html
+  to:         /item/ccda.rev00256
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife42.html
+  to:         /item/ccda.rev00257
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife43.html
+  to:         /item/ccda.rev00258
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife44.html
+  to:         /item/ccda.rev00259
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife45.html
+  to:         /item/ccda.rev00260
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife46.html
+  to:         /item/ccda.rev00261
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife47.html
+  to:         /item/ccda.rev00262
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife48.html
+  to:         /item/ccda.rev00263
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife49.html
+  to:         /item/ccda.rev00264
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife50.html
+  to:         /item/ccda.rev00265
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife51.html
+  to:         /item/ccda.rev00266
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife52.html
+  to:         /item/ccda.rev00267
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife53.html
+  to:         /item/ccda.rev00268
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife54.html
+  to:         /item/ccda.rev00269
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife55.html
+  to:         /item/ccda.rev00270
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife56.html
+  to:         /item/ccda.rev00271
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife57.html
+  to:         /item/ccda.rev00272
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife58.html
+  to:         /item/ccda.rev00273
+-
+  method:     r301
+  from:       /Reviews/WifeReviews/wife59.html
+  to:         /item/ccda.rev00274
+
+# Marrow of Tradition
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow1.html
+  to:         /item/ccda.rev00275
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow2.html
+  to:         /item/ccda.rev00276
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow3.html
+  to:         /item/ccda.rev00277
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow4.html
+  to:         /item/ccda.rev00278
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow5.html
+  to:         /item/ccda.rev00279
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow6.html
+  to:         /item/ccda.rev00280
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow7.html
+  to:         /item/ccda.rev00281
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow8.html
+  to:         /item/ccda.rev00282
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow9.html
+  to:         /item/ccda.rev00283
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow10.html
+  to:         /item/ccda.rev00284
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow11.html
+  to:         /item/ccda.rev00285
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow12.html
+  to:         /item/ccda.rev00286
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow13.html
+  to:         /item/ccda.rev00287
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow14.html
+  to:         /item/ccda.rev00288
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow15.html
+  to:         /item/ccda.rev00289
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow16.html
+  to:         /item/ccda.rev00290
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow17.html
+  to:         /item/ccda.rev00291
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow18.html
+  to:         /item/ccda.rev00292
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow19.html
+  to:         /item/ccda.rev00293
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow20.html
+  to:         /item/ccda.rev00294
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow21.html
+  to:         /item/ccda.rev00295
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow22.html
+  to:         /item/ccda.rev00296
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow23.html
+  to:         /item/ccda.rev00297
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow24.html
+  to:         /item/ccda.rev00298
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow25.html
+  to:         /item/ccda.rev00299
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow26.html
+  to:         /item/ccda.rev00300
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow27.html
+  to:         /item/ccda.rev00301
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow28.html
+  to:         /item/ccda.rev00302
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow29.html
+  to:         /item/ccda.rev00303
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow30.html
+  to:         /item/ccda.rev00304
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow31.html
+  to:         /item/ccda.rev00305
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow32.html
+  to:         /item/ccda.rev00306
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow33.html
+  to:         /item/ccda.rev00307
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow34.html
+  to:         /item/ccda.rev00308
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow35.html
+  to:         /item/ccda.rev00309
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow36.html
+  to:         /item/ccda.rev00310
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow37.html
+  to:         /item/ccda.rev00311
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow38.html
+  to:         /item/ccda.rev00312
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow39.html
+  to:         /item/ccda.rev00313
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow40.html
+  to:         /item/ccda.rev00314
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow41.html
+  to:         /item/ccda.rev00315
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow42.html
+  to:         /item/ccda.rev00316
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow43.html
+  to:         /item/ccda.rev00317
+-
+  method:     r301
+  from:       /Reviews/MarrowReviews/marrow44.html
+  to:         /item/ccda.rev00318
+
+
+
+# Works Section
+###############
+-
+  method:     r301
+  from:       /Works/Novels/house_behind_the_cedars.html
+  to:         /item/ccda.works00001
+-
+  method:     r301
+  from:       /Works/Other/fdouglass.html
+  to:         /item/ccda.works00002
+-
+  method:     r301
+  from:       /Works/Stories/friskrat.html
+  to:         /item/ccda.works00003
+-
+  method:     r301
+  from:       /Works/Stories/unclepeters.html
+  to:         /item/ccda.works00004
+-
+  method:     r301
+  from:       /Works/Stories/badnight.html
+  to:         /item/ccda.works00005
+-
+  method:     r301
+  from:       /Works/Stories/twowives.html
+  to:         /item/ccda.works00006
+-
+  method:     r301
+  from:       /Works/Stories/soulless.html
+  to:         /item/ccda.works00007
+-
+  method:     r301
+  from:       /Works/Stories/appreciation.html
+  to:         /item/ccda.works00008
+-
+  method:     r301
+  from:       /Works/Stories/grapevine.html
+  to:         /item/ccda.works00009
+-
+  method:     r301
+  from:       /Works/Stories/reminded.html
+  to:         /item/ccda.works00010
+-
+  method:     r301
+  from:       /Works/Stories/secret.html
+  to:         /item/ccda.works00011
+-
+  method:     r301
+  from:       /Works/Stories/midnight.html
+  to:         /item/ccda.works00012
+-
+  method:     r301
+  from:       /Works/Stories/appeal.html
+  to:         /item/ccda.works00013
+-
+  method:     r301
+  from:       /Works/Stories/sandy.html
+  to:         /item/ccda.works00014
+-
+  method:     r301
+  from:       /Works/Stories/goodwrong.html
+  to:         /item/ccda.works00015
+-
+  method:     r301
+  from:       /Works/Stories/gratitude.html
+  to:         /item/ccda.works00016
+-
+  method:     r301
+  from:       /Works/Stories/sheriff.html
+  to:         /item/ccda.works00017
+-
+  method:     r301
+  from:       /Works/Stories/restriction.html
+  to:         /item/ccda.works00018
+-
+  method:     r301
+  from:       /Works/Stories/conjurer.html
+  to:         /item/ccda.works00019
+-
+  method:     r301
+  from:       /Works/Stories/antique.html
+  to:         /item/ccda.works00020
+-
+  method:     r301
+  from:       /Works/Stories/hatchet.html
+  to:         /item/ccda.works00021
+-
+  method:     r301
+  from:       /Works/Stories/neckliss.html
+  to:         /item/ccda.works00022
+-
+  method:     r301
+  from:       /Works/Stories/sleeper.html
+  to:         /item/ccda.works00023
+-
+  method:     r301
+  from:       /Works/Stories/wifeofyouth.html
+  to:         /item/ccda.works00024
+-
+  method:     r301
+  from:       /Works/Stories/bouquet.html
+  to:         /item/ccda.works00025
+-
+  method:     r301
+  from:       /Works/Stories/hannibal.html
+  to:         /item/ccda.works00026
+-
+  method:     r301
+  from:       /Works/Stories/swaybacked.html
+  to:         /item/ccda.works00027
+-
+  method:     r301
+  from:       /Works/Stories/tobes.html
+  to:         /item/ccda.works00028
+-
+  method:     r301
+  from:       /Works/Stories/auntmimy.html
+  to:         /item/ccda.works00029
+-
+  method:     r301
+  from:       /Works/Stories/victim.html
+  to:         /item/ccda.works00030
+-
+  method:     r301
+  from:       /Works/Stories/lonesomeben.html
+  to:         /item/ccda.works00031
+-
+  method:     r301
+  from:       /Works/Stories/partners.html
+  to:         /item/ccda.works00032
+-
+  method:     r301
+  from:       /Works/Stories/marchprogress.html
+  to:         /item/ccda.works00033
+-
+  method:     r301
+  from:       /Works/Stories/prophet.html
+  to:         /item/ccda.works00034
+-
+  method:     r301
+  from:       /Works/Stories/lepouse.html
+  to:         /item/ccda.works00035
+-
+  method:     r301
+  from:       /Works/Stories/doll.html
+  to:         /item/ccda.works00036
+-
+  method:     r301
+  from:       /Works/Stories/funeral.html
+  to:         /item/ccda.works00037
+-
+  method:     r301
+  from:       /Works/Stories/markedtree.html
+  to:         /item/ccda.works00038
+-
+  method:     r301
+  from:       /Works/Essays/whiteman.html
+  to:         /item/ccda.works00039
+-
+  method:     r301
+  from:       /Works/Essays/counselors.html
+  to:         /item/ccda.works00040
+-
+  method:     r301
+  from:       /Works/Essays/resolutions.html
+  to:         /item/ccda.works00041
+-
+  method:     r301
+  from:       /Works/Essays/bookpopular.html
+  to:         /item/ccda.works00042
+-
+  method:     r301
+  from:       /Works/Essays/whiteblack.html
+  to:         /item/ccda.works00043
+-
+  method:     r301
+  from:       /Works/Essays/visit.html
+  to:         /item/ccda.works00044
+-
+  method:     r301
+  from:       /Works/Essays/franchise.html
+  to:         /item/ccda.works00045
+-
+  method:     r301
+  from:       /Works/Essays/superstitions.html
+  to:         /item/ccda.works00046
+-
+  method:     r301
+  from:       /Works/Essays/obliterating.html
+  to:         /item/ccda.works00047
+-
+  method:     r301
+  from:       /Works/Essays/free.html
+  to:         /item/ccda.works00048
+-
+  method:     r301
+  from:       /Works/Essays/defran.html
+  to:         /item/ccda.works00049
+-
+  method:     r301
+  from:       /Works/Essays/peonage.html
+  to:         /item/ccda.works00050
+-
+  method:     r301
+  from:       /Works/Essays/race.html
+  to:         /item/ccda.works00051
+-
+  method:     r301
+  from:       /Works/Essays/advocates.html
+  to:         /item/ccda.works00052
+-
+  method:     r301
+  from:       /Works/Essays/amedouglass.html
+  to:         /item/ccda.works00053
+-
+  method:     r301
+  from:       /Works/Essays/courtships.html
+  to:         /item/ccda.works00054
+-
+  method:     r301
+  from:       /Works/Essays/womens.html
+  to:         /item/ccda.works00055
+-
+  method:     r301
+  from:       /Works/Essays/ballad.html
+  to:         /item/ccda.works00057
+-
+  method:     r301
+  from:       /Works/Essays/grandarmy.html
+  to:         /item/ccda.works00058
+-
+  method:     r301
+  from:       /Works/Essays/future.html
+  to:         /item/ccda.works00059
+-
+  method:     r301
+  from:       /Works/Essays/plea.html
+  to:         /item/ccda.works00060
+-
+  method:     r301
+  from:       /Works/Essays/defamer.html
+  to:         /item/ccda.works00061
+-
+  method:     r301
+  from:       /Works/Essays/chesnuttreview.html
+  to:         /item/ccda.works00062
+-
+  method:     r301
+  from:       /Works/Essays/meow.html
+  to:         /item/ccda.works00063
