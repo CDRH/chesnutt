@@ -40,7 +40,7 @@ ItemsController.class_eval do
   def works_novels
     @title = "Novels"
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Works/Novel"]
+    options["f"] = ["subcategory|Works/Novels"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -64,7 +64,7 @@ ItemsController.class_eval do
     @title = "Collections"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Works/Collection"]
+    options["f"] = ["subcategory|Works/Collections"]
     @res = $api.query(options)
 
     # render search preset with route information
