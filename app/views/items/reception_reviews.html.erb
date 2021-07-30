@@ -20,7 +20,9 @@ to docs/search_preset.md %>
 
     <p>During his lifetime, Chesnutt's works earned publication notices and reviews in a wide variety of newspapers and magazines. Our collection includes reviews published in city newspapers, regional magazines, and national outlets. The collection includes materials from the Black press as well as the White press.</p>
 
-    <p>In the late 1990s John M. Freiermuth, then a graduate student in the Department of English, University of North Carolina, Greensboro, collected a large batch of reviews and offered them to project co-editor Stephanie Browner for use on the initial version of the <em>Chesnutt Archive</em>. Since then many more reviews have been located thanks to the increasing availability of historic periodicals through online databases. Samantha Gilmore of the University of Nebraska-Lincoln has led the effort to discover more more reviews, an effort that has vastly increased our ability to study Chesnutt’s early reception. You can find <%= link_to "reviews for specific Chesnutt works here", browse_facet_path(facet: "works") %>.
+    <p>In the late 1990s John M. Freiermuth, then a graduate student in the Department of English, University of North Carolina, Greensboro, collected a large batch of reviews and offered them to project co-editor Stephanie Browner for use on the initial version of the <em>Chesnutt Archive</em>. Since then many more reviews have been located thanks to the increasing availability of historic periodicals through online databases. Samantha Gilmore of the University of Nebraska-Lincoln has led the effort to discover and document more reviews, an effort that has vastly increased our ability to study Chesnutt’s early reception.</p> 
+
+    <p>You can find <%= link_to "reviews for specific Chesnutt works here", browse_facet_path(facet: "works") %>, or browse them chronologically below.
 </p>
   </div>
 </div>
@@ -32,15 +34,7 @@ to docs/search_preset.md %>
   <%# do not display any facet options or summary boxes for this view %>
 
   <%= render_overridable "items", "search_preset_text" %>
-  <%# sort broken due to change in default sort, see orchid issue #226
-  <%# render_overridable "items", "sort_and_page_ui" %>
-  <div class="row search_controls">
-    <div class="col-md-4 search_limit">
-    </div>
-    <div class="col-md-8 pagination_container">
-      <%= paginator @res.pages %>
-    </div>
-  </div>
+  <%= render_overridable "items", "sort_and_page_ui" %>
 
   <!-- search results section -->
   <%= render_overridable "items", "search_res_count" %>
