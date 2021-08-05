@@ -27,7 +27,7 @@ Rails.application.routes.draw do
   get "about/encoding_guidelines", to: "general#about_encoding_guidelines", as: "about_encoding_guidelines"
   get "about/use_statement", to: "general#about_use_statement", as: "about_use_statement"
   get "about/people", to: "general#about_people", as: "about_people"
-  get "about/white_paper", to: "general#about_white_paper", as: "about_white_paper"
+  get "about/statement_of_purpose", to: "general#about_statement_of_purpose", as: "about_statement_of_purpose"
   
   # no subnav for biographical sketch
   get "about/chesnutt", to: "general#biographical_sketch", as: "about_chesnutt"

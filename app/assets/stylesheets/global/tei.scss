@@ -16,6 +16,7 @@
 
 .tei_hi_rend_circled {
   border: solid black 1px;
+  border-radius: .5em;
 }
 
 .tei_hi_rend_dotted {
@@ -497,12 +498,19 @@ del {
 }
 
 .tei_del_rend_overstrike,
-.tei_subst_rend_overwrite,
 .tei_del_rend_strikethrough,
 .tei_hi_rend_overstrike,
 .tei_hi_rend_strikethrough {
   text-decoration: line-through;
 }
+
+.tei_subst_rend_overwrite {
+  del {
+    text-decoration: line-through;
+  }
+}
+
+
 
 .‹‹ {
   width: 50%;
@@ -530,7 +538,12 @@ del {
   border-bottom: double 6px black;
 }
 
-.bibliography_books .tei_bibl {
+.bibliography_books .tei_bibl,
+.bibliography_short_stories .tei_bibl,
+.bibliography_poems .tei_bibl,
+.bibliography_essays_articles .tei_bibl,
+.bibliography_miscellaneous .tei_bibl
+ {
   margin-left: 3em;
   display: block;
   padding-left: 3em;
