@@ -97,6 +97,8 @@ ItemsController.class_eval do
   end
 
   def manuscripts
+    @title = "Manuscripts"
+
     options = params.permit!.deep_dup
     options["f"] = ["category|Manuscripts"]
     @res = $api.query(options)
@@ -107,6 +109,8 @@ ItemsController.class_eval do
   end
 
   def correspondence
+    @title = "Correspondence"
+
     options = params.permit!.deep_dup
     options["f"] = ["category|Correspondence"]
     @res = $api.query(options)
@@ -117,6 +121,8 @@ ItemsController.class_eval do
   end
 
   def reception_reviews
+    @title = "Reviews"
+
     params["sort"] ||= ["date|asc"]
     options = params.permit!.deep_dup
     options["f"] = ["subcategory|Reception/Reviews"]
@@ -137,19 +143,12 @@ ItemsController.class_eval do
     @header = true
   end
 
+  def resources
+      @title = "Resources"
+  end
+
   def resources_bibliography
-    id = "ccda.oth00001"
-    @res = $api.get_item_by_id(id).first
-    if @res
-      url = @res["uri_html"]
-      @html = Net::HTTP.get(URI.parse(url)) if url
-      @title = @res["title"]
-      render "items/page"
-    else
-      @title = "Item #{params["id"]} not found"
-      render "items/show_not_found", status: 404
-    end
-    
+    @title = "Bibliography"
   end
 
 end
