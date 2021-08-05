@@ -1,3 +1,5 @@
+This rails site runs the Charles W. Chesnutt Archive https://chesnuttarchive.org
+
 # README
 
 This README would normally document whatever steps are necessary to get the
