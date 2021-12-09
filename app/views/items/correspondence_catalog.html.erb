@@ -1,0 +1,49 @@
+<%# overridden from orchid to add assets %>
+
+<% @ext_css = [ "datatables.min" ] %>
+<% @ext_js = [ "datatables.min", "corresp_catalog_datatables" ] %>
+
+<%# for instructions about how to use the search preset feature, please refer
+to docs/search_preset.md %>
+
+<%# provide the following:
+  - @res : API response object ($api.query(options))
+  - @route_path : string representing route used to call this template ("image_gallery_path")
+  - @content_label : OPTIONAL overrides @title for h1
+  - @preset_class : OPTIONAL adds CSS class on <div>
+%>
+
+<h1>Correspondence Catalog</h1>
+
+<p>This is a first go at a correspondence catalog</p>
+
+<div class="main_content">
+  <table id="corresp_table" class="display">
+    <thead>
+      <tr>
+        <th>identifier</th>
+        <th>sender</th>
+        <th>recipient</th>
+        <th>date</th>
+        <th>source</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ccda.corr00139</td>
+        <td>Chesnutt, Charles W.</td>
+        <td>Cable, George Washington</td>
+        <td>1889-02-22</td>
+        <td>Howard-Tilton Memorial Library, Tulane</td>
+      </tr>
+      <tr>
+        <td>ccda.corr00140</td>
+        <td>Chesnutt, Charles W.</td>
+        <td>Cable, George Washington</td>
+        <td>1889-03-01</td>
+        <td>Howard-Tilton Memorial Library, Tulane</td>
+      </tr>
+      
+    </tbody>
+  </table>
+</div>
