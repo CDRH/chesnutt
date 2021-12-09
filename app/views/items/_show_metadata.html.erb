@@ -65,6 +65,13 @@
     <%= @res["rights_holder"] %>.
 
   <%# ======
+  Correspondence
+  ========== %>
+  <% elsif @res["format"] == "letter" %>
+    <%= @res["title"] %>,
+    <%= @res["source"] %>.
+
+  <%# ======
   no format defined
   ========== %>
   <% else %>
