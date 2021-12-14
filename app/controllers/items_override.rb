@@ -120,6 +120,19 @@ ItemsController.class_eval do
     render_overridable "items", "correspondence"
   end
 
+  def correspondence_catalog
+    @title = "Correspondence Catalog"
+
+    options = params.permit!.deep_dup
+    options["f"] = ["id|correspondence_catalog"]
+    #@res = @items_api.query(options)
+    @res = @items_api.get_item_by_id("correspondence_catalog")
+
+    # render search preset with route information
+    @route_path = "correspondence_catalog_path"
+    #render_overridable "items", "correspondence"
+  end
+
   def reception_reviews
     @title = "Reviews"
 
