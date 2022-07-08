@@ -120,6 +120,33 @@ ItemsController.class_eval do
     render_overridable "items", "correspondence"
   end
 
+  def correspondence_catalog
+    @title = "Correspondence Catalog"
+
+    id = "correspondence_catalog"
+    @res = $api.get_item_by_id(id).first
+    if @res
+      url = @res["uri_html"]
+      @html = Net::HTTP.get(URI.parse(url)) if url
+      @title = @res["title"]
+      #render "items/page"
+      render_overridable("items","show")
+    else
+      @title = "Item #{params["id"]} not found"
+      render "items/show_not_found", status: 404
+    end
+
+    #options = params.permit!.deep_dup
+    #options["f"] = ["id|correspondence_catalog"]
+    #options["f"] = ["subcategory|Correspondence/Catalog"]
+    #@res = $api.query(options)
+    #@res = item_retrieve(correspondence_catalog)
+
+    # render search preset with route information
+    #@route_path = "correspondence_catalog_path"
+    #render_overridable "items", "correspondence"
+  end
+
   def reception_reviews
     @title = "Reviews"
 
@@ -149,6 +176,19 @@ ItemsController.class_eval do
 
   def resources_bibliography
     @title = "Bibliography"
+
+    id = "ccda.oth00001"
+    @res = $api.get_item_by_id(id).first
+    if @res
+      url = @res["uri_html"]
+      @html = Net::HTTP.get(URI.parse(url)) if url
+      @title = @res["title"]
+      #render "items/page"
+      render_overridable("items","show")
+    else
+      @title = "Item #{params["id"]} not found"
+      render "items/show_not_found", status: 404
+    end
   end
 
 end

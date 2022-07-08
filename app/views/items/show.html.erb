@@ -2,11 +2,20 @@
 
 <% @ext_css = [ "fancybox.min" ] %>
 <% @ext_js = [ "fancybox.min", "item_gallery_lightbox" ] %>
+<% @ext_css = [ "datatables.min" ] %>
+<% @ext_js = [ "datatables.min", "corresp_catalog_datatables" ] %>
 
 <h1><%= @res["title"] %></h1>
-<%= render_overridable("show_metadata") %>
+<% if @res["subcategory"] == "Correspondence/Catalog" %>
+  <p>This is a first go at a correspondence catalog.</p>
+<% end %>
+<% unless @res["subcategory"] == "Correspondence/Catalog" || @res["identifier"] == "ccda.oth00001" %>
+  <%= render_overridable("show_metadata") %>
+<% end %>
 <% if @res["subcategory"] == "Manuscripts/Galley Proofs" %>
   <%= render_overridable("show_key") %>
 <% end %>
 <%= render_overridable("show_content") %>
-<%= render_overridable("show_bottom_metadata") %>
+<% unless @res["subcategory"] == "Correspondence/Catalog" || @res["identifier"] == "ccda.oth00001" %>
+  <%= render_overridable("show_bottom_metadata") %>
+<% end %>
