@@ -129,22 +129,12 @@ ItemsController.class_eval do
       url = @res["uri_html"]
       @html = Net::HTTP.get(URI.parse(url)) if url
       @title = @res["title"]
-      #render "items/page"
-      render_overridable("items","show")
+      render_overridable "items","correspondence_catalog"
     else
       @title = "Item #{params["id"]} not found"
       render "items/show_not_found", status: 404
     end
 
-    #options = params.permit!.deep_dup
-    #options["f"] = ["id|correspondence_catalog"]
-    #options["f"] = ["subcategory|Correspondence/Catalog"]
-    #@res = $api.query(options)
-    #@res = item_retrieve(correspondence_catalog)
-
-    # render search preset with route information
-    #@route_path = "correspondence_catalog_path"
-    #render_overridable "items", "correspondence"
   end
 
   def reception_reviews
