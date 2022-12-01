@@ -15,9 +15,6 @@ to docs/search_preset.md %>
 
 <h1>Correspondence Catalog</h1>
 
-<p>Text explaining the correspondence catalog goes here</p>
+<p>This is a first go at a correspondence catalog.</p>
 
-<% if @res["subcategory"] == "Correspondence/Catalog" %>
-  <p>ZZZ</p>
-<% end %>
-
+<%= render_overridable("show_content") %>
