@@ -112,7 +112,10 @@
   border-radius: 7px;
 }
 
-
+.tei_note_type_archival {
+  color: #aaa;
+  font-family: $font-family-monospace;
+}
 
 
 .tei_seg {
@@ -176,9 +179,9 @@ div.poem {}
   font-weight: 600;
 }
 
-.tei_name {
-  font-style: italic;
-}
+// .tei_name {
+//   font-style: italic;
+// }
 
 .tei_fw, .tei_titlePage {
   background-color: $gray-lighter;
@@ -187,16 +190,28 @@ div.poem {}
   text-align: center;
 }
 
+// suppress fw on certain pages
+// example below
+
+// .category_correspondence {
+//   .tei_fw {
+//     display: none;
+//   }
+// }
+
 .tei_titlePage {
   border: solid 1px $gray-lighter;
   margin: .5em 0;
   padding: .5em;
 }
 
+// This is a hack until we have lowercased text within "smallCaps" 
+// marked tags across the site. see issue #198
 .SmallCaps,
-.tei_hi_rend_smallCaps
- {
-   font-variant: small-caps;
+.tei_hi_rend_smallCaps,
+.tei_hi_rend_smallcaps {
+  text-transform: lowercase;  
+  font-variant: small-caps;
 }
 
 .tei_sic {
@@ -310,7 +325,9 @@ span.pageimage {
   margin: .5em 0;
 }
 
-.tei_name_type_place {
+.tei_name_type_place, 
+.tei_signed,
+.tei_addrline {
   display: block;
 }
 
@@ -319,7 +336,8 @@ span.pageimage {
   margin-top: 1.5em;
 }
 
-.tei_addrline {
+.tei_addrLine, 
+.tei_address {
   display: block;
 }
 
@@ -424,6 +442,12 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
   border-right: none;
   border-left: none;
   display: inline;
+}
+
+// .tei_dateline
+.tei_note_place_right {
+  display: block;
+  text-align: right;
 }
 
 .tei_note_type_authorial {

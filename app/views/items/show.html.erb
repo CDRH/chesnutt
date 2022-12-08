@@ -1,5 +1,13 @@
 <%# overridden from orchid to add assets, key, bottom metadata %>
 
+<%# creating page classes based on category/sub category
+    note that if there is no subcategory the category will repeat in the subcategory %>
+<% page_class_list = [
+  @res["category"].present? ? "category_" + format_name(@res["category"]) : "",
+  @res["subcategory"].present? ? "subcategory_" + format_name(@res["subcategory"]) : ""
+] %>
+<% @page_classes = page_class_list.reject(&:empty?).join(' ') %>
+
 <% @ext_css = [ "fancybox.min" ] %>
 <% @ext_js = [ "fancybox.min", "item_gallery_lightbox" ] %>
 
@@ -10,7 +18,14 @@
 <% if @res["subcategory"] == "Manuscripts/Galley Proofs" %>
   <%= render_overridable("show_key") %>
 <% end %>
+
+<%# If there is content in previous or next, call template to show previous and next links %>
+<% if @res["previous_item_id_k"] != "" || @res["next_item_id_k"] != "" %>
+  <%= render_overridable("prev_next_item_nav") %>
+<% end %>
+
 <%= render_overridable("show_content") %>
+
 <% unless @res["identifier"] == "ccda.oth00001" %>
   <%= render_overridable("show_bottom_metadata") %>
 <% end %>

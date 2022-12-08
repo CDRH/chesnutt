@@ -600,7 +600,9 @@ ul.searchlinks {
 
 // End Banners
 
+// ===============
 // Other Page code
+// ===============
 
 // About - people 
 
@@ -716,6 +718,44 @@ ul.searchlinks {
   border: 1px solid $gray-light;
   display: block;
   padding: 10px 20px;
+}
+
+// Letters
+
+// Letters
+
+.archive_item p.corresp_note,
+.archive_item .corresp_note {
+  text-indent: 0;
+}
+
+// Previous and Next Links
+
+nav.letter_navigation {
+  display: flex;
+  justify-content: center;
+  
+  
+  div {
+    background-color: $eggshell;
+    margin: .5em;
+    padding: .5em 1em;
+  }
+
+  .letter_navigation_previous {
+    border-radius: 20em 0 0 20em;
+
+    a:before {
+      content: "← ";
+    }
+  }
+  .letter_navigation_next {
+    border-radius: 0 20em 20em 0;
+
+    a:after {
+      content: " →";
+    }
+  }
 }
 
 // ================

@@ -1,0 +1,25 @@
+<nav class="letter_navigation">
+
+      <div class="letter_navigation_previous">
+      <% if @res["previous_item_id_k"] != "" %>
+         <a href="<%= @res["previous_item_id_k"] %>">
+                Previous
+              </a>
+              <% else %>
+              Previous
+              <% end %>
+      </div>
+  
+
+     
+      <div class="letter_navigation_next">
+      <% if @res["next_item_id_k"] != "" %>
+         <a href="<%= @res["next_item_id_k"] %>">
+                Next
+              </a>
+               <% else %>
+               Next
+                <% end %>
+      </div>
+   </nav>
+   
