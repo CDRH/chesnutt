@@ -15,8 +15,12 @@
 <% unless @res["identifier"] == "ccda.oth00001" %>
   <%= render_overridable("show_metadata") %>
 <% end %>
+<%# show keys %>
 <% if @res["subcategory"] == "Manuscripts/Galley Proofs" %>
-  <%= render_overridable("show_key") %>
+  <%= render_overridable("show_manuscripts_key") %>
+<% end %>
+<% if @res["category"] == "Correspondence" %>
+  <%= render_overridable("show_correspondence_key") %>
 <% end %>
 
 <%# If there is content in previous or next, call template to show previous and next links %>
