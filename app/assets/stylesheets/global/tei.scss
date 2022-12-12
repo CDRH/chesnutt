@@ -40,60 +40,70 @@
 .tei_add_place_margin-left {
   &:before {
     content: " [left margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_margin-bottom {
   &:before {
     content: " [bottom margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_margin-right {
   &:before {
     content: " [right margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_margin-top {
   &:before {
     content: " [top margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_left {
   &:before {
     content: " [left margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_right {
   &:before {
     content: " [right margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_top {
   &:before {
     content: " [top margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_bottom {
   &:before {
     content: " [bottom margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_above {
   &:before {
     content: " [above line] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_below {
   &:before {
     content: " [below line] ";
+    text-decoration: none;
   }
 }
 
@@ -101,6 +111,7 @@
 .tei_add_place_supralinear {
   &:before {
     content: " [above line] ";
+    text-decoration: none;
   }
 }
 
@@ -319,6 +330,15 @@ span.pageimage {
 }
 
 /* correspondence */
+
+.category_correspondence {
+
+// adding a wavy line to add and del, only 
+  .tei_del, .tei_add {
+    text-decoration: $brand-success dotted underline;
+    text-decoration-thickness: 2px;
+  }
+}
 
 .tei_salute {
   display: block;
