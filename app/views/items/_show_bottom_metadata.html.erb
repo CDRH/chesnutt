@@ -19,6 +19,14 @@
     <% end %>
 
     <li><%= metadata(@res, "Document ID", "identifier", link: false) %></li>
+    
+     <% if @res["type"].present? %>    
+    <li>
+      <strong>Nature of source text: </strong> 
+      <%= @res["type"] %>
+      <%= t "correspondence.editorial_note" %>
+    </li>
+    <% end %>
       
     <% if @res["rights"].present? || @res["rights_uri"].present? %>    
     <li>
@@ -27,14 +35,6 @@
       <% if @res["rights_uri"].present? %>
         [<%= link_to "License", @res["rights_uri"] %>]
       <% end %>
-    </li>
-    <% end %>
-
-    <% if @res["type"].present? %>    
-    <li>
-      <strong>Editorial note: </strong> 
-      <%= @res["type"] %>
-      <%= t "correspondence.editorial_note" %>
     </li>
     <% end %>
 
