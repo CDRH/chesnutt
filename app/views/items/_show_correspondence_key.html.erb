@@ -12,41 +12,50 @@
         <table class="table">
                <thead>
                   <tr>
-                     <th scope="col">Textual Feature</th>
-                     <th scope="col">Appearance or explanation</th>
+                    <th scope="col"><b>Textual Feature</b></th>
+                    <th scope="col"><b>Appearance or explanation</b></th>
                   </tr>
                </thead>
                <tbody>
+                 <tr>
+                     <td>
+                     alterations to base text (additions or deletions)
+                     </td>
+                     <td>
+                        <span class="tei_add">added or deleted text</span>
+                     </td>
+                  </tr>
                   <tr>
                      <td>passage deleted with a strikethrough mark</td>
                      <td><del class="tei_del_rend_strikethrough">deleted passage</del></td>
                   </tr>
-                  <tr>
-                     <td>text added in the margin</td>
-                     <td>[right margin] text in right margin; [left margin] text in left margin</td>
+                 <tr>
+                     <td>passage deleted by overwritten added text</td>
+                     <td>
+                     <span class="tei_subst tei_hand_medium_black_ink  tei_subst_rend_overwrite"><del>Deleted text</del> <span class="tei_add">Added text</span></span>
+                     </td>
                   </tr>
+                 <tr>
+                     <td>position of added text (if not added inline)</td>
+                   <td><span class="tei_add">[right margin] text added in right margin</span>; <span class="tei_add">[above line] text added above the line</span></td>
+                  </tr>
+                 <tr>
+                   <td>forme works (running head, page number, etc.)</td>
+                   <td><span class="tei_fw">forme work here</span></td>
+                 <tr/>
                   <tr>
                      <td>supplied text</td>
                      <td><span class="tei_sic_ed">[supplied text]</span></td>
                   </tr>
                   <tr>
                      <td>
-                     archival text
+                     archivist note
                      </td>
                      <td>
-                        <span class="tei_note_type_archival">archival text</span>
+                        <span class="tei_note_type_archival">archivist note</span>
                      </td>
                   </tr>
-                  <tr>
-                     <td>
-                     add and delete
-                     </td>
-                     <td>
-                        <span class="tei_add">added text</span><br/>
-                        <span class="tei_del">deleted text</span>
-                     </td>
-                  </tr>
-                  <tr>
+                   <tr>
                      <td>note on classcode</td>
                      <td>
                      <span>Text explaining what the classcode means</span>
