@@ -284,3 +284,10 @@ en:
     title: Search
     # browse items without applying any search / filters
     view_all: View All Items
+
+  ##################
+  # CORRESPONDENCE #
+  ##################
+
+  correspondence:
+    editorial_note: (Explanation of editorial note goes here)

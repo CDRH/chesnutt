@@ -30,6 +30,14 @@
     </li>
     <% end %>
 
+    <% if @res["type"].present? %>    
+    <li>
+      <strong>Editorial note: </strong> 
+      <%= @res["type"] %>
+      <%= t "correspondence.editorial_note" %>
+    </li>
+    <% end %>
+
     <% if @res["contributor"].present? %>
       <li>
         <%= metadata(@res, "Contributors to the digital file", 
