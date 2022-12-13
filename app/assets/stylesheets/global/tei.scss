@@ -334,7 +334,8 @@ span.pageimage {
 .category_correspondence {
 // adding a wavy line to add and del, only 
   .tei_del, .tei_add {
-    text-decoration: $brand-success dotted underline;
+    
+    border-bottom: 2px dotted $brand-success;
     text-decoration-thickness: 2px;
   }
 }
@@ -530,6 +531,10 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
     // added metamark &#8272;
     content: "⁐";
   }
+}
+
+.tei_del {
+  text-decoration: line-through;
 }
 
 del {
