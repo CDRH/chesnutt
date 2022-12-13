@@ -332,7 +332,6 @@ span.pageimage {
 /* correspondence */
 
 .category_correspondence {
-
 // adding a wavy line to add and del, only 
   .tei_del, .tei_add {
     text-decoration: $brand-success dotted underline;
@@ -456,13 +455,14 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 }
 
 // todo: karin look at this
-.tei_note_type_authorial span {
-  background-color: $gold-metallic;
-  border: double 3px blue;
-  border-right: none;
-  border-left: none;
-  display: inline;
-}
+// commented out, was causing weird display
+// .tei_note_type_authorial span {
+//   background-color: $gold-metallic;
+//   border: double 3px blue;
+//   border-right: none;
+//   border-left: none;
+//   display: inline;
+// }
 
 // .tei_dateline
 .tei_note_place_right {
@@ -491,12 +491,12 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 
 
 // Hand CSS
-// DRAFT
-
-.tei_hand_resp_cwc {
-  border-bottom: double 3px $brand-success;
+// limiting Chesnutt's hand to manuscripts
+.category_manuscripts {
+  .tei_hand_resp_cwc {
+    border-bottom: double 3px $brand-success;
+  }
 }
-
 // .tei_hand_medium_black_pen {
 //   background-color: red;
 // }

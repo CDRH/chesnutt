@@ -1,83 +1,107 @@
-<div class="metadata">
+<div class="metadata top_metadata">
+  <%# link to bottom metadata %>
   <%= link_to "See more information about this item", "#more-metadata",
-    class: "btn btn-warning btn-xs btn-metadata" %>
+        class: "btn btn-warning btn-xs btn-metadata" %>
+  <ul>
+    <%# SOURCE TEXT %>
+    <li>
+      <% 
+        # setting up the seperator variable- only add a comma if both volume and issue are present
+        vol_iss_num_sep = ((@res["volume_number_k"].present? && @res["issue_number_k"].present?) ? "," : "")
+        vol_issue = (@res["volume_number_k"].present? ? " " + @res["volume_number_k"] + vol_iss_num_sep + " " : "")
+        vol_issue << (@res["issue_number_k"].present? ? "no. " + @res["issue_number_k"] + " " : "") 
+      %>
+      
+      <strong>Source Text:</strong> 
 
-  <% 
-    # setting up the seperator variable- only add a comma if both volume and issue are present
-    vol_iss_num_sep = ((@res["volume_number_k"].present? && @res["issue_number_k"].present?) ? "," : "")
-    vol_issue = (@res["volume_number_k"].present? ? " " + @res["volume_number_k"] + vol_iss_num_sep + " " : "")
-    vol_issue << (@res["issue_number_k"].present? ? "no. " + @res["issue_number_k"] + " " : "") 
-  %>
-  
-  <strong>Source Text:</strong> 
+      <%# ======
+      Periodical
+      ========== %>
+      <% if @res["format"] == "periodical" %>
 
-  <%# ======
-  Periodical
-  ========== %>
-  <% if @res["format"] == "periodical" %>
+        <%= @res["author_cite_k"] %>, 
+        "<%= @res["title"] %>," 
+        <em><%= @res["publisher_k"] %></em>
+        <%= vol_issue %> 
+        (<%= @res["date_display"] %>)<% if @res["page_number_k"].present? %>: 
+        <%= @res["page_number_k"] %>.
+        <% else %>.
+        <% end %> 
 
-    <%= @res["author_cite_k"] %>, 
-    "<%= @res["title"] %>," 
-    <em><%= @res["publisher_k"] %></em>
-    <%= vol_issue %> 
-    (<%= @res["date_display"] %>)<% if @res["page_number_k"].present? %>: 
-    <%= @res["page_number_k"] %>.
-    <% else %>.
-    <% end %> 
+      <%# ======
+      Book
+      ========== %>
+      <% elsif @res["format"] == "book" %>
 
-  <%# ======
-  Book
-  ========== %>
-  <% elsif @res["format"] == "book" %>
+        <%= @res["author_cite_k"] %>, 
 
-    <%= @res["author_cite_k"] %>, 
+        <%# if there is a volume title, put title in quotes, otherwise, emphasis %>
+        <% if @res["volume_title_k"].present? %>
+          "<%= @res["title"] %>,"
+        <% else %>
+          <em><%= @res["title"] %></em>
+          <%if @res["volume_creator_k"].present? %>,<% end %>
+        <% end %>
 
-    <%# if there is a volume title, put title in quotes, otherwise, emphasis %>
-    <% if @res["volume_title_k"].present? %>
-      "<%= @res["title"] %>,"
-    <% else %>
-      <em><%= @res["title"] %></em>
-      <%if @res["volume_creator_k"].present? %>,<% end %>
+        <% if @res["volume_title_k"].present? %>
+          in <em> <%= @res["volume_title_k"] %></em><%if @res["volume_creator_k"].present? %>,<% end %> 
+        <% end %>
+
+        <% if @res["volume_creator_k"].present? %>
+          ed. <%= @res["volume_creator_k"] %>
+        <% end %>
+
+        (<%= @res["publisher_k"] %>, 
+
+        <%= @res["date_display"]  %>)<%# here for to eliminate space
+        %><%= (@res["page_number_k"].present? ? ": " + @res["page_number_k"] : "") %>. 
+
+      <%# ======
+      Manuscript
+      ========== %>
+      <% elsif @res["format"] == "galley proof" %>
+      
+        <%= @res["author_cite_k"] %>, 
+        <em><%= @res["title"] %></em> (galley proof) 
+        <%= @res["date_display"] %>, 
+        <%= @res["archive_location_k"] %>, 
+        <%= @res["rights_holder"] %>.
+
+      <%# ======
+      Correspondence
+      ========== %>
+      <% elsif @res["format"] == "letter" %>
+        <%= @res["title"] %>,
+        <%= @res["source"] %>.
+
+      <%# ======
+      no format defined
+      ========== %>
+      <% else %>
+        <%= @res["title"] %>,
+        <%= @res["date_display"] %>.
+
+      <% end %>
+
+    </li>
+
+    <%# RELATED ITEMS %>
+    <% if @res["related_note_and_id_k"].present? %>
+      <li>
+        <strong>Related items: </strong>
+        <ul>
+        <% array = @res["related_note_and_id_k"] %>
+        <% array.each do |relation| %>
+          <li>
+          <%# split item on | - temporary, eventually we'll use nested fields %>
+          <% item_array = relation.split("|") %>
+            <%# first item in array is the note %>
+            <%= item_array[0] %>
+            <%# second item in array is the id %>
+            <%= link_to item_array[1], item_array[1] %>
+          </li>
+        <% end %>
+      </li>
     <% end %>
-
-    <% if @res["volume_title_k"].present? %>
-      in <em> <%= @res["volume_title_k"] %></em><%if @res["volume_creator_k"].present? %>,<% end %> 
-    <% end %>
-
-    <% if @res["volume_creator_k"].present? %>
-      ed. <%= @res["volume_creator_k"] %>
-    <% end %>
-
-    (<%= @res["publisher_k"] %>, 
-
-    <%= @res["date_display"]  %>)<%# here for to eliminate space
-    %><%= (@res["page_number_k"].present? ? ": " + @res["page_number_k"] : "") %>. 
-
-  <%# ======
-  Manuscript
-  ========== %>
-  <% elsif @res["format"] == "galley proof" %>
-  
-    <%= @res["author_cite_k"] %>, 
-    <em><%= @res["title"] %></em> (galley proof) 
-    <%= @res["date_display"] %>, 
-    <%= @res["archive_location_k"] %>, 
-    <%= @res["rights_holder"] %>.
-
-  <%# ======
-  Correspondence
-  ========== %>
-  <% elsif @res["format"] == "letter" %>
-    <%= @res["title"] %>,
-    <%= @res["source"] %>.
-
-  <%# ======
-  no format defined
-  ========== %>
-  <% else %>
-    <%= @res["title"] %>,
-    <%= @res["date_display"] %>.
-
-  <% end %>
-  
-</div>
+  </ul>
+</div><%# /.metadata %>
