@@ -305,6 +305,17 @@ span.pageimage {
   display: block;
 }
 
+.archive_item {
+  .tei_note_type_editorial {
+    display: block;
+    margin: 1.5em 0;
+    
+    p {
+      text-indent: 0;
+    }
+  }
+}
+
 // Quotes
 
 /*  q in TEI */

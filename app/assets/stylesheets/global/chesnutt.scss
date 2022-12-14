@@ -39,6 +39,13 @@ body {
   }
 }
 
+.milestone.horbar {
+  border-bottom: $gray-lighter solid 1px;
+  margin: 1.5em 0;
+  display: block;
+  height: 1px;
+}
+
 // HTML Elements
 
 .archive_item p {
@@ -688,10 +695,7 @@ ul.searchlinks {
 .top_metadata {
   ul {
     list-style-type: none;
-    ul {
-      margin-left: 2em;
-      list-style-type: square;
-    }
+    
   }
 }
 
@@ -705,6 +709,11 @@ ul.searchlinks {
   ul {
     margin:0;
     padding:0;
+    ul {
+      margin-left: 2em;
+      list-style-type: square;
+      columns: 3;
+    }
   }
 
   .btn-metadata {
@@ -726,6 +735,13 @@ ul.searchlinks {
     font-weight: 800;
     margin: 0 0 .5em 0;
     padding: 0;
+  }
+}
+
+// only add columns for larger screens
+@media (min-width: $screen-md) {
+  .metadata ul ul {
+    columns: 3;
   }
 }
 
