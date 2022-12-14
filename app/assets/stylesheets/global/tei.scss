@@ -333,9 +333,10 @@ span.pageimage {
 
 .category_correspondence {
 // adding a wavy line to add and del, only 
+$adddelcolor: darken($brand-success, 10%);
   .tei_del, .tei_add {
-    
-    border-bottom: 2px dotted $brand-success;
+    color: $adddelcolor !important;
+    border-bottom: 2px dotted $adddelcolor !important;
     text-decoration-thickness: 2px;
   }
 }
