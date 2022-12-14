@@ -13,14 +13,16 @@
     </li>
 
     <% if @res["uri_data"].present? %>
+    <br/>
       <li><strong>Source File: </strong>
         <a href="<%= @res["uri_data"] %>"><%= File.basename(@res["uri_data"]) %></a>
       </li>
     <% end %>
-
+<br/>
     <li><%= metadata(@res, "Document ID", "identifier", link: false) %></li>
     
      <% if @res["type"].present? %>    
+    <br/>
     <li>
       <strong>Nature of source text: </strong> 
       <%= @res["type"] %>
@@ -41,6 +43,7 @@
     <% end %>
       
     <% if @res["rights"].present? || @res["rights_uri"].present? %>    
+      <br/>
     <li>
       <strong>Rights information: </strong> 
       <%= @res["rights"] %>
@@ -51,6 +54,7 @@
     <% end %>
 
     <% if @res["contributor"].present? %>
+    <br/>
       <li>
         <%= metadata(@res, "Contributors to the digital file", 
           "contributor.name", link: false) %>
