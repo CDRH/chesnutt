@@ -4,6 +4,8 @@
 // TEI
 // ================
 
+$overwrite_color: darken($brand-success, 10%);
+
 // Proofs
 
 .tei_hi_rend_underline {
@@ -332,11 +334,15 @@ span.pageimage {
 /* correspondence */
 
 .category_correspondence {
+  .tei_subst_rend_overwrite {
+    .tei_del, .tei_add {
+      color: $overwrite_color;
+    }
+  }
 // adding a wavy line to add and del, only 
-$adddelcolor: darken($brand-success, 10%);
+
   .tei_del, .tei_add {
-    color: $adddelcolor !important;
-    border-bottom: 2px dotted $adddelcolor !important;
+    border-bottom: 2px dotted $overwrite_color;
     text-decoration-thickness: 2px;
   }
 }
@@ -366,7 +372,7 @@ $adddelcolor: darken($brand-success, 10%);
 
 .tei_subst_rend_overwrite {
   del, .tei_add {
-    color: rgb(210, 144, 2);
+    color: $overwrite_color;
   }
 }
 
