@@ -1,0 +1,20 @@
+<%# overridden from orchid to add assets %>
+
+<% @ext_css = [ "datatables.min" ] %>
+<% @ext_js = [ "datatables.min", "corresp_catalog_datatables" ] %>
+
+<%# for instructions about how to use the search preset feature, please refer
+to docs/search_preset.md %>
+
+<%# provide the following:
+  - @res : API response object ($api.query(options))
+  - @route_path : string representing route used to call this template ("image_gallery_path")
+  - @content_label : OPTIONAL overrides @title for h1
+  - @preset_class : OPTIONAL adds CSS class on <div>
+%>
+
+<h1>Correspondence Catalog</h1>
+
+<p>This is a first go at a correspondence catalog.</p>
+
+<%= render_overridable("show_content") %>
