@@ -6,15 +6,13 @@
 <%# for instructions about how to use the search preset feature, please refer
 to docs/search_preset.md %>
 
-<%# provide the following:
-  - @res : API response object ($api.query(options))
-  - @route_path : string representing route used to call this template ("image_gallery_path")
-  - @content_label : OPTIONAL overrides @title for h1
-  - @preset_class : OPTIONAL adds CSS class on <div>
-%>
-
 <h1>Correspondence Catalog</h1>
 
-<p>This is a first go at a correspondence catalog.</p>
+<p>Below is a catalog of all known correspondence to or from Charles W. Chesnutt, including draft letters—the first such resource compiled in Chesnutt scholarship.</p>
+
+<p>We strive to list the current location of each letter. However, the location of some letters is unknown, and we are aware of their existence only through references in secondary sources; in such instances we list that secondary source. Approximately 120 letters are known only by their reprinting, in part or in full, in Helen M. Chesnutt's biography of her father, <em>Charles Waddell Chesnutt: Pioneer of the Color Line</em> (Chapel Hill: University of North Carolina Press, 1952); the source of these letters is listed as "Pioneer of the Color Line," along with the page number. Full transcriptions of letters are linked from the first column, when available.</p>
+
+<p>This catalog will be updated as new letters are discovered, and users are encouraged to <a href="mailto:browners@newschool.edu;matt.cohen@unl.edu;kprice2@unl.edu">contact the project editors</a> if they are aware of a letter not represented here.</p> 
+<br/>
 
 <%= render_overridable("show_content") %>

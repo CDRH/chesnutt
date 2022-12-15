@@ -1,0 +1,63 @@
+<div class="panel-group key" id="about-accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Key
+        </a>
+      </h4>
+    </div><%# /panel-heading %>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <table class="table">
+               <thead>
+                  <tr>
+                    <th scope="col"><b>Textual Feature</b></th>
+                    <th scope="col"><b>Appearance</b></th>
+                  </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                     <td>
+                     alterations to base text (additions or deletions)
+                     </td>
+                     <td>
+                        <span class="tei_add">added or deleted text</span>
+                     </td>
+                  </tr>
+                  <tr>
+                     <td>passage deleted with a strikethrough mark</td>
+                     <td><del class="tei_del_rend_strikethrough tei_del">deleted passage</del></td>
+                  </tr>
+                 <tr>
+                     <td>passage deleted by overwritten added text</td>
+                     <td>
+                     <span class="tei_subst tei_hand_medium_black_ink  tei_subst_rend_overwrite"><span class="tei_del">Deleted text</span> <span class="tei_add">Added text</span></span>
+                     </td>
+                  </tr>
+                 <tr>
+                     <td>position of added text (if not added inline)</td>
+                   <td><span class="tei_add">[right margin] text added in right margin</span>; <span class="tei_add">[above line] text added above the line</span></td>
+                  </tr>
+                 <tr>
+                   <td>page number, repeated letterhead, etc.</td>
+                   <td><span class="tei_fw">page number or repeated letterhead</span></td>
+                 </tr>
+                  <tr>
+                     <td>supplied text</td>
+                     <td><span class="tei_sic_ed">[supplied text]</span></td>
+                  </tr>
+                  <tr>
+                     <td>
+                     archivist note
+                     </td>
+                     <td>
+                        <span class="tei_note_type_archival">archivist note</span>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+      </div><%# /panel-body %>
+    </div><%# /panel-collapse %>
+  </div><%# /panel %>
+</div><%# /panel-group %>

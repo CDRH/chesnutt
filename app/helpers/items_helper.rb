@@ -20,4 +20,16 @@ module ItemsHelper
 
     link_to title_display, path
   end
+
+  # formatting names to use in class names
+  def format_name (input)
+    if input != nil
+      if input.include? "/"
+        formatted_input = input.downcase.split('/').last.strip.downcase
+      else
+      formatted_input =  input.strip.downcase.gsub(/'/,'').gsub(' ','-')
+      end
+    end
+    return formatted_input
+  end
 end

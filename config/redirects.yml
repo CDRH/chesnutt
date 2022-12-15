@@ -1,3 +1,9 @@
+# Correspondence catalog
+-
+  method:     r301
+  from:       /item/correspondence_catalog
+  to:         /correspondence/catalog
+
 # Reviews Section
 #################
 # Conjure Woman

@@ -4,6 +4,8 @@
 // TEI
 // ================
 
+$overwrite_color: darken($brand-success, 10%);
+
 // Proofs
 
 .tei_hi_rend_underline {
@@ -40,60 +42,70 @@
 .tei_add_place_margin-left {
   &:before {
     content: " [left margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_margin-bottom {
   &:before {
     content: " [bottom margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_margin-right {
   &:before {
     content: " [right margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_margin-top {
   &:before {
     content: " [top margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_left {
   &:before {
     content: " [left margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_right {
   &:before {
     content: " [right margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_top {
   &:before {
     content: " [top margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_bottom {
   &:before {
     content: " [bottom margin] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_above {
   &:before {
     content: " [above line] ";
+    text-decoration: none;
   }
 }
 
 .tei_add_place_below {
   &:before {
     content: " [below line] ";
+    text-decoration: none;
   }
 }
 
@@ -101,6 +113,7 @@
 .tei_add_place_supralinear {
   &:before {
     content: " [above line] ";
+    text-decoration: none;
   }
 }
 
@@ -112,7 +125,10 @@
   border-radius: 7px;
 }
 
-
+.tei_note_type_archival {
+  color: #aaa;
+  font-family: $font-family-monospace;
+}
 
 
 .tei_seg {
@@ -176,9 +192,9 @@ div.poem {}
   font-weight: 600;
 }
 
-.tei_name {
-  font-style: italic;
-}
+// .tei_name {
+//   font-style: italic;
+// }
 
 .tei_fw, .tei_titlePage {
   background-color: $gray-lighter;
@@ -187,16 +203,28 @@ div.poem {}
   text-align: center;
 }
 
+// suppress fw on certain pages
+// example below
+
+// .category_correspondence {
+//   .tei_fw {
+//     display: none;
+//   }
+// }
+
 .tei_titlePage {
   border: solid 1px $gray-lighter;
   margin: .5em 0;
   padding: .5em;
 }
 
+// This is a hack until we have lowercased text within "smallCaps" 
+// marked tags across the site. see issue #198
 .SmallCaps,
-.tei_hi_rend_smallCaps
- {
-   font-variant: small-caps;
+.tei_hi_rend_smallCaps,
+.tei_hi_rend_smallcaps {
+  text-transform: lowercase;  
+  font-variant: small-caps;
 }
 
 .tei_sic {
@@ -277,6 +305,17 @@ span.pageimage {
   display: block;
 }
 
+.archive_item {
+  .tei_note_type_editorial {
+    display: block;
+    margin: 1.5em 0;
+    
+    p {
+      text-indent: 0;
+    }
+  }
+}
+
 // Quotes
 
 /*  q in TEI */
@@ -305,12 +344,28 @@ span.pageimage {
 
 /* correspondence */
 
+.category_correspondence {
+  .tei_subst_rend_overwrite {
+    .tei_del, .tei_add {
+      color: $overwrite_color;
+    }
+  }
+// adding a wavy line to add and del, only 
+
+  .tei_del, .tei_add {
+    border-bottom: 2px dotted $overwrite_color;
+    text-decoration-thickness: 2px;
+  }
+}
+
 .tei_salute {
   display: block;
   margin: .5em 0;
 }
 
-.tei_name_type_place {
+.tei_name_type_place, 
+.tei_signed,
+.tei_addrline {
   display: block;
 }
 
@@ -319,7 +374,8 @@ span.pageimage {
   margin-top: 1.5em;
 }
 
-.tei_addrline {
+.tei_addrLine, 
+.tei_address {
   display: block;
 }
 
@@ -327,7 +383,7 @@ span.pageimage {
 
 .tei_subst_rend_overwrite {
   del, .tei_add {
-    color: rgb(210, 144, 2);
+    color: $overwrite_color;
   }
 }
 
@@ -418,12 +474,19 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 }
 
 // todo: karin look at this
-.tei_note_type_authorial span {
-  background-color: $gold-metallic;
-  border: double 3px blue;
-  border-right: none;
-  border-left: none;
-  display: inline;
+// commented out, was causing weird display
+// .tei_note_type_authorial span {
+//   background-color: $gold-metallic;
+//   border: double 3px blue;
+//   border-right: none;
+//   border-left: none;
+//   display: inline;
+// }
+
+// .tei_dateline
+.tei_note_place_right {
+  display: block;
+  text-align: right;
 }
 
 .tei_note_type_authorial {
@@ -447,12 +510,12 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 
 
 // Hand CSS
-// DRAFT
-
-.tei_hand_resp_cwc {
-  border-bottom: double 3px $brand-success;
+// limiting Chesnutt's hand to manuscripts
+.category_manuscripts {
+  .tei_hand_resp_cwc {
+    border-bottom: double 3px $brand-success;
+  }
 }
-
 // .tei_hand_medium_black_pen {
 //   background-color: red;
 // }
@@ -486,6 +549,10 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
     // added metamark &#8272;
     content: "⁐";
   }
+}
+
+.tei_del {
+  text-decoration: line-through;
 }
 
 del {
