@@ -695,7 +695,9 @@ ul.searchlinks {
 .top_metadata {
   ul {
     list-style-type: none;
-    
+    li {
+      margin: 0;
+    }
   }
 }
 
@@ -706,6 +708,10 @@ ul.searchlinks {
   padding: 10px 20px 35px 20px;
   position: relative;
 
+  li {
+    margin: .5em 0 .7em .5em;
+  }
+
   ul {
     margin:0;
     padding:0;
@@ -713,6 +719,9 @@ ul.searchlinks {
       margin-left: 2em;
       list-style-type: square;
       columns: 3;
+      li {
+        margin: 0;
+      }
     }
   }
 
