@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get "manuscripts", to: "items#manuscripts", as: "manuscripts"
   
   get "correspondence", to: "items#correspondence", as: "correspondence"
+  get "correspondence/catalog", to: "items#correspondence_catalog", as: "correspondence_catalog"
 
   get "reception", to: "items#reception", as: "reception"
   get "reception/reviews", to: "items#reception_reviews", as: "reception_reviews"

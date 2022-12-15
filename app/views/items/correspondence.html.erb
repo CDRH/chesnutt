@@ -10,4 +10,27 @@ to docs/search_preset.md %>
 
 <h1>Correspondence</h1>
 
-<p>Thanks to a one-year grant from the National Historical Publications and Records Commission the team of researchers at <em>The Charles W. Chesnutt Archive</em> has commenced work on <em>The Correspondence of Charles W. Chesnutt</em>. The correspondence project aims to illuminate the expansive social and literary network of this prominent African American writer, lawyer, and voting rights activist. Our goal is to include transcriptions of incoming as well as outgoing letters, and Chesnutt’s drafts, along with images of the original documents. We have already compiled a document list that identifies over 1,500 letters and their repository locations. The final corpus is expected to be close to 2,000 letters. Like the <em>Charles W. Chesnutt Archive</em>, the <em>Correspondence</em> will be freely available to scholars and the public. By the end of the first year of the project, May 31, 2022, we intend to publish transcriptions, annotations, and (whenever possible) images of 200 letters.</p>
+<p>Here we present our growing digital edition of the correspondence of Charles W. Chesnutt.. Chesnutt’s letters illuminate the expansive social and literary network of this prominent African American writer, lawyer, and voting rights activist, and shed light on his times. The letters, dating from 1883 to 1932, range widely, relating to personal, political, business, civic, and literary matters. Our edition includes transcriptions of incoming as well as outgoing letters, and Chesnutt’s drafts, along with images of the original documents whenever possible. Our editorial policies can be found <%= link_to "here", about_editorial_policy_path %>.</p>
+
+<p>The edition includes a catalog of all of Chesnutt’s known correspondence, incoming and outgoing.</p>
+<br/>
+
+<h4><%= link_to "Full Correspondence Catalog", correspondence_catalog_path %></h4>
+
+  <br/>
+
+<%= render_overridable "items", "search_preset_header" %>
+
+<div class="row search_form search_preset search_preset_<%= @preset_class %>">
+
+  <%# do not display any facet options or summary boxes for this view %>
+
+  <%= render_overridable "items", "search_preset_text" %>
+  <%= render_overridable "items", "sort_and_page_ui" %>
+
+  <!-- search results section -->
+  <%= render_overridable "items", "search_res_count" %>
+  <%= render_overridable "items", "search_preset_res_items" %>
+
+  <%= render_overridable "items", "sort_and_page_ui" %>
+</div>

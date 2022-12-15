@@ -16,6 +16,7 @@ body {
   border: 1px solid $platinum;
   line-height: 1.8em;
   padding: 20px;
+  overflow: auto;
 }
 
 .flex {
@@ -36,6 +37,13 @@ body {
   img {
     max-width: 100%;
   }
+}
+
+.milestone.horbar {
+  border-bottom: $gray-lighter solid 1px;
+  margin: 1.5em 0;
+  display: block;
+  height: 1px;
 }
 
 // HTML Elements
@@ -600,7 +608,9 @@ ul.searchlinks {
 
 // End Banners
 
+// ===============
 // Other Page code
+// ===============
 
 // About - people 
 
@@ -682,12 +692,29 @@ ul.searchlinks {
 // Items 
 // ================
 
+.top_metadata {
+  ul {
+    list-style-type: none;
+    
+  }
+}
+
 .metadata {
   border: 1px solid $gray-light;
   clear: both;
   margin: 10px 0;
   padding: 10px 20px 35px 20px;
   position: relative;
+
+  ul {
+    margin:0;
+    padding:0;
+    ul {
+      margin-left: 2em;
+      list-style-type: square;
+      columns: 3;
+    }
+  }
 
   .btn-metadata {
     bottom: 0;
@@ -711,11 +738,80 @@ ul.searchlinks {
   }
 }
 
+// only add columns for larger screens
+@media (min-width: $screen-md) {
+  .metadata ul ul {
+    columns: 3;
+  }
+}
+
+// key
+
+// Adding arrows and link colors to linked panels
+.key .panel-title a {
+  text-decoration: none;
+  &:hover {
+    color: $brand-primary;
+  }
+  &:after {
+    content: "↑";
+    margin-left: .5em;
+    
+  }
+  &.collapsed:after {
+    content: "↓";
+    margin-left: .5em;
+  }
+}
+
+// key background
+.key .panel-body {
+  background-color: lighten($gray-base, 98%);
+}
+
 // border around publication statement
 .archive_item .editorial_note {
   border: 1px solid $gray-light;
   display: block;
   padding: 10px 20px;
+}
+
+// Letters
+
+// Letters
+
+.archive_item p.corresp_note,
+.archive_item .corresp_note {
+  text-indent: 0;
+}
+
+// Previous and Next Links
+
+nav.letter_navigation {
+  display: flex;
+  justify-content: center;
+  
+  
+  div {
+    background-color: $eggshell;
+    margin: .5em;
+    padding: .5em 1em;
+  }
+
+  .letter_navigation_previous {
+    border-radius: 20em 0 0 20em;
+
+    a:before {
+      content: "← ";
+    }
+  }
+  .letter_navigation_next {
+    border-radius: 0 20em 20em 0;
+
+    a:after {
+      content: " →";
+    }
+  }
 }
 
 // ================

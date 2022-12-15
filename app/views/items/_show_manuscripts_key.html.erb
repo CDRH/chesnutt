@@ -1,9 +1,15 @@
-<div class="key">
-
-<div class="collapse in" id="transcription_guide" aria-expanded="true" style="">
-         <div class="well">
-            <h4>Key</h4>
-            <table class="table">
+<div class="panel-group key" id="about-accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a  class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Key
+        </a>
+      </h4>
+    </div><%# /panel-heading %>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        <table class="table">
                <thead>
                   <tr>
                      <th scope="col">Textual Feature</th>
@@ -59,7 +65,7 @@
                   </tr>
                </tbody>
             </table>
-         </div>
-      </div>
-
-</div>
+      </div><%# /panel-body %>
+    </div><%# /panel-collapse %>
+  </div><%# /panel %>
+</div><%# /panel-group %>
