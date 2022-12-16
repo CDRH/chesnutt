@@ -929,3 +929,12 @@ nav.letter_navigation {
   background-color: $link-color;
   color: #fff;
 }
+
+// Error Page
+
+.item_error_message {
+  text-align: center;
+  span {
+    border-bottom: dotted .1em $gray-light;
+  }
+}
