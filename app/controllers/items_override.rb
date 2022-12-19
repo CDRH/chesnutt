@@ -113,6 +113,9 @@ ItemsController.class_eval do
 
     options = params.permit!.deep_dup
     options["f"] = ["category|Correspondence"]
+    params["sort"] ||= ["date|asc"]
+    options["sort"] = ["date|asc"]
+    
     @res = $api.query(options)
 
     # render search preset with route information
