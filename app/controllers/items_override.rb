@@ -111,8 +111,10 @@ ItemsController.class_eval do
   def correspondence
     @title = "Correspondence"
 
-    options = params.permit!.deep_dup
-    options["f"] = ["category|Correspondence"]
+    params["sort"] ||= ["date|asc"] # Assigns user's chosen sort to both UI and API request or uses different default
+    options = params.permit!.deep_dup # copying all of the search facets, sort, etc from the search query string
+    options["f"] = ["category|Correspondence"] # Sets the API request category so not all items
+    
     @res = $api.query(options)
 
     # render search preset with route information
