@@ -130,6 +130,10 @@ $overwrite_color: darken($brand-success, 10%);
   font-family: $font-family-monospace;
 }
 
+.tei_note_type_authorial {
+   display: block;
+}
+
 
 .tei_seg {
   background-color: $platinum;
