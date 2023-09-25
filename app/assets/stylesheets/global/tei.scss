@@ -130,6 +130,10 @@ $overwrite_color: darken($brand-success, 10%);
   font-family: $font-family-monospace;
 }
 
+.tei_note_type_authorial {
+   display: block;
+}
+
 
 .tei_seg {
   background-color: $platinum;
@@ -491,6 +495,7 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 
 .tei_note_type_authorial {
   margin: .5em 0 1em 0;
+  display: block;
 }
 
 .tei_titlePart_type_main {
