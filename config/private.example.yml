@@ -10,7 +10,7 @@ test:
 
 development:
   <<: *default
-  api_path: https://cdrhdev1.unl.edu/api/v1/collection/chesnutt/
+  api_path: http://localhost:3000/collection/habeascorpus
   iiif_path: https://cdrhdev1.unl.edu/iiif/2
 
 production:
