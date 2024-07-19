@@ -1,4 +1,6 @@
 ItemsController.class_eval do
+  
+  before_action :set_page_facets
 
   def works
     @title = "All Works"
