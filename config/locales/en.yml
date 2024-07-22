@@ -116,8 +116,8 @@ en:
       format: Format
       # locations referenced by this item
       places: Place(s)
-      # subcategory of the item, such as "Letters"
-      subcategory: Subcategory
+      # category2 of the item, such as "Letters"
+      category2: category2
       # description of the title of the item
       title: Title
       # any works (often literary) referenced by this item, such as "O Pioneers!"

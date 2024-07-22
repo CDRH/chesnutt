@@ -19,7 +19,7 @@ ItemsController.class_eval do
     @title = "Stories"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Works/Stories"]
+    options["f"] = ["category2|Works/Stories"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -31,7 +31,7 @@ ItemsController.class_eval do
     @title = "Essays"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Works/Essays"]
+    options["f"] = ["category2|Works/Essays"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -42,7 +42,7 @@ ItemsController.class_eval do
   def works_novels
     @title = "Novels"
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Works/Novels"]
+    options["f"] = ["category2|Works/Novels"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -54,7 +54,7 @@ ItemsController.class_eval do
     @title = "Poems"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Works/Poems"]
+    options["f"] = ["category2|Works/Poems"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -66,7 +66,7 @@ ItemsController.class_eval do
     @title = "Collections"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Works/Collections"]
+    options["f"] = ["category2|Works/Collections"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -78,7 +78,7 @@ ItemsController.class_eval do
     @title = "Other Works"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Works/Other Works"]
+    options["f"] = ["category2|Works/Other Works"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -90,7 +90,7 @@ ItemsController.class_eval do
     @title = "Reviews by Chesnutt"
 
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Works/Reviews"]
+    options["f"] = ["category2|Works/Reviews"]
     @res = $api.query(options)
 
     # render search preset with route information
@@ -146,7 +146,7 @@ ItemsController.class_eval do
 
     params["sort"] ||= ["date|asc"]
     options = params.permit!.deep_dup
-    options["f"] = ["subcategory|Reception/Reviews"]
+    options["f"] = ["category2|Reception/Reviews"]
     @res = $api.query(options)
 
     # render search preset with route information
