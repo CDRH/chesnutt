@@ -723,7 +723,6 @@ ul.searchlinks {
     ul {
       margin-left: 2em;
       list-style-type: square;
-      columns: 3;
       li {
         margin: 0;
       }
@@ -752,9 +751,17 @@ ul.searchlinks {
   }
 }
 
+
+// only split bottom metadata lists into 3 columns 
+#more-metadata {
+  ul ul {
+    columns: 3;
+  }
+}
+
 // only add columns for larger screens
 @media (min-width: $screen-md) {
-  .metadata ul ul {
+  #more-metadata ul ul {
     columns: 3;
   }
 }
