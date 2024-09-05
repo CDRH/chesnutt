@@ -86,22 +86,35 @@
     </li>
 
     <%# RELATED ITEMS %>
+
+    <!-- old code splitting array into bulleted list
+        <ul>
+        <%# array = @res["related_note_and_id_k"] %>
+        <%# array.each do |relation| %>
+          <li>
+          <%# split item on | - temporary, eventually we'll use nested fields %>
+          <%# item_array = relation.split("|") %>
+            <%# first item in array is the note %>
+            <%# item_array[0] %>
+            <%# second item in array is the id %>
+            <%# link_to item_array[1], item_array[1] %>
+          </li>
+        <%# end %>
+      </ul>
+      -->
+
+    <!-- code listing array inline -->  
     <% if @res["related_note_and_id_k"].present? %>
       <li>
         <strong>Related items: </strong>
-        <ul>
-        <% array = @res["related_note_and_id_k"] %>
-        <% array.each do |relation| %>
-          <li>
-          <%# split item on | - temporary, eventually we'll use nested fields %>
-          <% item_array = relation.split("|") %>
-            <%# first item in array is the note %>
-            <%= item_array[0] %>
-            <%# second item in array is the id %>
-            <%= link_to item_array[1], item_array[1] %>
-          </li>
-        <% end %>
-        </ul>
+        <span class="related-item">
+          <% array = @res["related_note_and_id_k"] %>
+          <% array.each do |relation| %>
+            <% item_array = relation.split("|") %>
+              <%= item_array[0] %>
+              <%= link_to item_array[1], item_array[1] %>
+          <% end %>
+        </span>
       </li>
     <% end %>
   </ul>
