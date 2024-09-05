@@ -36,7 +36,7 @@ default: &default
   api_options:
     # example of default filter for all queries
     # f:
-    #   - subcategory|Writings
+    #   - category2|Writings
     # sorting and response number
     sort:
       - title_sort|asc
@@ -66,8 +66,8 @@ default: &default
         label: Category
         flags:
           - search_filter
-      subcategory:
-        label: Subcategory
+      category2:
+        label: Subcategoryq
         flags:
           - search_filter
       date.year:
