@@ -183,14 +183,6 @@ div.poem {}
   font-weight: 600;
 }
 
-// Footnotes
-
-.footnotes {
-  .tei_note + a {
-    margin-left: 0.5em;
-  }
-}
-
 // tei note on proofs
 
 .subcat_galley_proofs .tei_note,
