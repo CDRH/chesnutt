@@ -292,6 +292,15 @@ span.pageimage {
   display: block;
 }
 
+.tei_opener {
+  span + .tei_dateline {
+    margin-top: 2rem;
+  }
+  
+  .tei_dateline + .tei_salute {
+    margin-top: 2rem;
+  }
+}
 
 
 

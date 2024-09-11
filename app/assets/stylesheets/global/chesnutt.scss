@@ -754,7 +754,7 @@ ul.searchlinks {
 
 // only add columns for larger screens
 @media (min-width: $screen-md) {
-  .metadata ul ul {
+  #more-metadata ul ul {
     columns: 3;
   }
 }
