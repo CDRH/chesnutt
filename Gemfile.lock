@@ -1,8 +1,10 @@
-PATH
-  remote: /Users/willdewey/repos/orchid
+GIT
+  remote: https://github.com/CDRH/orchid
+  revision: d0c0c4c76034c0327ff5021623cfc50930912e19
+  branch: local_testing
   specs:
     orchid (3.1.1)
-      rails (~> 6.1.7)
+      rails (> 6.1.7)
 
 GEM
   remote: https://rubygems.org/
