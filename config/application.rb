@@ -18,5 +18,9 @@ module Chesnutt
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Local changes
+    # Enable templates for error pages rather than static HTML files
+    config.exceptions_app = self.routes
   end
 end
