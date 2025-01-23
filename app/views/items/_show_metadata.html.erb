@@ -72,7 +72,7 @@
       ========== %>
       <% elsif @res["format"] == "letter" %>
         <%= @res["title"] %>,
-        <%= @res["source"] %>.
+        <%= @res["has_source"]["title"] %>.
 
       <%# ======
       no format defined
@@ -80,7 +80,6 @@
       <% else %>
         <%= @res["title"] %>,
         <%= @res["date_display"] %>.
-
       <% end %>
 
     </li>
