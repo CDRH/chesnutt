@@ -24,7 +24,7 @@
 <% end %>
 
 <%# If there is content in previous or next, call template to show previous and next links %>
-<% if @res["previous_item_id_k"] != "" || @res["next_item_id_k"] != "" %>
+<% if @res["previous_item_id_k"] || @res["next_item_id_k"] %>
   <%= render_overridable("prev_next_item_nav") %>
 <% end %>
 
