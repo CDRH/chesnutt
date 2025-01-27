@@ -67,7 +67,7 @@ default: &default
         flags:
           - search_filter
       category2:
-        label: Subcategoryq
+        label: Subcategory
         flags:
           - search_filter
       date.year:
