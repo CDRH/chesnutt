@@ -1,7 +1,7 @@
 <nav class="letter_navigation">
 
       <div class="letter_navigation_previous">
-      <% if @res["previous_item_id_k"] != "" %>
+      <% if @res["previous_item_id_k"] %>
          <a href="<%= @res["previous_item_id_k"] %>">
                 Previous letter in chain
               </a>
@@ -13,7 +13,7 @@
 
      
       <div class="letter_navigation_next">
-      <% if @res["next_item_id_k"] != "" %>
+      <% if @res["next_item_id_k"] %>
          <a href="<%= @res["next_item_id_k"] %>">
                 Next letter in chain
               </a>
