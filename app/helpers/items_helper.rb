@@ -2,9 +2,6 @@ module ItemsHelper
   include Orchid::ItemsHelper
 
   def search_item_link(item)
-    if item["category"]
-      category = item["category"].downcase
-    end
     category2 = item["category2"]
     item_id = item["identifier"][/^ccda\.(.+)$/, 1]
     path = "#"
