@@ -86,7 +86,7 @@ default: &default
         label: Works in Reviews
         flags:
           - search_filter
-      source:
+      has_source.title:
         label: Source
 # Add fields for other languages with their language code
 #    es:
