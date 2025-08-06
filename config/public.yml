@@ -82,11 +82,11 @@ default: &default
         label: Format
         flags:
           - search_filter
-      works:
+      keywords4:
         label: Works in Reviews
         flags:
           - search_filter
-      source:
+      has_source.title:
         label: Source
 # Add fields for other languages with their language code
 #    es:
