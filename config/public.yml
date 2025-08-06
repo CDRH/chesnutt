@@ -82,7 +82,7 @@ default: &default
         label: Format
         flags:
           - search_filter
-      works:
+      keywords4:
         label: Works in Reviews
         flags:
           - search_filter
