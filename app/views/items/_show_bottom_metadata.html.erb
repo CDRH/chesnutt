@@ -41,18 +41,16 @@
           %>
 
     <% if @res["contributor"].present? %>
-      <li><strong>Known contributors to report: </strong>
-        <%# @res["contributor"][]["role"] %>
-        <% reviewers = @res["contributor"].select { |i| i["role"] == "Reviewer"} %>
-        <%= reviewers.select { |i| i["name"]} %>
-        <%# for n in reviewers 
-              n["name"]
-            end %>
-            
-        <%# reviewers[0]["name"] %>
-
-        <%# {"id"=>"jdp", "name"=>"James Duncan Phillips", "role"=>"Reviewer"}, {"id"=>nil, "name"=>"Horace Elisha Scudder", "role"=>"Reviewer"}, {"id"=>"ghm", "name"=>"George Harrison Mifflin", "role"=>"Reviewer"} %>
-      </li>
+      <% reviewers = @res["contributor"].select { |i| i["role"] == "Reviewer"} %>
+      <% if reviewers.length > 0 %>
+        <li><strong>Known contributors to report: </strong>
+            <% revArray = [] %>
+            <% reviewers.each do |rev| %>
+              <% revArray << rev["name"] %>
+            <% end %>
+            <%= revArray.join(" | ") %>
+        </li>
+      <% end %>
     <% end %>
 
     <%# END For Readers Reports %>
