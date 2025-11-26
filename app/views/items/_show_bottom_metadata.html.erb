@@ -19,17 +19,6 @@
       </li>
     <% end %>
 
-    <%# For Readers Reports %>
-    <% if @res["contributor"].present? %>
-      <% reviewers = @res["contributor"].select { |i| i["role"] == "Reviewer"} %>
-      <% if reviewers.length > 0 %>
-        <li><strong>Known contributors to report: </strong>
-          <%= reviewers.map {|rev| rev["name"] }.join(" | ") %>
-        </li>
-      <% end %>
-    <% end %>
-    <%# END For Readers Reports %>
-
     <li><%= metadata(@res, "Document ID", "identifier", link: false) %></li>
     
      <% if @res["type"].present? %>    
