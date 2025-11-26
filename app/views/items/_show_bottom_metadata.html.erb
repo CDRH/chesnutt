@@ -44,11 +44,7 @@
       <% reviewers = @res["contributor"].select { |i| i["role"] == "Reviewer"} %>
       <% if reviewers.length > 0 %>
         <li><strong>Known contributors to report: </strong>
-            <% revArray = [] %>
-            <% reviewers.each do |rev| %>
-              <% revArray << rev["name"] %>
-            <% end %>
-            <%= revArray.join(" | ") %>
+          <%= reviewers.map {|rev| rev["name"] }.join(" | ") %>
         </li>
       <% end %>
     <% end %>
