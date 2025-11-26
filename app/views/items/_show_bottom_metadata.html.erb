@@ -19,27 +19,7 @@
       </li>
     <% end %>
 
-    <%# For Readers Reports 
-
-          "contributor": [
-          {
-            "id": "jdp",
-            "name": "James Duncan Phillips",
-            "role": "Reviewer"
-          },
-          {
-            "id": null,
-            "name": "Horace Elisha Scudder",
-            "role": "Reviewer"
-          },
-          {
-            "id": "ghm",
-            "name": "George Harrison Mifflin",
-            "role": "Reviewer"
-          }
-          
-          %>
-
+    <%# For Readers Reports %>
     <% if @res["contributor"].present? %>
       <% reviewers = @res["contributor"].select { |i| i["role"] == "Reviewer"} %>
       <% if reviewers.length > 0 %>
@@ -48,7 +28,6 @@
         </li>
       <% end %>
     <% end %>
-
     <%# END For Readers Reports %>
 
     <li><%= metadata(@res, "Document ID", "identifier", link: false) %></li>
@@ -87,13 +66,13 @@
     <% end %>
 
     <% if @res["contributor"].present? %>
-
-      <li>
-        <%= metadata(@res, "Contributors to the digital file", 
-          "contributor.name", link: false) %>
-      </li>
+    <% reviewers = @res["contributor"].select { |i| i["role"] == "TEI Editor"} %>
+      <% if reviewers.length > 0 %>
+        <li><strong>Contributors to the digital file: </strong>
+          <%= reviewers.map {|rev| rev["name"] }.join(" | ") %>
+        </li>
+      <% end %>
     <% end %>
-
   </ul>
 
   <%= link_to "Back to the top", "#main-content", class: "btn btn-warning btn-xs btn-metadata" %>
