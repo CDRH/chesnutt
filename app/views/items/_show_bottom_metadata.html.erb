@@ -19,6 +19,44 @@
       </li>
     <% end %>
 
+    <%# For Readers Reports 
+
+          "contributor": [
+          {
+            "id": "jdp",
+            "name": "James Duncan Phillips",
+            "role": "Reviewer"
+          },
+          {
+            "id": null,
+            "name": "Horace Elisha Scudder",
+            "role": "Reviewer"
+          },
+          {
+            "id": "ghm",
+            "name": "George Harrison Mifflin",
+            "role": "Reviewer"
+          }
+          
+          %>
+
+    <% if @res["contributor"].present? %>
+      <li><strong>Known contributors to report: </strong>
+        <%# @res["contributor"][]["role"] %>
+        <% reviewers = @res["contributor"].select { |i| i["role"] == "Reviewer"} %>
+        <%= reviewers.select { |i| i["name"]} %>
+        <%# for n in reviewers 
+              n["name"]
+            end %>
+            
+        <%# reviewers[0]["name"] %>
+
+        <%# {"id"=>"jdp", "name"=>"James Duncan Phillips", "role"=>"Reviewer"}, {"id"=>nil, "name"=>"Horace Elisha Scudder", "role"=>"Reviewer"}, {"id"=>"ghm", "name"=>"George Harrison Mifflin", "role"=>"Reviewer"} %>
+      </li>
+    <% end %>
+
+    <%# END For Readers Reports %>
+
     <li><%= metadata(@res, "Document ID", "identifier", link: false) %></li>
     
      <% if @res["type"].present? %>    

@@ -644,3 +644,20 @@ del {
 .tei_head_type_sub {
   font-size: 1.2em;
 }
+
+// Facsimile/Figure
+// This code was added for readers reports but will apply to all figures
+
+.tei_facsimile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tei_facsimile .hr {
+  display: none;
+}
+
+.tei_facsimile .pageimage {
+  float: none;
+}
