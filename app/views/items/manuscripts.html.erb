@@ -8,7 +8,7 @@ to docs/search_preset.md %>
   - @preset_class : OPTIONAL adds CSS class on <div>
 %>
 
-<h1>Manuscripts</h1>
+ <%= render_overridable "items", "search_preset_header" %>
 
 <div class="flex page_banner_vertical">
   <div class="flex_inner display_illustration">
@@ -19,7 +19,7 @@ to docs/search_preset.md %>
 
     <p>This section offers editions of Chesnutt’s manuscripts, including galley proofs of book-length works featuring his emendations. We will supplement this collection further as time and resources allow. For manuscripts, we try whenever possible to provide both a transcription and digital images of the individual pages. </p>
 
-    <%= render_overridable "items", "search_preset_header" %>
+   
 
     <div class="search_form search_preset search_preset_<%= @preset_class %>">
 

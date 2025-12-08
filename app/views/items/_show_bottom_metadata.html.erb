@@ -55,13 +55,13 @@
     <% end %>
 
     <% if @res["contributor"].present? %>
-
-      <li>
-        <%= metadata(@res, "Contributors to the digital file", 
-          "contributor.name", link: false) %>
-      </li>
+    <% reviewers = @res["contributor"].select { |i| i["role"] == "TEI Editor"} %>
+      <% if reviewers.length > 0 %>
+        <li><strong>Contributors to the digital file: </strong>
+          <%= reviewers.map {|rev| rev["name"] }.join(" | ") %>
+        </li>
+      <% end %>
     <% end %>
-
   </ul>
 
   <%= link_to "Back to the top", "#main-content", class: "btn btn-warning btn-xs btn-metadata" %>
