@@ -65,7 +65,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Orchid
-gem 'orchid', git: 'https://github.com/CDRH/orchid', tag: "v4.1.0"
+gem 'orchid', git: 'https://github.com/CDRH/orchid', tag: "v4.0.0"
 
 gem 'bootstrap-sass', '~> 3.4.1'
 gem 'jquery-rails', '~> 4.3'
