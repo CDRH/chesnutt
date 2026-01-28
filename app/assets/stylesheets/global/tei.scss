@@ -652,7 +652,7 @@ del {
 .tei_facsimile {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .tei_facsimile .hr {
