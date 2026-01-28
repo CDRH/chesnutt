@@ -17,7 +17,7 @@ Rails.application.routes.draw do
 
   get "reception", to: "items#reception", as: "reception"
   get "reception/reviews", to: "items#reception_reviews", as: "reception_reviews"
-  get "reception/reader_reports", to: "items#reader_reports", as: "reader_reports"
+  get "reception/readers_reports", to: "items#readers_reports", as: "readers_reports"
   get "reception/biographical_sketches", to: "items#reception_biographical_sketches", as: "reception_biographical_sketches"
 
   get "resources", to: "items#resources", as: "resources"

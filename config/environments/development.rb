@@ -82,5 +82,4 @@ Rails.application.configure do
       1, 32.megabytes
     )
   )
-  config.hosts << "cdrhrailsdev.unl.edu"
 end
