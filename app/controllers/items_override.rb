@@ -154,6 +154,19 @@ ItemsController.class_eval do
     render_overridable "items", "reception_reviews"
   end
 
+  def readers_reports
+    @title = "Readers' Reports"
+
+    params["sort"] ||= ["date|asc"]
+    options = params.permit!.deep_dup
+    options["f"] = ["category|'Readers\' reports'"]
+    @res = $api.query(options)
+
+    # render search preset with route information
+    @route_path = "readers_reports_path"
+    render_overridable "items", "readers_reports"
+  end
+
   def scholarship
     @title = "Scholarship"
     @header = true

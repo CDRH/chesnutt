@@ -8,26 +8,36 @@ to docs/search_preset.md %>
   - @preset_class : OPTIONAL adds CSS class on <div>
 %>
 
-<h1>Reviews</h1>
+<%= render_overridable "items", "search_preset_header" %>
+
 <div class="flex page_banner_vertical">
   <div class="flex_inner display_illustration">
     <div class="page_illustration_outer"></div>
   </div>
   <div class="flex_inner display_content">
     <%# <p>Displaying "category|Manuscripts"</p> %>
+    
+    <h3>Unpublished readers' reports</h3>
+    
+    <p>For forty years (1891-1931), Chesnutt submitted fiction to the Boston publishing firm Houghton Mifflin for possible publication. The readers' reports were, of course, evaluations of the literary merits and commercial prospects of submissions. The original documents, now held at the Houghton library, Harvard University, provide a window into how Chesnutt's fiction was read at the firm. The readers' reports have been all but ignored until very recently. Although Chesnutt interacted with numerous publishers in his career, his ongoing interest in publishing with Houghton Mifflin&#8212;despite recurrent rejections&#8212;is striking. For an extended analysis of these documents, see Antje Anderson, Stephanie P. Browner, Lauren Millhorn, and Kenneth M. Price, "Houghton Mifflin Readers' Reports and the Shape of Charles W. Chesnutt's Literary Career," <em>New England Quarterly</em> 98, no. 4 (December 2025), 490-532.</p>
+    
+    <p style="text-align: center;"><%= link_to "Readers' reports", readers_reports_path, class:"btn btn-default" %></p>
+    
+    <h3>Published contemporary reviews of Chesnutt's works</h3>
 
-    <p>This section offers the most complete collection of contemporary reviews of Chesnutt to be found anywhere. We will supplement this collection further as more reviews are located, and we are grateful when users <a href="mailto: kprice2@unl.edu;browners@newschool.edu;matt.cohen@unl.edu">alert us</a> to missing items.</p>
+    <p>The following section offers the most complete collection of contemporary reviews of Chesnutt to be found anywhere. We will supplement this collection further as more reviews are located, and we are grateful when users <a href="mailto: kprice2@unl.edu;browners@newschool.edu;matt.cohen@unl.edu">alert us</a> to missing items.</p>
 
     <p>During his lifetime, Chesnutt's works earned publication notices and reviews in a wide variety of newspapers and magazines. Our collection includes reviews published in city newspapers, regional magazines, and national outlets. The collection includes materials from the Black press as well as the White press.</p>
 
     <p>In the late 1990s John M. Freiermuth, then a graduate student in the Department of English, University of North Carolina, Greensboro, collected a large batch of reviews and offered them to project co-editor Stephanie Browner for use on the initial version of the <em>Chesnutt Archive</em>. Since then many more reviews have been located thanks to the increasing availability of historic periodicals through online databases. Samantha Gilmore of the University of Nebraska-Lincoln has led the effort to discover and document more reviews, an effort that has vastly increased our ability to study Chesnutt’s early reception.</p> 
 
-    <p>You can find <%= link_to "reviews for specific Chesnutt works here", browse_facet_path(facet: "keywords4") %>, or browse all reviews below.
-</p>
+    <p>You can find <%= link_to "reviews for specific Chesnutt works here", browse_facet_path(facet: "keywords4") %>, or browse all reviews below.</p>
+
+    
   </div>
 </div>
 
-<%= render_overridable "items", "search_preset_header" %>
+
 
 <div class="search_form search_preset search_preset_<%= @preset_class %>">
 
