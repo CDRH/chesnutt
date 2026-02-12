@@ -10,7 +10,7 @@ body {
   font-weight: 400;
 }
 
-.archive_item {  // class around tei -> html generations
+.archive-item {  // class around tei -> html generations
   background-color: $white;
   border-radius: 5px;
   border: 1px solid $platinum;
@@ -23,12 +23,12 @@ body {
   display: flex;
 }
 
-.right_image {
+.right-image {
   margin: 0 0 10px 10px;
   max-width: 100%;
 }
 
-.center_image {
+.center-image {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -48,7 +48,7 @@ body {
 
 // HTML Elements
 
-.archive_item p {
+.archive-item p {
   text-indent: 3em;
 }
 
@@ -75,7 +75,7 @@ a {
   background-color: $banana-mania;
 }
 
-.rend_bold {
+.rend-bold {
   font-weight: 600;
 }
 
@@ -158,11 +158,11 @@ ul.searchlinks {
     margin-top: .1em;
     padding-top: .4em;
 
-    .title_the, .title_archive  {
+    .title-the, .title-archive  {
       font-size: .7em;
     }
 
-    .title_cwc {
+    .title-cwc {
       font-family: $font-family-smallcaps;
       letter-spacing: .1em;
       margin: 0 .1em 0 .3em;
@@ -190,7 +190,7 @@ ul.searchlinks {
 
   // mainnav
 
-  .navbar_mainnav {
+  .navbar-mainnav {
     background-color: $brand-info;
     border-bottom: 3px solid $subnav;
 
@@ -200,7 +200,7 @@ ul.searchlinks {
   }
 
   .navbar-default.navbar_mainnav .navbar-nav > .active > a, 
-  .navbar-default.navbar_mainnav .navbar-nav > .active {
+  .navbar-default.navbar-mainnav .navbar-nav > .active {
     background-color: $subnav;
     color: $brand-primary;
   }
@@ -208,11 +208,11 @@ ul.searchlinks {
   // subnav
 
   .navbar-default.navbar_subnav .navbar-nav > .active > a, 
-  .navbar-default.navbar_msubnav .navbar-nav > .active {
+  .navbar-default.navbar-msubnav .navbar-nav > .active {
     background-color: $white;
   }
 
-  .navbar_subnav.navbar {
+  .navbar-subnav.navbar {
     color: $dark;
     font-size: .8em;
     height: auto;
@@ -228,7 +228,7 @@ ul.searchlinks {
     }
   }
 
-  .navbar-default.navbar_subnav {
+  .navbar-default.navbar-subnav {
     background-color: $subnav;
   }
 
@@ -255,28 +255,28 @@ ul.searchlinks {
   padding-bottom: 8em;
   padding-top: 1.5em;
 
-  .footer_twitter {
+  .footer-twitter {
     margin-top: 2.5em
   }
 
-  .footer_content_warning {
+  .footer-content-warning {
     font-size: .7em;
   }
 
-  .footer_info {
+  .footer-info {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 
-      .footer_logo {
+      .footer-logo {
         align-items: center;
         background-color: rgba(255, 255, 255, 0.07);
         margin: 1em;
         padding: 20px;
 
         // Make CDRH link 2 lines
-        .cdrh_link {
+        .cdrh-link {
           max-width: 32rem;
         }
 
@@ -301,20 +301,20 @@ ul.searchlinks {
   }
 }
 
-.footer_additional_info {
+.footer-additional-info {
   font-size: 1.4em;
   margin-top: 2em;
 }
 
 // Stick footer to bottom
 
-#body-wrapper {
+#body_wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-#content-wrapper {
+#content_wrapper {
   flex-grow: 1;
 }
 
@@ -324,7 +324,7 @@ ul.searchlinks {
 
 // Secondary page listing (see about the site main page)
 
-.page_subnav {
+.page-subnav {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
@@ -419,18 +419,18 @@ ul.searchlinks {
 // Settings for all horizontal illustrations
 
 // make banner sit flush at top
-.page_banner_outer {
+.page-banner-outer {
   margin-top: -49px;
 }
 
 // if screen > sm, place text over image
 @media (min-width: $screen-sm) {
-  .page_banner_outer {
+  .page-banner-outer {
     position: relative;
     z-index: 1;
   }
 
-  .page_banner_illustration {
+  .page-banner-illustration {
     position: absolute;
     top: 0;
     left: 0;
@@ -438,7 +438,7 @@ ul.searchlinks {
 }
 
 // Style semi transparent background for page text 
-.page_banner_text {
+.page-banner-text {
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px 20px 10px 20px;
   position: relative;
@@ -452,21 +452,21 @@ ul.searchlinks {
 }
 
 // set illustration to cover entire area
-.page_banner_illustration {
+.page-banner-illustration {
   background-size: cover;
 }
 
 // set width of outer and inner illustration holders 
 // to 100%. note: tried 100vw, but it was too wide
 .page_banner_outer,
-.page_banner_illustration { 
+.page-banner-illustration { 
   width: 100%;
 }
 
 // for larger screens, move semi transparent text 
 // box to left
 @media (min-width: $screen-lg) {
-  .page_banner_text {
+  .page-banner-text {
     width: 60%;
   }
 }
@@ -477,7 +477,7 @@ ul.searchlinks {
 @mixin horizontal_bar($section, $img, $height) 
 {
   .action_#{$section} {
-    .page_banner_illustration {
+    .page-banner-illustration {
       background-image: $img;
       height: $height;
     }
@@ -485,7 +485,7 @@ ul.searchlinks {
   
   @media (min-width: $screen-sm) {
     .action_#{$section} {
-      .page_banner_outer {
+      .page-banner-outer {
          height: $height;
       }
     }
@@ -523,26 +523,26 @@ ul.searchlinks {
 // Vertical Banners
 
 // Switch order of flex elements for large display
-.flex.page_banner_vertical .flex_inner:nth-child(2) {
+.flex.page-banner-vertical .flex-inner:nth-child(2) {
   margin-right: 20px;
   order: 1;
 }
 
-.flex.page_banner_vertical .flex_inner:nth-child(1) {
+.flex.page-banner-vertical .flex-inner:nth-child(1) {
   order: 2;
 }
 
 @media (max-width: $screen-xs-max) {
-  .flex.page_banner_vertical {
+  .flex.page-banner-vertical {
     display: block !important;
 
-    .flex_inner:nth-child(2) {
+    .flex-inner:nth-child(2) {
       margin-right: 0;
     }
   }
 }
 
-.page_banner_vertical .page_illustration_outer {
+.page-banner-vertical .page-illustration-outer {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -552,15 +552,15 @@ ul.searchlinks {
 // Manuscripts
 
 @media (max-width: $screen-xs-max) {
-  .action_manuscripts .flex.page_banner_vertical {
-    .page_illustration_outer {
+  .action_manuscripts .flex.page_banner-vertical {
+    .page-illustration-outer {
       max-height: 300px;
       width: 100%;
     }
   }
 }
 
-.action_manuscripts .page_illustration_outer {
+.action_manuscripts .page-illustration-outer {
   background-image: image-url("chesnutt-manuscripts.jpg");
   background-position: center;
   display: block;
@@ -571,15 +571,15 @@ ul.searchlinks {
 // Reviews/Reception
 
 @media (max-width: $screen-xs-max) {
-  .action_reception_reviews .flex.page_banner_vertical {
-    .page_illustration_outer {
+  .action_reception_reviews .flex.page-banner-vertical {
+    .page-illustration-outer {
       max-height: 300px;
       width: 100%
     }
   }
 }
 
-.action_reception_reviews .page_illustration_outer {
+.action_reception_reviews .page-illustration-outer {
   background-image: image-url("chesnutt-reviews.jpg");
   background-position: top;
   background-size: contain;
@@ -588,28 +588,28 @@ ul.searchlinks {
 }
 
 @media (min-width: $screen-xs) {
-  .action_reception_reviews .page_illustration_outer {
+  .action_reception_reviews .page-illustration-outer {
     height: 270px;
     width: 180px;
   }
 }
 
 @media (min-width: $screen-sm) {
-  .action_reception_reviews .page_illustration_outer {
+  .action_reception_reviews .page-illustration-outer {
     height: 400px;
     width: 266px;
   }
 }
 
 @media (min-width: $screen-md) {
-  .action_reception_reviews .page_illustration_outer {
+  .action_reception_reviews .page-illustration-outer {
     height: 320px;
     width: 213px;
   }
 }
 
 @media (min-width: $screen-lg) {
-  .action_reception_reviews .page_illustration_outer {
+  .action_reception_reviews .page-illustration-outer {
     height: 270px;
     width: 180px;
   }
@@ -623,7 +623,7 @@ ul.searchlinks {
 
 // About - people 
 
-.action_about_people.page_about #content-wrapper {
+.action_about_people.page-about #content_wrapper {
   img {
     clear: both;
     float: left;
@@ -643,12 +643,12 @@ ul.searchlinks {
 
 // About - biographical sketch
 
-.essay.biographical_sketch {
+.essay.biographical-sketch {
   padding-top: 20px;
 }
 
 @media (min-width: $screen-sm) {
-  .essay.biographical_sketch {
+  .essay.biographical-sketch {
     backdrop-filter: blur(4px);
     background: rgba(255, 255, 255, .9);
     border-radius: 30px;
@@ -659,14 +659,14 @@ ul.searchlinks {
   }
 }
 
-.chesnutt_about_image {
+.chesnutt-about-image {
   display: block;
   margin: 20px auto;
   max-width: 100%;
 }
 
 @media (min-width: $screen-md) {
-  .chesnutt_about_image {
+  .chesnutt-about-image {
     margin: 0 0 20px 20px;
     float: right;
   }
@@ -676,7 +676,7 @@ ul.searchlinks {
 // Search Results
 // ============
 
-.search_results_info {
+.search-results-info {
   ul {
     margin: 0;
     padding: 0;
@@ -701,7 +701,7 @@ ul.searchlinks {
 // Items 
 // ================
 
-.top_metadata {
+.top-metadata {
   ul {
     list-style-type: none;
     li {
@@ -744,7 +744,7 @@ ul.searchlinks {
     width: 100%
   }
 
-  .archive_item ul {
+  .archive-item ul {
     columns: 1;
     list-style-type: none;
     margin: 0 0 .5em 0;
@@ -761,7 +761,7 @@ ul.searchlinks {
 
 // only add columns for larger screens
 @media (min-width: $screen-md) {
-  #more-metadata ul ul {
+  #more_metadata ul ul {
     columns: 3;
   }
 }
@@ -791,7 +791,7 @@ ul.searchlinks {
 }
 
 // border around publication statement
-.archive_item .editorial_note {
+.archive-item .editorial-note {
   border: 1px solid $gray-light;
   display: block;
   padding: 10px 20px;
@@ -802,13 +802,13 @@ ul.searchlinks {
 // Letters
 
 .archive_item p.corresp_note,
-.archive_item .corresp_note {
+.archive-item .corresp-note {
   text-indent: 0;
 }
 
 // Previous and Next Links
 
-nav.letter_navigation {
+nav.letter-navigation {
   display: flex;
   justify-content: center;
   
@@ -819,14 +819,14 @@ nav.letter_navigation {
     padding: .5em 1em;
   }
 
-  .letter_navigation_previous {
+  .letter-navigation-previous {
     border-radius: 20em 0 0 20em;
 
     a:before {
       content: "← ";
     }
   }
-  .letter_navigation_next {
+  .letter-navigation-next {
     border-radius: 0 20em 20em 0;
 
     a:after {
@@ -840,7 +840,7 @@ nav.letter_navigation {
 // ================
 
 .controller_general.action_index {
-  #content-wrapper {
+  #content_wrapper {
     margin-bottom: 0;
   }
 }
@@ -854,7 +854,7 @@ nav.letter_navigation {
       }
     }
 
-    .navbar-default.navbar_mainnav {
+    .navbar-default.navbar-mainnav {
       font-size: 1.3em;
 
       // Hide Home button on home page
@@ -892,7 +892,7 @@ nav.letter_navigation {
 } 
 
 .home-content-wrapper {
-  .callout_quote {
+  .callout-quote {
     background-color: $gold-metallic;
     box-shadow: 0px 0px 7px $gray-darker;
     display: block;
@@ -926,7 +926,7 @@ nav.letter_navigation {
 
 // back to top
 
-.back_to_top a {
+.back-to-top a {
   background: #fff;
   border: solid 1px $gray-light;
   bottom: 0;
@@ -937,14 +937,14 @@ nav.letter_navigation {
   z-index: 1000;
 }
 
- .back_to_top a:hover {
+ .back-to-top a:hover {
   background-color: $link-color;
   color: #fff;
 }
 
 // Error Page
 
-.item_error_message {
+.item-error-message {
   text-align: center;
   span {
     border-bottom: dotted .1em $gray-light;

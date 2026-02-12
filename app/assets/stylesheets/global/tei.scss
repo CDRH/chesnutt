@@ -8,101 +8,101 @@ $overwrite_color: darken($brand-success, 10%);
 
 // Proofs
 
-.tei_hi_rend_underline {
+.tei-hi-rend-underline {
   text-decoration: underline;
 }
 
-.tei_hi_rend_overline {
+.tei-hi-rend-overline {
   border-top: solid black 1px;
 }
 
-.tei_hi_rend_circled {
+.tei-hi-rend-circled {
   border: solid black 1px;
   border-radius: .5em;
 }
 
-.tei_hi_rend_dotted {
+.tei-hi-rend-dotted {
   border-bottom: dotted black 4px;
 }
 
-.tei_hi_rend_overstrike {
+.tei-hi-rend-overstrike {
   text-underline-offset: -.3em;
 }
 
-.tei_supplied {
+.tei-supplied {
   background-color: $banana-mania;
 }
 
-.tei_del_rend_circled {
+.tei-del-rend-circled {
   border: solid black 1px;
 }
 
 // Metamark / adds
 
-.tei_add_place_margin-left {
+.tei-add-place-margin-left {
   &:before {
     content: " [left margin] ";
     text-decoration: none;
   }
 }
 
-.tei_add_place_margin-bottom {
+.tei-add-place-margin-bottom {
   &:before {
     content: " [bottom margin] ";
     text-decoration: none;
   }
 }
 
-.tei_add_place_margin-right {
+.tei-add-place-margin-right {
   &:before {
     content: " [right margin] ";
     text-decoration: none;
   }
 }
 
-.tei_add_place_margin-top {
+.tei-add-place-margin-top {
   &:before {
     content: " [top margin] ";
     text-decoration: none;
   }
 }
 
-.tei_add_place_left {
+.tei-add-place-left {
   &:before {
     content: " [left margin] ";
     text-decoration: none;
   }
 }
 
-.tei_add_place_right {
+.tei-add-place-right {
   &:before {
     content: " [right margin] ";
     text-decoration: none;
   }
 }
 
-.tei_add_place_top {
+.tei-add-place-top {
   &:before {
     content: " [top margin] ";
     text-decoration: none;
   }
 }
 
-.tei_add_place_bottom {
+.tei-add-place-bottom {
   &:before {
     content: " [bottom margin] ";
     text-decoration: none;
   }
 }
 
-.tei_add_place_above {
+.tei-add-place-above {
   &:before {
     content: " [above line] ";
     text-decoration: none;
   }
 }
 
-.tei_add_place_below {
+.tei-add-place-below {
   &:before {
     content: " [below line] ";
     text-decoration: none;
@@ -110,39 +110,39 @@ $overwrite_color: darken($brand-success, 10%);
 }
 
 
-.tei_add_place_supralinear {
+.tei-add-place-supralinear {
   &:before {
     content: " [above line] ";
     text-decoration: none;
   }
 }
 
-.tei_add {
+.tei-add {
   font-style: normal;
 }
 
-.tei_add_rend_circle {
+.tei-add-rend-circle {
   border-radius: 7px;
 }
 
-.tei_note_type_archival {
+.tei-note-type-archival {
   color: #aaa;
   font-family: $font-family-monospace;
   display: block;
 }
 
-.tei_note_type_authorial {
+.tei-note-type-authorial {
    display: block;
 }
 
 
-.tei_seg {
+.tei-seg {
   background-color: $platinum;
   border-bottom: dashed black 1px;
 }
 
 
-.tei_metamark.tei_metamark_rend_lasso {
+.tei-metamark.tei-metamark-rend-lasso {
   display: none;
 }
 
@@ -153,33 +153,33 @@ $overwrite_color: darken($brand-success, 10%);
 
 div.poem {}
 
-.tei_lg_type_stanza {}
+.tei-lg-type-stanza {}
 
-.tei_lg {
+.tei-lg {
   display: block;
   margin-bottom: 1em;
 }
 
-.tei_l {
+.tei-l {
   display: block;
 }
 
 // Texts
 
 .tei_byline,
-.tei_ab {
+.tei-ab {
   display: block;
 }
 
-.tei_ab {
+.tei-ab {
   margin: 0 0 .69em;
 }
 
-.tei_byline {
+.tei-byline {
   margin-bottom: .5em;
 }
 
-.tei_ab_type_title {
+.tei-ab-type-title {
   font-size: 1.2em;
   font-weight: 600;
 }
@@ -187,7 +187,7 @@ div.poem {}
 // tei note on proofs
 
 .subcat_galley_proofs .tei_note,
-.tei_note_demo {
+.tei-note-demo {
   background-color: rgba(194,218,217,1);
   border: solid #aaa 1px;
   display: inline;
@@ -197,11 +197,11 @@ div.poem {}
   font-weight: 600;
 }
 
-// .tei_name {
+// .tei-name {
 //   font-style: italic;
 // }
 
-.tei_fw, .tei_titlePage {
+.tei-fw, .tei-titlePage {
   background-color: $gray-lighter;
   display: block;
   margin-bottom: .5em;
@@ -211,13 +211,13 @@ div.poem {}
 // suppress fw on certain pages
 // example below
 
-// .category_correspondence {
-//   .tei_fw {
+// .category-correspondence {
+//   .tei-fw {
 //     display: none;
 //   }
 // }
 
-.tei_titlePage {
+.tei-titlePage {
   border: solid 1px $gray-lighter;
   margin: .5em 0;
   padding: .5em;
@@ -227,17 +227,17 @@ div.poem {}
 // marked tags across the site. see issue #198
 .SmallCaps,
 .tei_hi_rend_smallCaps,
-.tei_hi_rend_smallcaps {
+.tei-hi-rend-smallcaps {
   text-transform: lowercase;  
   font-variant: small-caps;
 }
 
-.tei_sic {
+.tei-sic {
  
   
 }
 
-.tei_sic_ed {
+.tei-sic-ed {
     background-color: $banana-mania;
   }
 
@@ -248,13 +248,13 @@ div.poem {}
 
 // figures
 
-.inline_figure {
+.inline-figure {
   border: solid 2px $platinum;
   margin: 1em 3em;
   text-align: center;
 }
 
-.tei_caption {}
+.tei-caption {}
 
 
 // Page images
@@ -289,16 +289,16 @@ span.pageimage {
 
 // letters
 
-.tei_dateline {
+.tei-dateline {
   display: block;
 }
 
-.tei_opener {
-  span + .tei_dateline {
+.tei-opener {
+  span + .tei-dateline {
     margin-top: 2rem;
   }
   
-  .tei_dateline + .tei_salute {
+  .tei-dateline + .tei-salute {
     margin-top: 2rem;
   }
 }
@@ -310,17 +310,17 @@ span.pageimage {
 
 // Editorial Marks
 
-.tei_ref_target, .internal_link.tei_ptr {
+.tei-ref-target, .internal-link.tei-ptr {
   vertical-align: super;
   font-size: 1em;
 }
 
-.editorial_note {
+.editorial-note {
   display: block;
 }
 
-.archive_item {
-  .tei_note_type_editorial {
+.archive-item {
+  .tei-note-type-editorial {
     display: block;
     margin: 1.5em 0;
     
@@ -333,14 +333,14 @@ span.pageimage {
 // Quotes
 
 /*  q in TEI */
-.tei_q {
+.tei-q {
   display: block;
   margin: .5em 0;
   padding: .5em 4em .5em 4em;
 }
 
 .tei_floatingText .tei_lg,
-.tei_floatingText .tei_p {
+.tei-floatingText .tei-p {
   font-size: .9em;
   margin-left: 3.3em;
 }
@@ -352,67 +352,67 @@ span.pageimage {
 .tei_lg_type_poem,
 .tei_lg,
 .tei_lg_type_linegroup,
-.tei_l {
+.tei-l {
   display: block;
 }
 
 /* correspondence */
 
-.category_correspondence {
-  .tei_subst_rend_overwrite {
-    .tei_del, .tei_add {
+.category-correspondence {
+  .tei-subst-rend-overwrite {
+    .tei-del, .tei-add {
       color: $overwrite_color;
     }
   }
 // adding a wavy line to add and del, only 
 
-  .tei_del, .tei_add {
+  .tei-del, .tei-add {
     border-bottom: 2px dotted $overwrite_color;
     text-decoration-thickness: 2px;
   }
 }
 
-.tei_salute {
+.tei-salute {
   display: block;
   margin: .5em 0;
 }
 
 .tei_name_type_place, 
 .tei_signed,
-.tei_addrline {
+.tei-addrline {
   display: block;
 }
 
-.tei_address {
+.tei-address {
   display: block;
   margin-top: 1.5em;
 }
 
 .tei_addrLine, 
-.tei_address {
+.tei-address {
   display: block;
 }
 
 /* Manuscripts */
 
-.tei_subst_rend_overwrite {
-  del, .tei_add {
+.tei-subst-rend-overwrite {
+  del, .tei-add {
     color: $overwrite_color;
   }
 }
 
-.tei_add_place_inline {
+.tei-add-place-inline {
 }
 
 .unclear,
-.tei_gap_reason_illegible {
+.tei-gap-reason-illegible {
   color: #aaa;
 }
 
 /* Will need to discuss if we want to keep this, 
 it is not supported in all browsers 
 see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
-.tei_del_rend_overstrike sup {
+.tei-del-rend-overstrike sup {
   display:inline-block;
   font-size: 1em;
   padding-left: 0em;
@@ -423,39 +423,39 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
   text-underline-offset: -.3em;
 }
 
-.tei_milestone_unit_glued {
+.tei-milestone-unit-glued {
   color: #939393;
   margin: .5em;
   text-align: center;
 }
 
-.inline_tei_rend_insertion {
+.inline-tei-rend-insertion {
   vertical-align: sub; /* prevents triangle formation */
 }
 
-.tei_add_place_infralinear {
+.tei-add-place-infralinear {
   vertical-align: sub;
 }
 
-.tei_hashmark_title {
+.tei-hashmark-title {
   text-align: center;
   margin: .5em 0;
 }
 
-.tei_delSpan_rend_hashmark {
+.tei-delSpan-rend-hashmark {
   background-color: #CCCCCC;
   padding: .5em;
 }
 
 /* not sure if these stylings are manuscript specific */
 .tei_list_type_simple,
-.tei_list_rend_simple {
+.tei-list-rend-simple {
   list-style: none;
   margin: 0 0 1em 0;
   padding: 0;
 }
 
-.tei_lb {
+.tei-lb {
   display: block;
 }
 
@@ -464,15 +464,15 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 // this code broke list display on proof00003, so commenting out for now
 
 // @media (min-width: $screen-sm-min) {
-//   .tei_list_rend_simple li {
+//   .tei-list-rend-simple li {
 //     display: flex;
-//     .tei_ab_rend_double_height {
+//     .tei-ab-rend-double-height {
 //       margin: 0;
 //       padding: 0;
 //     }
 //   }
 
-//   .tei_ab_rend_double_height {
+//   .tei-ab-rend-double-height {
 //     margin-left: .5em;
 //     display: flex;
 //     align-items: center;
@@ -482,14 +482,14 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 
 /* marginalia */
 
-.tei_titlePage {
+.tei-titlePage {
   display:block;
   margin: 1em 0;
 }
 
 // todo: karin look at this
 // commented out, was causing weird display
-// .tei_note_type_authorial span {
+// .tei-note-type-authorial span {
 //   background-color: $gold-metallic;
 //   border: double 3px blue;
 //   border-right: none;
@@ -498,46 +498,46 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 // }
 
 // .tei_dateline
-.tei_note_place_right {
+.tei-note-place-right {
   display: block;
   text-align: right;
 }
 
-.tei_note_type_authorial {
+.tei-note-type-authorial {
   margin: .5em 0 1em 0;
   display: block;
 }
 
-.tei_titlePart_type_main {
+.tei-titlePart-type-main {
   display: block;
   font-weight: 800;
   margin: .5em 0 1em 0;
 }
 
-.tei_milestone_rend_horbar-short-center {
+.tei-milestone-rend-horbar-short-center {
   width: 6em;
   margin: 1em auto;
 }
 
-.tei_pubPlace {
+.tei-pubPlace {
   display: block;
 }
 
 
 // Hand CSS
 // limiting Chesnutt's hand to manuscripts
-.category_manuscripts {
-  .tei_hand_resp_cwc {
+.category-manuscripts {
+  .tei-hand-resp-cwc {
     border-bottom: double 3px $brand-success;
   }
 }
-// .tei_hand_medium_black_pen {
+// .tei-hand-medium-black-pen {
 //   background-color: red;
 // }
 
 
-.tei_note_type_authorial {}
-.tei_note_place_margin-bottom {}
+.tei-note-type-authorial {}
+.tei-note-place-margin-bottom {}
 
 
 // karin added
@@ -548,17 +548,17 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 }
 
 .tei_metamark,
-.tei_del_rend_closeup {
+.tei-del-rend-closeup {
   background-color: rgba(194,218,217,1);
   border: solid $dark-purple 1px;
   display: inline;
 }
 
-.tei_metamark {
+.tei-metamark {
   padding: 1px 3px 0px 3px;
 }
 
-.tei_del_rend_closeup {
+.tei-del-rend-closeup {
   padding-left: 3px;
   &:before {
     // added metamark &#8272;
@@ -566,7 +566,7 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
   }
 }
 
-.tei_del {
+.tei-del {
   text-decoration: line-through;
 }
 
@@ -574,7 +574,7 @@ del {
   text-decoration: none;
 
   &.tei_del_rend_overstrike,
-  &.tei_del_rend_strikethrough {
+  &.tei-del-rend-strikethrough {
     text-decoration: line-through;
   }
 }
@@ -582,11 +582,11 @@ del {
 .tei_del_rend_overstrike,
 .tei_del_rend_strikethrough,
 .tei_hi_rend_overstrike,
-.tei_hi_rend_strikethrough {
+.tei-hi-rend-strikethrough {
   text-decoration: line-through;
 }
 
-.tei_subst_rend_overwrite {
+.tei-subst-rend-overwrite {
   del {
     text-decoration: line-through;
   }
@@ -602,21 +602,21 @@ del {
   margin: .3em auto;
 }
 
-.tei_p_rend_center {
+.tei-p-rend-center {
   text-align: center;
 }
 
-.tei_p_rend_right {
+.tei-p-rend-right {
   text-align: right;
 }
 
-.tei_hi_rend_tripleUnderline {
+.tei-hi-rend-tripleUnderline {
   border-bottom: double 6px black;
   text-decoration: underline;
   text-decoration-thickness: 0.11em;
 }
 
-.tei_hi_rend_doubleUnderline {
+.tei-hi-rend-doubleUnderline {
   border-bottom: double 6px black;
 }
 
@@ -630,35 +630,35 @@ del {
   display: block;
   padding-left: 3em;
   text-indent: -3em;
-  .tei_note {
+  .tei-note {
     padding: 0 .3em;
     display: inline;
     text-indent: 0;
   }
 }
 
-.bibliography_indent {
+.bibliography-indent {
     padding-left: 3em;
 }
 
 //subheads
-.tei_head_type_sub {
+.tei-head-type-sub {
   font-size: 1.2em;
 }
 
 // Facsimile/Figure
 // This code was added for readers reports but will apply to all figures
 
-.tei_facsimile {
+.tei-facsimile {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
-.tei_facsimile .hr {
+.tei-facsimile .hr {
   display: none;
 }
 
-.tei_facsimile .pageimage {
+.tei-facsimile .pageimage {
   float: none;
 }
