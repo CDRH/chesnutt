@@ -2,10 +2,8 @@
 <html lang="<%= I18n.locale %>" <%= site_section %>>
   <%= render "layouts/head/head" %>
   <body class="<%= "language-#{I18n.locale}" %>">
-    <a href="#main-content" class="sr-only sr-only-focusable">
-      Skip to main content
-    </a>
     <div id="body_wrapper">
+      <%= render "layouts/body/skip_to_main" %>
       <%= render "layouts/body/header" %>
       <%= render "layouts/body/contents" %>
       <%= render "layouts/body/footer" %>
