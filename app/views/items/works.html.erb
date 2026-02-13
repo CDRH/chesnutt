@@ -9,8 +9,6 @@ to docs/search_preset.md %>
 %>
 
 <% if @header == true %>
-  </div><%# close container div for full width  %>
-
   <div class="page-banner-outer">
     <div class="container">
     <div class="page-banner-text">
@@ -26,8 +24,6 @@ to docs/search_preset.md %>
     </div>
 
   </div>
-
-  <div class="container"><%# reopen container div %>
 <% end %><%# end if @header == true  %>
 
 <%= render_overridable "items", "search_preset_header" %>

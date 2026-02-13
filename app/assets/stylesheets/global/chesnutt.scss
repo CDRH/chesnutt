@@ -421,9 +421,9 @@ ul.searchlinks {
 // Settings for all horizontal illustrations
 
 // make banner sit flush at top
-.page-banner-outer {
-  margin-top: -49px;
-}
+//.page-banner-outer {
+  //margin-top: -49px;
+//}
 
 // if screen > sm, place text over image
 @media (min-width: $screen-sm) {
@@ -654,7 +654,7 @@ ul.searchlinks {
     backdrop-filter: blur(4px);
     background: rgba(255, 255, 255, .9);
     border-radius: 30px;
-    margin-top: -13vw;
+    //margin-top: -13vw;
     padding: 20px;
     position: relative;
     z-index: 500;
