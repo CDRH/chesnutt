@@ -67,7 +67,8 @@ a {
 }
 
 // Then removing underlines in some places
-#header a, #footer a, a.btn {
+.navbar-nav a,
+a.btn {
   text-decoration: none;
 }
 
