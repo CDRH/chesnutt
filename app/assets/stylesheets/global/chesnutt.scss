@@ -679,8 +679,21 @@ ul.searchlinks {
 
     li {
       list-style: none;
-      padding-left: 1.5em;
-      text-indent: -1.5em;  
+
+      ul {
+        list-style: none;
+        display: inline;
+
+        li {
+          display: inline;
+
+          &:not(:last-of-type):after {
+            content: " | ";
+            display: inline; 
+            position: relative;
+          }
+        }
+      }
     }
   }
   p em {
