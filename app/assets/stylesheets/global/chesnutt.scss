@@ -419,11 +419,6 @@ ul.searchlinks {
 
 // Settings for all horizontal illustrations
 
-// make banner sit flush at top
-.page_banner_outer {
-  margin-top: -49px;
-}
-
 // if screen > sm, place text over image
 @media (min-width: $screen-sm) {
   .page_banner_outer {
