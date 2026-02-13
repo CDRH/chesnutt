@@ -10,7 +10,7 @@ body {
   font-weight: 400;
 }
 
-.archive-item {  // class around tei -> html generations
+.archive_item {  // class around tei -> html generations
   background-color: $white;
   border-radius: 5px;
   border: 1px solid $platinum;
@@ -48,7 +48,7 @@ body {
 
 // HTML Elements
 
-.archive-item p {
+.archive_item p {
   text-indent: 3em;
 }
 
@@ -746,7 +746,7 @@ ul.searchlinks {
     width: 100%
   }
 
-  .archive-item ul {
+  .archive_item ul {
     columns: 1;
     list-style-type: none;
     margin: 0 0 .5em 0;
@@ -793,7 +793,7 @@ ul.searchlinks {
 }
 
 // border around publication statement
-.archive-item .editorial-note {
+.archive_item .editorial-note {
   border: 1px solid $gray-light;
   display: block;
   padding: 10px 20px;
@@ -803,8 +803,8 @@ ul.searchlinks {
 
 // Letters
 
-.archive_item p.corresp_note,
-.archive-item .corresp-note {
+.archive_item p.corresp-note,
+.archive_item .corresp-note {
   text-indent: 0;
 }
 
