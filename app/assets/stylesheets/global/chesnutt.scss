@@ -713,8 +713,10 @@ ul.searchlinks {
 .top_metadata {
   ul {
     list-style-type: none;
+
     li {
       margin: 0 0 .5em 0;;
+      display: block !important;
     }
     li:last-of-type {
       margin: 0;
@@ -731,17 +733,24 @@ ul.searchlinks {
 
   li {
     margin: .5em 0 .7em .5em;
+    display: block !important;
   }
 
   ul {
     margin:0;
     padding:0;
     ul {
-      margin-left: 2em;
-      list-style-type: square;
-      columns: 3;
+      display: inline !important;
+      padding-left: 0 !important;
       li {
         margin: 0;
+        display: inline !important;
+
+        &:not(:last-of-type):after {
+          content: " | ";
+          display: inline; 
+          position: relative;
+        }        
       }
     }
   }
