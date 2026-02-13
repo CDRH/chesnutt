@@ -201,7 +201,7 @@ ul.searchlinks {
     }
   }
 
-  .navbar-default.navbar_mainnav .navbar-nav > .active > a, 
+  .navbar-default.navbar-mainnav .navbar-nav > .active > a, 
   .navbar-default.navbar-mainnav .navbar-nav > .active {
     background-color: $subnav;
     color: $brand-primary;
@@ -209,7 +209,7 @@ ul.searchlinks {
 
   // subnav
 
-  .navbar-default.navbar_subnav .navbar-nav > .active > a, 
+  .navbar-default.navbar-subnav .navbar-nav > .active > a, 
   .navbar-default.navbar-msubnav .navbar-nav > .active {
     background-color: $white;
   }
@@ -625,7 +625,7 @@ ul.searchlinks {
 
 // About - people 
 
-.action_about_people.page-about #content_wrapper {
+.action_about_people.page_about #content_wrapper {
   img {
     clear: both;
     float: left;
