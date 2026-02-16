@@ -8,36 +8,39 @@ to docs/search_preset.md %>
   - @preset_class : OPTIONAL adds CSS class on <div>
 %>
 
-<%= render_overridable "items", "search_preset_header" %>
-
-<div class="flex page_banner_vertical">
-  <div class="flex_inner display_illustration">
-    <div class="page_illustration_outer"></div>
-  </div>
-  <div class="flex_inner display_content">
-    <%# <p>Displaying "category|Manuscripts"</p> %>
-
-    <p>This section offers page images of the readers' reports created by Houghton Mifflin in response to submissions by Chesnutt. The reports were evaluations of the literary merits and commercial prospects of submissions. Chesnutt submitted fiction to the Boston publishing firm for forty years (1891–1931) and these reports, now held at the Houghton library, Harvard University, provide a window into how Chesnutt's fiction was read by the firm. For now we provide only page images and select metadata, but in the future we hope to be able to provide full transcriptions.</p> 
-</p>
-  </div>
-</div>
-
-<div class="search_form search_preset search_preset_<%= @preset_class %>">
-
-  <%# do not display any facet options or summary boxes for this view %>
-
-  <%= render_overridable "items", "search_preset_text" %>
-  <%= render_overridable "items", "sort_and_page_ui" %>
-
-  <!-- search results section -->
-  <%= render_overridable "items", "search_res_count" %>
-  <%= render_overridable "items", "search_preset_res_items" %>
-
-  <div class="row search_controls">
-    <div class="col-md-4 search_limit">
+<div class="container">
+  
+  <%= render_overridable "items", "search_preset_header" %>
+  
+  <div class="flex page_banner_vertical">
+    <div class="flex_inner display_illustration">
+      <div class="page_illustration_outer"></div>
     </div>
-    <div class="col-md-8 pagination_container">
-      <%= paginator @res.pages %>
+    <div class="flex_inner display_content">
+      <%# <p>Displaying "category|Manuscripts"</p> %>
+  
+      <p>This section offers page images of the readers' reports created by Houghton Mifflin in response to submissions by Chesnutt. The reports were evaluations of the literary merits and commercial prospects of submissions. Chesnutt submitted fiction to the Boston publishing firm for forty years (1891–1931) and these reports, now held at the Houghton library, Harvard University, provide a window into how Chesnutt's fiction was read by the firm. For now we provide only page images and select metadata, but in the future we hope to be able to provide full transcriptions.</p>
+  </p>
+    </div>
+  </div>
+  
+  <div class="search_form search_preset search_preset_<%= @preset_class %>">
+  
+    <%# do not display any facet options or summary boxes for this view %>
+  
+    <%= render_overridable "items", "search_preset_text" %>
+    <%= render_overridable "items", "sort_and_page_ui" %>
+  
+    <!-- search results section -->
+    <%= render_overridable "items", "search_res_count" %>
+    <%= render_overridable "items", "search_preset_res_items" %>
+  
+    <div class="row search_controls">
+      <div class="col-md-4 search_limit">
+      </div>
+      <div class="col-md-8 pagination_container">
+        <%= paginator @res.pages %>
+      </div>
     </div>
   </div>
 </div>
