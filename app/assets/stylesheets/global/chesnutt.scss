@@ -528,6 +528,10 @@ ul.searchlinks {
   order: 2;
 }
 
+.flex.page_banner_vertical .flex_inner.display_content {
+  overflow-x: hidden;
+}
+
 @media (max-width: $screen-xs-max) {
   .flex.page_banner_vertical {
     display: block !important;
