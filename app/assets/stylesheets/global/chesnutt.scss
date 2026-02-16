@@ -944,7 +944,8 @@ nav.letter_navigation {
 
 // back to top
 
-.back_to_top a {
+.back-to-top a {
+  color: #502020 !important;
   background: #fff;
   text-decoration: none;
   font-weight: 500;
@@ -958,7 +959,7 @@ nav.letter_navigation {
   
   &:hover {
     color: #fff;
-    background-color: $link-color;
+    background-color: #f5f5f5;
   }
 
   &:after {
