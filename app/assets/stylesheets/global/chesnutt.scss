@@ -67,7 +67,8 @@ a {
 }
 
 // Then removing underlines in some places
-#header a, #footer a, a.btn {
+.navbar-nav a,
+a.btn {
   text-decoration: none;
 }
 
@@ -418,11 +419,6 @@ ul.searchlinks {
 
 // Settings for all horizontal illustrations
 
-// make banner sit flush at top
-.page_banner_outer {
-  margin-top: -49px;
-}
-
 // if screen > sm, place text over image
 @media (min-width: $screen-sm) {
   .page_banner_outer {
@@ -683,8 +679,21 @@ ul.searchlinks {
 
     li {
       list-style: none;
-      padding-left: 1.5em;
-      text-indent: -1.5em;  
+
+      ul {
+        list-style: none;
+        display: inline;
+
+        li {
+          display: inline;
+
+          &:not(:last-of-type):after {
+            content: " | ";
+            display: inline; 
+            position: relative;
+          }
+        }
+      }
     }
   }
   p em {
@@ -704,8 +713,10 @@ ul.searchlinks {
 .top_metadata {
   ul {
     list-style-type: none;
+
     li {
       margin: 0 0 .5em 0;;
+      display: block !important;
     }
     li:last-of-type {
       margin: 0;
@@ -722,17 +733,24 @@ ul.searchlinks {
 
   li {
     margin: .5em 0 .7em .5em;
+    display: block !important;
   }
 
   ul {
     margin:0;
     padding:0;
     ul {
-      margin-left: 2em;
-      list-style-type: square;
-      columns: 3;
+      display: inline !important;
+      padding-left: 0 !important;
       li {
         margin: 0;
+        display: inline !important;
+
+        &:not(:last-of-type):after {
+          content: " | ";
+          display: inline; 
+          position: relative;
+        }        
       }
     }
   }
@@ -841,7 +859,7 @@ nav.letter_navigation {
 
 .controller_general.action_index {
   #content-wrapper {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -926,20 +944,30 @@ nav.letter_navigation {
 
 // back to top
 
-.back_to_top a {
+.back-to-top a {
+  color: #502020 !important;
   background: #fff;
+  text-decoration: none;
+  font-weight: 500;
   border: solid 1px $gray-light;
   bottom: 0;
   box-shadow: 0px 0px 5px 3px rgba($gray-dark,0.3);
-  padding: .1em 1em .3em 1em;
+  padding: .5rem 2rem 0.5rem 1.25rem;
   position: fixed;
-  right: 20px;
+  right: 2%;
   z-index: 1000;
-}
+  
+  &:hover {
+    color: #fff;
+    background-color: #f5f5f5;
+  }
 
- .back_to_top a:hover {
-  background-color: $link-color;
-  color: #fff;
+  &:after {
+    content: "\2191";
+    position: relative;
+    top: -1px;
+    left: 6px;
+  }
 }
 
 // Error Page

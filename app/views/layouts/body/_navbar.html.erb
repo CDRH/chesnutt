@@ -1,7 +1,7 @@
 <%# template is to remove collapsing menu %>
 
-<div class="navbar navbar-default navbar_mainnav">
-  <div class="container">
+<nav class="navbar navbar-default navbar_mainnav" aria-label="Main Menu">
+  <div class="row">
     <ul class="nav navbar-nav">
       <li class="<%= active?(home_path) %>">
         <%= link_to t("home.title", default: "Home"), home_path %>
@@ -26,7 +26,7 @@
       </li>
     </ul>
   </div>
-</div><!-- /navbar -->
+</nav><!-- /navbar -->
 
 <% if params[:action].include?("works") %>
   <%= render_overridable("layouts/body", "navbar_works") %>
