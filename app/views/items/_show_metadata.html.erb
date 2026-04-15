@@ -119,14 +119,16 @@
     <% if @res["related_note_and_id_k"].present? %>
       <li>
         <strong>Related items: </strong>
-        <span class="related-item">
+        <ul class="related-item">
           <% array = @res["related_note_and_id_k"] %>
           <% array.each do |relation| %>
-            <% item_array = relation.split("|") %>
+            <% item_array = relation.split("") %>
+            <li>
               <%= item_array[0] %>
               <%= link_to item_array[1], item_array[1] %>
+            </li>
           <% end %>
-        </span>
+        </ul>
       </li>
     <% end %>
   </ul>
