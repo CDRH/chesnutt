@@ -791,17 +791,17 @@ ul.searchlinks {
 // key
 
 // Adding arrows and link colors to linked panels
-.key .panel-title a {
+.key .panel-heading-link {
   text-decoration: none;
   &:hover {
     color: $brand-primary;
   }
-  &:after {
+  .panel-title:after {
     content: "↑";
     margin-left: .5em;
     
   }
-  &.collapsed:after {
+  &.collapsed .panel-title:after {
     content: "↓";
     margin-left: .5em;
   }
