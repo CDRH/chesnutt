@@ -2,7 +2,7 @@
   <div class="row">
     <ul class="nav navbar-nav">
       <li class="<%= active?(resources_bibliography_path) %>">
-        <%= link_to "Bibliography", resources_bibliography_path %>
+        <%= link_to "Bibliography", resources_bibliography_path, 'aria-current': (current_page?(resources_bibliography_path) ? 'page' : nil) %>
       </li>
     </ul>
   </div>
