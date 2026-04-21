@@ -1,31 +1,29 @@
 <%# template is to remove collapsing menu %>
 
 <nav class="navbar navbar-default navbar_mainnav" aria-label="Main Menu">
-  <div class="row">
-    <ul class="nav navbar-nav">
-      <li class="<%= active?(home_path) %>">
-        <%= link_to t("home.title", default: "Home"), home_path, 'aria-current': (current_page?(home_path) ? 'page' : nil) %>
-      </li>
-      <li class="<%= 'active' if params[:action].include?("biographical_sketch") == true %>">
-        <%= link_to "About Chesnutt", about_chesnutt_path, 'aria-current': (current_page?(about_chesnutt_path) ? 'page' : nil) %>
-      </li>
-      <li class="<%= 'active' if params[:action].include?("works") == true %>">
-        <%= link_to "Works", works_path, 'aria-current': (current_page?(works_path) ? 'page' : nil) %>
-      </li>
-      <li class="<%= active?(manuscripts_path) %>">
-        <%= link_to "Manuscripts", manuscripts_path, 'aria-current': (current_page?(manuscripts_path) ? 'page' : nil) %>
-      </li>
-      <li class="<%= active?(correspondence_path) %>">
-        <%= link_to "Correspondence", correspondence_path, 'aria-current': (current_page?(correspondence_path) ? 'page' : nil) %>
-      </li>
-      <li class="<%= 'active' if params[:action].include?("reception_reviews") == true %>">
-        <%= link_to "Reviews", reception_reviews_path, 'aria-current': (current_page?(reception_reviews_path) ? 'page' : nil) %>
-      </li>
-      <li class="<%= 'active' if params[:action].include?("resources") == true%>">
-        <%= link_to "Resources", resources_path, 'aria-current': (current_page?(resources_path) ? 'page' : nil) %>
-      </li>
-    </ul>
-  </div>
+  <ul class="nav navbar-nav">
+    <li class="<%= active?(home_path) %>">
+      <%= link_to t("home.title", default: "Home"), home_path, 'aria-current': (current_page?(home_path) ? 'page' : nil) %>
+    </li>
+    <li class="<%= 'active' if params[:action].include?("biographical_sketch") == true %>">
+      <%= link_to "About Chesnutt", about_chesnutt_path, 'aria-current': (current_page?(about_chesnutt_path) ? 'page' : nil) %>
+    </li>
+    <li class="<%= 'active' if params[:action].include?("works") == true %>">
+      <%= link_to "Works", works_path, 'aria-current': (current_page?(works_path) ? 'page' : nil) %>
+    </li>
+    <li class="<%= active?(manuscripts_path) %>">
+      <%= link_to "Manuscripts", manuscripts_path, 'aria-current': (current_page?(manuscripts_path) ? 'page' : nil) %>
+    </li>
+    <li class="<%= active?(correspondence_path) %>">
+      <%= link_to "Correspondence", correspondence_path, 'aria-current': (current_page?(correspondence_path) ? 'page' : nil) %>
+    </li>
+    <li class="<%= 'active' if params[:action].include?("reception_reviews") == true %>">
+      <%= link_to "Reviews", reception_reviews_path, 'aria-current': (current_page?(reception_reviews_path) ? 'page' : nil) %>
+    </li>
+    <li class="<%= 'active' if params[:action].include?("resources") == true%>">
+      <%= link_to "Resources", resources_path, 'aria-current': (current_page?(resources_path) ? 'page' : nil) %>
+    </li>
+  </ul>
 </nav><!-- /navbar -->
 
 <% if params[:action].include?("works") %>
