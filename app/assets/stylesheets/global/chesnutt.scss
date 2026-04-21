@@ -251,7 +251,7 @@ ul.searchlinks {
 // Navbar adjustments for Orchid 4.1+
 .navbar_mainnav,
 .navbar_subnav {
-  .navbar-default .navbar-nav > li > a {
+  &.navbar-default .navbar-nav > li > a {
     min-height: initial;
   }
 }
