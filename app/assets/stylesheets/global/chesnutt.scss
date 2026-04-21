@@ -248,6 +248,14 @@ ul.searchlinks {
   }
 }
 
+// Navbar adjustments for Orchid 4.1+
+@media screen and (max-width: 1199px) {
+  .navbar-default .navbar-nav > li > a {
+    min-height: initial;
+    padding: 10px 15px;
+  }
+}
+
 // Footer
 
 #footer {
