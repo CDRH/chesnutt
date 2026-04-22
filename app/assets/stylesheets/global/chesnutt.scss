@@ -232,7 +232,6 @@ ul.searchlinks {
   .navbar-default.navbar_subnav {
     background-color: $subnav;
   }
-
 } // end header 
 
 @media (max-width: $screen-xs-max) {
@@ -346,7 +345,6 @@ ul.searchlinks {
 
 #content-wrapper {
   flex-grow: 1;
-  padding-bottom: 0;
 }
 
 // ================
@@ -544,7 +542,20 @@ ul.searchlinks {
   biographical_sketch,
   image-url("chesnutt-about.jpg"), 
   46vw
-  );
+);
+
+.action_biographical_sketch {
+  #content-wrapper {
+    padding-bottom: 0;
+  }
+}
+
+// About
+.action_about.page_about {
+  h1 {
+    padding-left: 10px;
+  }
+}
 
 // Vertical Banners
 
