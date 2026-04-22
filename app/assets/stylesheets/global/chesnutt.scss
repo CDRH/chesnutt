@@ -127,6 +127,12 @@ ul.searchlinks {
   li {
     display: inline;
     margin-right: 20px;
+
+    &.active a {  
+      background-color: $subnav;
+      color: $brand-primary;
+      padding: 5px 10px;
+    }
   }
 }
 
