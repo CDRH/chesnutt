@@ -30,6 +30,8 @@ Rails.application.routes.draw do
   get "about/use_statement", to: "general#about_use_statement", as: "about_use_statement"
   get "about/people", to: "general#about_people", as: "about_people"
   get "about/statement_of_purpose", to: "general#about_statement_of_purpose", as: "about_statement_of_purpose"
+  get "correspondence/intro", to: "general#correspondence_intro", as: "correspondence_intro"
+
   
   # no subnav for biographical sketch
   get "about/chesnutt", to: "general#biographical_sketch", as: "about_chesnutt"
