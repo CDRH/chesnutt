@@ -879,22 +879,29 @@ ul.searchlinks {
   
   
   li {
-    background-color: $eggshell;
     margin: .5em;
-    padding: .5em 1em;
+
+    a {
+      background-color: $eggshell;
+      padding: .5em 1em;
+
+      &:hover {
+        background-color: $banana-mania;
+      }
+    }
   }
 
-  .letter_navigation_previous {
+  .letter_navigation_previous a {
     border-radius: 20em 0 0 20em;
 
-    a:before {
+    &:before {
       content: "← ";
     }
   }
-  .letter_navigation_next {
+  .letter_navigation_next a {
     border-radius: 0 20em 20em 0;
 
-    a:after {
+    &:after {
       content: " →";
     }
   }
