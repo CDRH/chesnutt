@@ -871,12 +871,13 @@ ul.searchlinks {
 
 // Previous and Next Links
 
-nav.letter_navigation {
+.letter_navigation {
   display: flex;
   justify-content: center;
+  padding-left: 0;
   
   
-  div {
+  li {
     background-color: $eggshell;
     margin: .5em;
     padding: .5em 1em;
