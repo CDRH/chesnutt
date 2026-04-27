@@ -118,7 +118,7 @@ strong {
 }
 
 // Browse and Search links on upper right when screen is larger
-ul.searchlinks {
+#header ul.searchlinks {
   display: block;
   font-family: $font-family-sans-serif;
   list-style-type: none;
@@ -137,7 +137,7 @@ ul.searchlinks {
 }
 
 @media (min-width: $screen-md-min) {
-  ul.searchlinks {
+  #header ul.searchlinks {
     position: absolute;
     right: 0;
     top: 0;
