@@ -11,25 +11,28 @@
 <% @ext_css = [ "fancybox.min" ] %>
 <% @ext_js = [ "fancybox.min", "item_gallery_lightbox" ] %>
 
-<h1><%= @res["title"] %></h1>
-<% unless @res["identifier"] == "ccda.oth00001" %>
-  <%= render_overridable("show_metadata") %>
-<% end %>
-<%# show keys %>
-<% if @res["category2"] == "Manuscripts/Galley Proofs" %>
-  <%= render_overridable("show_manuscripts_key") %>
-<% end %>
-<% if @res["category"] == "Correspondence" %>
-  <%= render_overridable("show_correspondence_key") %>
-<% end %>
-
-<%# If there is content in previous or next, call template to show previous and next links %>
-<% if @res["previous_item_id_k"] || @res["next_item_id_k"] %>
-  <%= render_overridable("prev_next_item_nav") %>
-<% end %>
-
-<%= render_overridable("show_content") %>
-
-<% unless @res["identifier"] == "ccda.oth00001" %>
-  <%= render_overridable("show_bottom_metadata") %>
-<% end %>
+<div class="container">
+  
+  <h1><%= @res["title"] %></h1>
+  <% unless @res["identifier"] == "ccda.oth00001" %>
+    <%= render_overridable("show_metadata") %>
+  <% end %>
+  <%# show keys %>
+  <% if @res["category2"] == "Manuscripts/Galley Proofs" %>
+    <%= render_overridable("show_manuscripts_key") %>
+  <% end %>
+  <% if @res["category"] == "Correspondence" %>
+    <%= render_overridable("show_correspondence_key") %>
+  <% end %>
+  
+  <%# If there is content in previous or next, call template to show previous and next links %>
+  <% if @res["previous_item_id_k"] || @res["next_item_id_k"] %>
+    <%= render_overridable("prev_next_item_nav") %>
+  <% end %>
+  
+  <%= render_overridable("show_content") %>
+  
+  <% unless @res["identifier"] == "ccda.oth00001" %>
+    <%= render_overridable("show_bottom_metadata") %>
+  <% end %>
+</div>

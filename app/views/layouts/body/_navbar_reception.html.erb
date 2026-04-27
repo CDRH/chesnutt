@@ -1,12 +1,10 @@
 <nav class="navbar navbar-default navbar_subnav" aria-label="Secondary Menu">
-  <div class="row">
-    <ul class="nav navbar-nav">
-      <li class="<%= active?(reception_reviews_path) %>">
-        <%= link_to "Reviews", reception_reviews_path %>
-      </li>
-      <li class="<%= active?(reception_biographical_sketches_path) %>">
-        <%= link_to "Biographical Sketches", reception_biographical_sketches_path %>
-      </li>
-    </ul>
-  </div>
+  <ul class="nav navbar-nav">
+    <li class="<%= active?(reception_reviews_path) %>">
+      <%= link_to "Reviews", reception_reviews_path, 'aria-current': (current_page?(reception_reviews_path) ? 'page' : nil) %>
+    </li>
+    <li class="<%= active?(reception_biographical_sketches_path) %>">
+      <%= link_to "Biographical Sketches", reception_biographical_sketches_path, 'aria-current': (current_page?(reception_biographical_sketches_path) ? 'page' : nil) %>
+    </li>
+  </ul>
 </nav><!-- /navbar -->

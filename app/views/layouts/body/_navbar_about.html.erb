@@ -1,24 +1,22 @@
 <nav class="navbar navbar-default navbar_subnav" aria-label="Secondary Menu">
-  <div class="row">
-    <ul class="nav navbar-nav">
-      <li class="<%= active?(about_history_path) %>">
-        <%= link_to "Project History", about_history_path %>
-      </li>
-            <li class="<%= active?(about_people_path) %>">
-        <%= link_to "People", about_people_path %>
-      </li>
-      <li class="<%= active?(about_editorial_policy_path) %>">
-        <%= link_to "Editorial Policy", about_editorial_policy_path %>
-      </li>
-      <li class="<%= active?(about_encoding_guidelines_path) %>">
-        <%= link_to "Encoding Guidelines", about_encoding_guidelines_path %>
-      </li>
-      <li class="<%= active?(about_use_statement_path) %>">
-        <%= link_to "Use Statement", about_use_statement_path %>
-      </li>
-       <li class="<%= active?(about_statement_of_purpose_path) %>">
-        <%= link_to "Statement of Principles", about_statement_of_purpose_path %>
-      </li>
-    </ul>
-  </div>
+  <ul class="nav navbar-nav">
+    <li class="<%= active?(about_history_path) %>">
+      <%= link_to "Project History", about_history_path, 'aria-current': (current_page?(about_history_path) ? 'page' : nil) %>
+    </li>
+          <li class="<%= active?(about_people_path) %>">
+      <%= link_to "People", about_people_path, 'aria-current': (current_page?(about_people_path) ? 'page' : nil) %>
+    </li>
+    <li class="<%= active?(about_editorial_policy_path) %>">
+      <%= link_to "Editorial Policy", about_editorial_policy_path, 'aria-current': (current_page?(about_editorial_policy_path) ? 'page' : nil) %>
+    </li>
+    <li class="<%= active?(about_encoding_guidelines_path) %>">
+      <%= link_to "Encoding Guidelines", about_encoding_guidelines_path, 'aria-current': (current_page?(about_encoding_guidelines_path) ? 'page' : nil) %>
+    </li>
+    <li class="<%= active?(about_use_statement_path) %>">
+      <%= link_to "Use Statement", about_use_statement_path, 'aria-current': (current_page?(about_use_statement_path) ? 'page' : nil) %>
+    </li>
+      <li class="<%= active?(about_statement_of_purpose_path) %>">
+      <%= link_to "Statement of Principles", about_statement_of_purpose_path, 'aria-current': (current_page?(about_statement_of_purpose_path) ? 'page' : nil) %>
+    </li>
+  </ul>
 </nav><!-- /navbar -->
