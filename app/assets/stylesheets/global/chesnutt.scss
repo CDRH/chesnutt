@@ -677,7 +677,7 @@ ul.searchlinks {
     padding: 0 20px 10px 0;
   } 
 
-  p {
+  p:not(.h5) {
     border-bottom: 1px solid $gray;
     clear: both;
     height: auto;
