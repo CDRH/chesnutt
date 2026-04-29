@@ -1,9 +1,9 @@
 GIT
   remote: https://github.com/CDRH/orchid
-  revision: 6c925358064f1fcf39476039f4e3ccdba626c5a1
-  tag: v4.1.0
+  revision: ff175270e7e5dec4801fe63c88c15787a4365012
+  tag: v4.1.1
   specs:
-    orchid (4.1.0)
+    orchid (4.1.1)
       rails (> 6.1, < 7.0)
 
 GEM
@@ -74,7 +74,7 @@ GEM
       execjs (~> 2)
     base64 (0.3.0)
     bindex (0.8.1)
-    bootsnap (1.23.0)
+    bootsnap (1.24.1)
       msgpack (~> 1.2)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
