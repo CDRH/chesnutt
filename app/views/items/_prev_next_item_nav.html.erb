@@ -1,25 +1,23 @@
-<nav class="letter_navigation">
-
-      <div class="letter_navigation_previous">
-      <% if @res["previous_item_id_k"] %>
-         <a href="<%= @res["previous_item_id_k"] %>">
-                Previous letter in chain
-              </a>
-              <% else %>
-              Previous letter in chain
-              <% end %>
-      </div>
-  
-
-     
-      <div class="letter_navigation_next">
-      <% if @res["next_item_id_k"] %>
-         <a href="<%= @res["next_item_id_k"] %>">
-                Next letter in chain
-              </a>
-               <% else %>
-               Next letter in chain
-                <% end %>
-      </div>
-   </nav>
+<nav aria-label="Correspondence chain navigation">
+  <ul class="letter_navigation">
+    <li class="letter_navigation_previous">
+    <% if @res["previous_item_id_k"] %>
+      <a href="<%= @res["previous_item_id_k"] %>">
+            Previous letter in chain
+          </a>
+          <% else %>
+            Previous letter in chain
+          <% end %>
+    </li>
+    <li class="letter_navigation_next">
+    <% if @res["next_item_id_k"] %>
+        <a href="<%= @res["next_item_id_k"] %>">
+          Next letter in chain
+        </a>
+        <% else %>
+          Next letter in chain
+        <% end %>
+    </li>
+  </ul>
+</nav>
    

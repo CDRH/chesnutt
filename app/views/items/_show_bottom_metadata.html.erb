@@ -58,11 +58,13 @@
     <% reviewers = @res["contributor"].select { |i| i["role"] == "TEI Editor"} %>
       <% if reviewers.length > 0 %>
         <li><strong>Contributors to the digital file: </strong>
-          <%= reviewers.map {|rev| rev["name"] }.join(" | ") %>
+          <ul>
+            <%= safe_join(reviewers.map {|rev| content_tag(:li, rev["name"]) }.uniq) %>
+          </ul>
         </li>
       <% end %>
     <% end %>
   </ul>
 
-  <%= link_to "Back to the top", "#main-content", class: "btn btn-warning btn-xs btn-metadata" %>
+  <%= link_to "Back to the top", "#content-wrapper", class: "btn btn-warning btn-xs btn-metadata" %>
 </div>

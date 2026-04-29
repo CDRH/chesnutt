@@ -67,7 +67,8 @@ a {
 }
 
 // Then removing underlines in some places
-#header a, #footer a, a.btn {
+.navbar-nav a,
+a.btn {
   text-decoration: none;
 }
 
@@ -117,7 +118,7 @@ strong {
 }
 
 // Browse and Search links on upper right when screen is larger
-ul.searchlinks {
+#header ul.searchlinks {
   display: block;
   font-family: $font-family-sans-serif;
   list-style-type: none;
@@ -126,11 +127,17 @@ ul.searchlinks {
   li {
     display: inline;
     margin-right: 20px;
+
+    &.active a {  
+      background-color: $cultured;
+      color: $brand-primary;
+      padding: 5px 10px;
+    }
   }
 }
 
 @media (min-width: $screen-md-min) {
-  ul.searchlinks {
+  #header ul.searchlinks {
     position: absolute;
     right: 0;
     top: 0;
@@ -220,7 +227,7 @@ ul.searchlinks {
 
     a {
       color: $dark;
-      padding: 2px 10px 5px 10px;
+      padding: 5px 10px;
 
       &.active {
         background-color: $gold-metallic;
@@ -231,7 +238,6 @@ ul.searchlinks {
   .navbar-default.navbar_subnav {
     background-color: $subnav;
   }
-
 } // end header 
 
 @media (max-width: $screen-xs-max) {
@@ -244,6 +250,35 @@ ul.searchlinks {
     .navbar-nav {
       font-size: .9em;
     }
+
+    .navbar_subnav .navbar-nav {
+      font-size: 1em;
+      padding: 0px 5px;
+    }
+  }
+}
+
+// Navbar adjustments for Orchid 4.1+
+.navbar_mainnav,
+.navbar_subnav {
+  &.navbar-default .navbar-nav > li > a {
+    min-height: initial;
+  }
+}
+
+
+// Mobile padding
+.navbar_mainnav.navbar-default .navbar-nav > li > a {
+  padding: 10px 15px;
+}
+
+// Desktop padding
+@media screen and (min-width: 768px) {
+  .navbar_mainnav.navbar-default .navbar-nav {
+
+    > li > a {
+      padding: 14px 15px;
+    }
   }
 }
 
@@ -255,8 +290,12 @@ ul.searchlinks {
   padding-bottom: 8em;
   padding-top: 1.5em;
 
-  .footer_twitter {
+  .footer_bluesky {
     margin-top: 2.5em
+
+    img {
+      max-width: 125px;
+    }
   }
 
   .footer_content_warning {
@@ -418,11 +457,6 @@ ul.searchlinks {
 
 // Settings for all horizontal illustrations
 
-// make banner sit flush at top
-.page_banner_outer {
-  margin-top: -49px;
-}
-
 // if screen > sm, place text over image
 @media (min-width: $screen-sm) {
   .page_banner_outer {
@@ -518,7 +552,20 @@ ul.searchlinks {
   biographical_sketch,
   image-url("chesnutt-about.jpg"), 
   46vw
-  );
+);
+
+.action_biographical_sketch {
+  #content-wrapper {
+    padding-bottom: 0;
+  }
+}
+
+// About
+.action_about.page_about {
+  h1 {
+    padding-left: 10px;
+  }
+}
 
 // Vertical Banners
 
@@ -530,6 +577,10 @@ ul.searchlinks {
 
 .flex.page_banner_vertical .flex_inner:nth-child(1) {
   order: 2;
+}
+
+.flex.page_banner_vertical .flex_inner.display_content {
+  overflow-x: hidden;
 }
 
 @media (max-width: $screen-xs-max) {
@@ -630,7 +681,7 @@ ul.searchlinks {
     padding: 0 20px 10px 0;
   } 
 
-  p {
+  p:not(.h5) {
     border-bottom: 1px solid $gray;
     clear: both;
     height: auto;
@@ -683,8 +734,21 @@ ul.searchlinks {
 
     li {
       list-style: none;
-      padding-left: 1.5em;
-      text-indent: -1.5em;  
+
+      ul {
+        list-style: none;
+        display: inline;
+
+        li {
+          display: inline;
+
+          &:not(:last-of-type):after {
+            content: " | ";
+            display: inline; 
+            position: relative;
+          }
+        }
+      }
     }
   }
   p em {
@@ -704,8 +768,10 @@ ul.searchlinks {
 .top_metadata {
   ul {
     list-style-type: none;
+
     li {
       margin: 0 0 .5em 0;;
+      display: block !important;
     }
     li:last-of-type {
       margin: 0;
@@ -722,17 +788,24 @@ ul.searchlinks {
 
   li {
     margin: .5em 0 .7em .5em;
+    display: block !important;
   }
 
   ul {
     margin:0;
     padding:0;
     ul {
-      margin-left: 2em;
-      list-style-type: square;
-      columns: 3;
+      display: inline !important;
+      padding-left: 0 !important;
       li {
         margin: 0;
+        display: inline !important;
+
+        &:not(:last-of-type):after {
+          content: " | ";
+          display: inline; 
+          position: relative;
+        }        
       }
     }
   }
@@ -769,17 +842,17 @@ ul.searchlinks {
 // key
 
 // Adding arrows and link colors to linked panels
-.key .panel-title a {
+.key .panel-heading-link {
   text-decoration: none;
   &:hover {
     color: $brand-primary;
   }
-  &:after {
+  .panel-title:after {
     content: "↑";
     margin-left: .5em;
     
   }
-  &.collapsed:after {
+  &.collapsed .panel-title:after {
     content: "↓";
     margin-left: .5em;
   }
@@ -808,28 +881,37 @@ ul.searchlinks {
 
 // Previous and Next Links
 
-nav.letter_navigation {
+.letter_navigation {
   display: flex;
   justify-content: center;
+  list-style: none;
+  padding-left: 0;
   
   
-  div {
-    background-color: $eggshell;
+  li {
     margin: .5em;
-    padding: .5em 1em;
+
+    a {
+      background-color: $eggshell;
+      padding: .5em 1em;
+
+      &:hover {
+        background-color: $banana-mania;
+      }
+    }
   }
 
-  .letter_navigation_previous {
+  .letter_navigation_previous a {
     border-radius: 20em 0 0 20em;
 
-    a:before {
+    &:before {
       content: "← ";
     }
   }
-  .letter_navigation_next {
+  .letter_navigation_next a {
     border-radius: 0 20em 20em 0;
 
-    a:after {
+    &:after {
       content: " →";
     }
   }
@@ -841,7 +923,7 @@ nav.letter_navigation {
 
 .controller_general.action_index {
   #content-wrapper {
-    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -926,20 +1008,30 @@ nav.letter_navigation {
 
 // back to top
 
-.back_to_top a {
+.back-to-top a {
+  color: #502020 !important;
   background: #fff;
+  text-decoration: none;
+  font-weight: 500;
   border: solid 1px $gray-light;
   bottom: 0;
   box-shadow: 0px 0px 5px 3px rgba($gray-dark,0.3);
-  padding: .1em 1em .3em 1em;
+  padding: .5rem 2rem 0.5rem 1.25rem;
   position: fixed;
-  right: 20px;
+  right: 2%;
   z-index: 1000;
-}
+  
+  &:hover {
+    color: #fff;
+    background-color: #f5f5f5;
+  }
 
- .back_to_top a:hover {
-  background-color: $link-color;
-  color: #fff;
+  &:after {
+    content: "\2191";
+    position: relative;
+    top: -1px;
+    left: 6px;
+  }
 }
 
 // Error Page

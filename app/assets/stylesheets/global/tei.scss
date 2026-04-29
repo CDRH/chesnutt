@@ -4,7 +4,7 @@
 // TEI
 // ================
 
-$overwrite_color: darken($brand-success, 10%);
+$overwrite_color: $brandy; // darken($brand-success, 10%);
 
 // Proofs
 
@@ -126,7 +126,7 @@ $overwrite_color: darken($brand-success, 10%);
 }
 
 .tei_note_type_archival {
-  color: #aaa;
+  color: #6c6c6c;
   font-family: $font-family-monospace;
   display: block;
 }
@@ -406,7 +406,7 @@ span.pageimage {
 
 .unclear,
 .tei_gap_reason_illegible {
-  color: #aaa;
+  color: #6c6c6c;
 }
 
 /* Will need to discuss if we want to keep this, 
@@ -529,6 +529,7 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
 .category_manuscripts {
   .tei_hand_resp_cwc {
     border-bottom: double 3px $brand-success;
+    border-top: double 3px $brand-success;
   }
 }
 // .tei_hand_medium_black_pen {

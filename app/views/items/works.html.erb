@@ -9,7 +9,6 @@ to docs/search_preset.md %>
 %>
 
 <% if @header == true %>
-  </div><%# close container div for full width  %>
 
   <div class="page_banner_outer">
     <div class="container">
@@ -27,21 +26,22 @@ to docs/search_preset.md %>
 
   </div>
 
-  <div class="container"><%# reopen container div %>
 <% end %><%# end if @header == true  %>
-
-<%= render_overridable "items", "search_preset_header" %>
-
-<div class="search_form search_preset search_preset_<%= @preset_class %>">
-
-  <%# do not display any facet options or summary boxes for this view %>
-
-  <%= render_overridable "items", "search_preset_text" %>
-  <%= render_overridable "items", "sort_and_page_ui" %>
-
-  <!-- search results section -->
-  <%= render_overridable "items", "search_res_count" %>
-  <%= render_overridable "items", "search_preset_res_items" %>
-
-  <%= render_overridable "items", "sort_and_page_ui" %>
+<div class="container">
+  
+  <%= render_overridable "items", "search_preset_header" %>
+  
+  <div class="search_form search_preset search_preset_<%= @preset_class %>">
+  
+    <%# do not display any facet options or summary boxes for this view %>
+  
+    <%= render_overridable "items", "search_preset_text" %>
+    <%= render_overridable "items", "sort_and_page_ui" %>
+  
+    <!-- search results section -->
+    <%= render_overridable "items", "search_res_count" %>
+    <%= render_overridable "items", "search_preset_res_items" %>
+  
+    <%= render_overridable "items", "sort_and_page_ui" %>
+  </div>
 </div>
