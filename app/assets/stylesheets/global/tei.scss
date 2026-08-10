@@ -54,7 +54,7 @@ $overwrite_color: $brandy; // darken($brand-success, 10%);
 }
 
 .tei_note_type_archival {
-  color: #6c6c6c;
+  color: #577176;
   font-family: $font-family-monospace;
   display: block;
 }
@@ -133,6 +133,7 @@ div.poem {}
 
 .tei_fw, .tei_titlePage {
   background-color: $gray-lighter;
+  border: 1px solid #aaa;
   display: block;
   margin-bottom: .5em;
   text-align: center;
