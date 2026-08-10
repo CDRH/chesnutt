@@ -277,7 +277,7 @@ span.pageimage {
       color: $overwrite_color;
     }
   }
-// adding a wavy line to add and del, only 
+// adding a dotted line to add and del, only 
 
   .tei_del, .tei_add {
     border-bottom: 2px dotted $overwrite_color;
@@ -311,6 +311,8 @@ span.pageimage {
 .tei_subst_rend_overwrite {
   del, .tei_add {
     color: $overwrite_color;
+    border-bottom: 2px dotted $overwrite_color;
+    text-decoration-thickness: 2px;
   }
 }
 
