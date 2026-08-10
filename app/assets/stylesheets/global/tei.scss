@@ -19,6 +19,8 @@ $overwrite_color: $brandy; // darken($brand-success, 10%);
 .tei_hi_rend_circled {
   border: solid black 1px;
   border-radius: .5em;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .tei_hi_rend_dotted {
@@ -35,6 +37,8 @@ $overwrite_color: $brandy; // darken($brand-success, 10%);
 
 .tei_del_rend_circled {
   border: solid black 1px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 // Metamark / adds
@@ -45,6 +49,8 @@ $overwrite_color: $brandy; // darken($brand-success, 10%);
 
 .tei_add_rend_circle {
   border-radius: 7px;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .tei_note_type_archival {
@@ -113,6 +119,8 @@ div.poem {}
   background-color: #d2e6ea;
   border: 1px solid black;
   display: inline;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .bold {
@@ -468,6 +476,8 @@ see https://whitman-dev.unl.edu/manuscripts/transcriptions/yal.00002.html */
   background-color: #d2e6ea;
   border: 1px solid black;
   display: inline;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .tei_metamark {
