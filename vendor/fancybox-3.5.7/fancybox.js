@@ -1945,6 +1945,7 @@
         })
         .addClass("fancybox-image")
         .attr("src", slide.src)
+        .attr("alt", "Full-size image")
         .appendTo(slide.$content);
 
       if ((img.complete || img.readyState == "complete") && $img.naturalWidth && $img.naturalHeight) {
@@ -5135,7 +5136,7 @@
           src = item.src;
         }
         image_no++
-        console.log
+
         list.push(
           '<a href="javascript:;" tabindex="0" data-index="' +
           i +
