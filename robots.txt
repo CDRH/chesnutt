@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /browse/
+Disallow: /search/
+Disallow: /search?q*
+Disallow: /*.xml$
+Disallow: /*.json$
+Disallow: /mini-profiler-resources/
+# Sections here
